@@ -110,6 +110,8 @@
       function resetFilters() {
         const date = new Date();
         const anneeActuelle = date.getFullYear();
+        const displayValOne = document.getElementById('range1');
+        const displayValTwo = document.getElementById('range2');
         $("#studio_filter, #creator_filter, #univer_filter").val("");
   
         $("input[name='genre_filter[]']").prop("checked", false);
@@ -118,6 +120,20 @@
   
         $("#yearMin").val("1950");
         $("#yearMax").val(anneeActuelle);
+        displayValOne.textContent = sliderOne.value;
+        displayValTwo.textContent = sliderTwo.value;
+        
+
+
+
+        const sliderTrack = document.querySelector('.slider-track');
+
+        sliderTrack.style.background = `linear-gradient(to right, #e76f51 100% , #e76f51 100%)`;
+
+
+
+
+        
         filterAnime();
       }
   
@@ -136,3 +152,52 @@
       document.getElementById("backToTop").addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
+
+
+
+
+
+
+
+
+
+      /**********************
+       * 
+       * 
+       */
+      const sliderOne = document.getElementById('yearMin');
+      const sliderTwo = document.getElementById('yearMax');
+      const displayValOne = document.getElementById('range1');
+      const displayValTwo = document.getElementById('range2');
+      const minGap = 1; // Minimum gap between sliders
+      const sliderTrack = document.querySelector('.slider-track');
+      
+      function slideOne() {
+          if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+              sliderOne.value = parseInt(sliderTwo.value) - minGap;
+          }
+          displayValOne.textContent = sliderOne.value;
+          fillColor();
+      }
+      
+      function slideTwo() {
+          if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+              sliderTwo.value = parseInt(sliderOne.value) + minGap;
+          }
+          displayValTwo.textContent = sliderTwo.value;
+          fillColor();
+      }
+      
+      function fillColor() {
+          const percent1 = ((sliderOne.value - sliderOne.min) / (sliderOne.max - sliderOne.min)) * 100;
+          const percent2 = ((sliderTwo.value - sliderTwo.min) / (sliderTwo.max - sliderTwo.min)) * 100;
+      
+          sliderTrack.style.background = `linear-gradient(to right, #d5d5d5 ${percent1}% , #e76f51 ${percent1}% , #e76f51 ${percent2}%, #d5d5d5 ${percent2}%)`;
+      }
+      
+      slideOne();
+      slideTwo();
+      
+      sliderOne.addEventListener('input', slideOne);
+      sliderTwo.addEventListener('input', slideTwo);
+      

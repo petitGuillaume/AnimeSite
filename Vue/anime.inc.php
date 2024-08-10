@@ -16,18 +16,19 @@
   <div class="blockForm">
     <form>
       <div class="formFirstLign">
-        <div>
+      <div>
         <label for="search_input">Nom :</label>
         <input type="text" id="search_input">
         </div>
-        <div>
-        <label for="yearMin">Année (Min):</label>
-        <input type="number" id="yearMin" min="1900" max="2099" value="1950">
+        <div class="slider-container">
+        <h2>Période de sortie</h2>
+        <div class="values">
+            <span   id="range1">1950</span> - <span  id="range2">2024</span>
         </div>
-        <div>
-        <label for="yearMax">Année (Max):</label>
-        <input type="number" id="yearMax" min="1900" max="2099"  value="<?php echo date('Y'); ?>">
-      </div></div>
+        <div class="slider-track"></div>
+        <input  id="yearMin"  value="1950" type="range" min="1950" max="2024" >
+        <input  id="yearMax" value="2024" type="range" min="1950" max="2024">
+    </div></div>
 
       <div class="formSecondLign">
         <div>
