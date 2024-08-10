@@ -1,0 +1,86 @@
+/** Corp de page -------------------------------------------------------------------------------**/
+
+*{
+    margin: 0; 
+    padding: 0; 
+}
+
+body{
+
+    background-color: #efeff5;
+}
+
+
+/** Navbar -------------------------------------------------------------------------------------**/
+
+.navbar
+{
+    background-color: black;
+    height: 15%;
+    width: 100%;
+    display: flex;
+    margin: 0; 
+    vertical-align: middle;
+    line-height: 40px;
+    
+}
+
+.bouton 
+{
+    font-weight: bold;
+    color: grey;
+
+}
+.butu
+{
+margin-top : 7px;
+}
+
+.titre
+{
+    margin: 5px 5px 5px 5px ;
+    font-size: 30px;
+    font-weight: bold;
+    color: grey;
+    display: flex;
+}
+
+
+ul 
+{
+        
+
+    list-style: none; /* enlever les puces */
+
+}
+ 
+ul li {
+
+    display: inline-block; /* affichage en ligne */
+
+}
+
+li{
+   margin-left: 5px;
+}
+
+
+
+
+/** Anime ------------------------------------------------------------------------------------------------ **/
+.anime-year{
+    color: #850606 !important;
+    font-weight: bold;
+    
+    }
+.anime-item {
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: -5px 5px 5px grey;
+    background-color: #FFFFFF;
+    display: flex;
+    max-width: 95%;
+    margin-bottom: 1%;
+    border-radius: 10px;
+
+}

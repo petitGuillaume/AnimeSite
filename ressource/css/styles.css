@@ -1,0 +1,442 @@
+/** Corp de page -------------------------------------------------------------------------------**/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    background-color: #f4a261;
+}
+
+
+/** Navbar -------------------------------------------------------------------------------------**/
+
+.navbar {
+    background-color: #e76f51;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    margin: 0;
+    line-height: 40px;
+    justify-content: space-between;
+}
+
+.bouton {
+    font-weight: bold;
+    color: #FFF;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-left: 10px;
+}
+
+.bouton2 {
+    margin: auto;
+    margin-right: 10px;
+
+}
+
+.navbar ul {
+    margin: auto;
+    flex-direction: row;
+}
+
+.butu {
+    margin-top: 7px;
+}
+
+.titre {
+    margin: 5px 5px 5px 5px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+}
+
+
+ul {
+
+
+    list-style: none;
+
+}
+
+ul li {
+
+    display: inline-block;
+
+}
+
+li {
+    margin-left: 5px;
+}
+
+/** Anime ------------------------------------------------------------------------------------------------ **/
+
+.accueil h1 {
+    font-size: 35px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.accueil .miniP {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+
+
+
+/** Anime ------------------------------------------------------------------------------------------------ **/
+
+.blockForm
+{   gap: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: -5px 5px 5px #333;
+    background-color: #FFFFFF !important;
+    display: flex;
+    margin-bottom: 1%;
+    padding: 10PX;
+}
+.formFirstLign
+{   margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+.formSecondLign{   margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.formTheirdLign{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.checkboxGenres
+{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    width: 125px;
+    font-weight: bold;
+}
+.formTheirdLign input{
+    margin-right: 5px;
+    display: flex;
+
+}
+.Custom-checkbox{
+    width: 15px;
+    
+}
+.anime_table {
+    margin-top: 20px;
+}
+
+.anime-item {
+    gap: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: -5px 5px 5px grey;
+    background-color: #FFFFFF !important;
+    display: flex;
+    max-width: 95%;
+    margin-bottom: 1%;
+    border-radius: 10px;
+
+}
+
+
+.BlocGenreRajout
+{
+    display: flex; flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.MiniBlocGenreRajout{
+    margin: 10px;
+}
+
+.ani {
+    width: 185px;
+}
+
+.minicolon {
+    width: 30%;
+}
+
+.minitittle {
+    font-size: 18px;
+}
+
+.blockcolon {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.tittle {
+    font-size: 34px;
+}
+
+.paragraphe {
+    font-size: 26px;
+    padding: 10px;
+}
+.gras{font-weight: bold;}
+
+.bigblock {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    font-style: normal;
+    text-decoration: none;
+    color: #000;
+}
+
+.blocktittle {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.blockcolon {
+    margin-top: 20px;
+}
+
+
+.colgenre {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+}
+
+.coloneChiffre {
+    width: 25%;
+
+}
+
+.TextGenre {
+    margin: auto;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.genreblock {
+    width: 150px;
+    height: 25px;
+    text-align: center;
+    padding: 7px;
+    border-radius: 15px;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.Action {
+
+    background-color: red;
+
+}
+.Amour
+{
+    background-color:#FFC0CB; 
+}
+.Aventure {
+    background-color: #98FB98;
+}
+.Combat{
+    background-color:#FF4C4C;
+}
+.Comedie{
+    background-color:#FFFF00;
+}
+.Cyber{
+    background-color: #D3D3D3;
+}
+.Echi{
+    background-color: #FF69B4;
+}
+.Drame{
+    background-color: #72666A;
+}
+.Enigme{
+    background-color: #B29692;
+}
+.Fantastique{
+    background-color: #00BFFF;
+}
+.Historique{
+    background-color: #D7CED1;
+}
+.Horreur
+{
+    background-color: #850606;
+}
+.Magic{
+    background-color: #FF1493;
+}
+.Mecha{
+    background-color: #97A9AF;
+}
+.Musique{
+    background-color: #F9FF9A;
+}
+.Science-Fiction
+{
+    background-color: #8A2BE2;
+}
+.Sport{
+    background-color: #C8D1C8;
+}
+.Tranche {
+    background-color: peachpuff;
+}
+.Yuri{
+    background-color: #DA70D6;
+}
+.miniImg {
+    width: 25px;
+    height: 25px;
+}
+
+
+
+
+
+@media (max-width: 1100px) {
+    .genreblock {
+        width: 40px;
+    }
+
+    .TextGenre {
+        display: none;
+    }
+}
+
+
+
+@media (max-width: 900px) {
+    .ani {
+        display: none;
+    }
+
+    .bigblock {
+        width: 95%;
+        margin: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+/** Rajout-anime ------------------------------------------------------------------------------------------------ **/
+.form-item {
+    gap: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: -5px 5px 5px grey;
+    background-color: #FFFFFF !important;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 700px;
+    margin-bottom: 1%;
+    border-radius: 10px;
+
+}
+.FormPage{display: flex; flex-wrap: wrap;}
+.form-item input{
+    margin-top: 20px;
+}
+.form-item option{
+    margin-top: 20px;
+}
+.form-item .firstBlock{
+    display: flex;
+}
+
+
+#backToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    width: 50px; /* Largeur et hauteur égales pour créer un cercle */
+    height: 50px;
+    line-height: 50px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+    text-align: center;
+  }
+
+  #backToTop:hover {
+    background-color: #555;
+    transform: scale(1.1);
+  }
+
+
+  /*********************/
+
+#studio_filter, #creator_filter, #univer_filter{
+  width: 200px;
+  height: 40px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 2px solid #f4a261;
+
+}
+.tittle_Filer{
+  margin-top: auto;
+  margin-bottom: auto;
+  font-weight: bold;
+}
+  #reset_filters {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 40px;
+    text-align: center;
+    background: #fff;
+    border-radius: 5px;
+    border: 2px solid #f4a261;
+}
+
+  /*********************/
+#yearMin, #yearMax
+  {
+    width: 200px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 2px solid #f4a261;
+  }
