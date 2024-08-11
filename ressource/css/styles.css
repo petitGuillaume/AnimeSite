@@ -453,7 +453,7 @@ a {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #333;
+    background-color: #e76f51;
     color: #fff;
     border-radius: 50%;
     cursor: pointer;
@@ -499,7 +499,21 @@ a {
     background: #fff;
     border-radius: 5px;
     border: 2px solid #f4a261;
+    font-weight: bold;
+    color: #f4a261;
 }
+
+
+#reset_filters:hover
+{
+    background: #f4a261;
+    border-radius: 5px;
+    border: 2px solid #f4a261;
+    font-weight: bold;
+    color: #FFF;
+
+}
+
 
   /*********************
 #yearMin, #yearMax
