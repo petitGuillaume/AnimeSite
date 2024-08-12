@@ -1,0 +1,79 @@
+
+.firstLignRajout
+{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+
+
+}
+.SecondLignRajout
+{
+
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+
+}
+
+
+.form-item {
+    gap: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: -5px 5px 5px grey;
+    background-color: #FFFFFF !important;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 700px;
+    margin-bottom: 1%;
+    border-radius: 10px;
+
+}
+.FormPage{display: flex; flex-wrap: wrap;}
+.form-item input{
+    margin-top: 20px;
+}
+
+.form-item select{
+
+    margin-top: 20px;
+}
+.form-item option{
+    margin-top: 20px;
+}
+.form-item .firstBlock{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+
+.SecondBlock{
+    display: flex;
+    flex-direction: column;
+}
+.BlocGenreRajout{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+
+.MiniBlocGenreRajout {
+    width: 125px;
+    text-align: initial;
+  }
+
+
+  .SecondLignRajout .form-item
+
+  {
+
+    width: 350px;
+
+  }

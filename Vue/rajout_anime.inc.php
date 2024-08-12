@@ -2,21 +2,24 @@
 <html>
 
 <head>
-    <title>Anime Form</title>
+  <title>Rajout Anime</title>
+  <link href="ressource/css/rajout_anime.css" rel="stylesheet">
+
 </head>
 
 <body>
     <div class="FormPage">
+        <div class="firstLignRajout">
         <div class="form-item">
-            <h2>Add New Anime</h2>
+            <h2>Ajouter un nouvel Anime</h2>
 
             <form method="post" action="index.php?rajout_anime" enctype="multipart/form-data">
                 <div class="firstBlock">
                     <div class="middle">
-                        <label>Name (Japanese):</label>
+                        <label>Nom (Japonais):</label>
                         <input type="text" name="name_jp" required><br>
 
-                        <label>Name (French):</label>
+                        <label>Nom (Français):</label>
                         <input type="text" name="name_fr" required><br>
 
                         <label>Image:</label>
@@ -34,13 +37,13 @@
                 <div class="firstBlock">
                     <div class="middle">
 
-                        <label>Number of Episodes:</label>
+                        <label>Nombre d'Episodes:</label>
                         <input type="number" name="nb_episodes" min="0" value="0" required><br>
 
-                        <label>Number of OAV:</label>
+                        <label>Nombre d'OAV:</label>
                         <input type="number" name="nb_oav" min="0" value="0" required><br>
 
-                        <label>Number of Films:</label>
+                        <label>Nombre de Films:</label>
                         <input type="number" name="nb_film" min="0" value="0" required><br>
                     </div>
 
@@ -123,7 +126,7 @@
 
 
 
-                <label>Source Anime (if applicable):</label>
+                <label>Source Anime :</label>
                 <select name="id_source">
                     <option value="">Select an option</option>
                     <!-- Populate options with anime from the database -->
@@ -177,6 +180,41 @@
                 <input type="submit" value="Submit">
             </form>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
         <div class="form-item">
 
             <h2>Add New film</h2>
@@ -198,7 +236,7 @@
                 <input type="number" name="year_film" required><br>
                 </div>
                 </div>
-                <div class="firstBlock">
+                <div class="SecondBlock">
                     <div class="middle">
                 <label>Univers:</label>
                 <select name="id_univers" required>
@@ -271,7 +309,7 @@
                 </select><br>
                 </div>
                     <div class="middle">
-                <label>Source Anime (if applicable):</label>
+                <label>Source Anime :</label>
                 <select name="id_source">
                     <option value="">Select an option</option>
                     <!-- Populate options with anime from the database -->
@@ -326,11 +364,35 @@
         </div>
 
 
+
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="SecondLignRajout">
         <div class="form-item">
 
             <h2>Ajouter un Univers</h2>
             <form action="index.php?rajout_anime" method="post">
-                <label>Nom du genre:</label>
+                <label>Nom de l'Univers</label>
                 <input type="text" name="univers_name" required><br>
                 <input type="hidden" name="form_type" value="add_univers">
                 <input type="submit" name="submit" value="Ajouter">
@@ -341,7 +403,7 @@
 
             <h2>Ajouter un studios</h2>
             <form action="index.php?rajout_anime" method="post">
-                <label>Nom du genre:</label>
+                <label>Nom du studios:</label>
                 <input type="text" name="studios_name" required><br>
                 <input type="hidden" name="form_type" value="add_studios">
                 <input type="submit" name="submit" value="Ajouter">
@@ -351,7 +413,7 @@
 
             <h2>Ajouter un createur</h2>
             <form action="index.php?rajout_anime" method="post">
-                <label>Nom du genre:</label>
+                <label>Nom du createur:</label>
                 <input type="text" name="createur_name" required><br>
                 <input type="hidden" name="form_type" value="add_createur">
                 <input type="submit" name="submit" value="Ajouter">
@@ -368,7 +430,7 @@
                 <input type="submit" name="submit" value="Ajouter">
             </form>
         </div>
-
+</div>
     </div>
 
 </body>

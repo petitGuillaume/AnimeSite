@@ -1,10 +1,6 @@
 <?php
 // insert_anime.php
-// Assuming you have a database connection ($conn) established
 include_once("modele/pdo.lib.php");
-// insert_anime.php
-// Supposons que vous avez déjà une connexion à la base de données via PDO ($pdo) établie
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($_POST['form_type'] === 'add_anime') {
 
@@ -231,8 +227,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
 }
-
-
-
 
 ?>

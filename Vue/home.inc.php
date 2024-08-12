@@ -3,6 +3,12 @@
  * Vue de la page home
  */
 ?>
+<head>
+  <title>Anime List</title>
+  <link href="ressource/css/styles.css" rel="stylesheet">
+
+</head>
+
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 

@@ -4,7 +4,9 @@
 <html>
 
 <head>
-  <title>Anime List</title>
+  <title>Liste des Anime</title>
+  <link href="ressource/css/styles.css" rel="stylesheet">
+
 </head>
 
 <body>

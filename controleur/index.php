@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="Navbar.css">
 
 
 <?php

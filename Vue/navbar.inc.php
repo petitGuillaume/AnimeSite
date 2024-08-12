@@ -1,11 +1,9 @@
-
 <!DOCTYPE html>
 <html>
 	<head>
     <meta charset="UTF-8">
 			<title>Azunya</title>
-			<link href="ressource/css/styles.css" rel="stylesheet">
-
+			<link href="ressource/css/Navbar.css" rel="stylesheet">
 	</head>
 
 	<body >

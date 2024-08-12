@@ -11,64 +11,6 @@ body {
 }
 
 
-/** Navbar -------------------------------------------------------------------------------------**/
-
-.navbar {
-    background-color: #e76f51;
-    height: 60px;
-    width: 100%;
-    display: flex;
-    margin: 0;
-    line-height: 40px;
-    justify-content: space-between;
-}
-
-.bouton {
-    font-weight: bold;
-    color: #FFF;
-    display: flex;
-    flex-direction: row;
-    margin: auto;
-    margin-left: 10px;
-}
-
-.bouton2 {
-    margin: auto;
-    margin-right: 10px;
-
-}
-
-.navbar ul {
-    margin: auto;
-    flex-direction: row;
-}
-
-.butu {
-    margin-top: 7px;
-}
-
-.titre {
-    margin: 5px 5px 5px 5px;
-    font-size: 30px;
-    font-weight: bold;
-    color: #fff;
-    display: flex;
-}
-
-
-ul {
-    list-style: none;
-
-}
-
-ul li {
-    display: inline-block;
-}
-
-li {
-    margin-left: 5px;
-}
-
 /** Anime ------------------------------------------------------------------------------------------------ **/
 
 .accueil h1 {
@@ -422,30 +364,7 @@ a {
 
 
 /** Rajout-anime ------------------------------------------------------------------------------------------------ **/
-.form-item {
-    gap: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: -5px 5px 5px grey;
-    background-color: #FFFFFF !important;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    max-width: 700px;
-    margin-bottom: 1%;
-    border-radius: 10px;
 
-}
-.FormPage{display: flex; flex-wrap: wrap;}
-.form-item input{
-    margin-top: 20px;
-}
-.form-item option{
-    margin-top: 20px;
-}
-.form-item .firstBlock{
-    display: flex;
-}
 
 
 #backToTop {
@@ -526,3 +445,4 @@ a {
   }
 
 ***/
+
