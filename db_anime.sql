@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Hôte : 127.0.0.1:3306
--- Généré le : lun. 24 juin 2024 à 11:16
--- Version du serveur : 8.3.0
--- Version de PHP : 8.2.18
+-- Host: localhost:3306
+-- Generation Time: Aug 13, 2024 at 05:39 PM
+-- Server version: 8.0.30
+-- PHP Version: 8.1.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,18 +18,17 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données : `db_anime`
+-- Database: `db_anime`
 --
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `anime`
+-- Table structure for table `anime`
 --
 
-DROP TABLE IF EXISTS `anime`;
-CREATE TABLE IF NOT EXISTS `anime` (
-  `ID` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `anime` (
+  `ID` int NOT NULL,
   `Name_Jp` varchar(255) DEFAULT NULL,
   `Name_Fr` varchar(255) DEFAULT NULL,
   `Image` varchar(255) DEFAULT NULL,
@@ -42,16 +41,11 @@ CREATE TABLE IF NOT EXISTS `anime` (
   `ID_Source` int DEFAULT NULL,
   `Anime_Type` varchar(255) DEFAULT NULL,
   `ID_Studio` int DEFAULT NULL,
-  `ID_Createur` int DEFAULT NULL,
-  PRIMARY KEY (`ID`),
-  KEY `ID_Univers` (`ID_Univers`),
-  KEY `ID_Source` (`ID_Source`),
-  KEY `ID_Studio` (`ID_Studio`),
-  KEY `ID_Createur` (`ID_Createur`)
-) ENGINE=InnoDB AUTO_INCREMENT=392 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `ID_Createur` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Déchargement des données de la table `anime`
+-- Dumping data for table `anime`
 --
 
 INSERT INTO `anime` (`ID`, `Name_Jp`, `Name_Fr`, `Image`, `Synopsis`, `Year`, `Nb_episodes`, `Nb_OAV`, `Nb_Film`, `ID_Univers`, `ID_Source`, `Anime_Type`, `ID_Studio`, `ID_Createur`) VALUES
@@ -455,21 +449,17 @@ INSERT INTO `anime` (`ID`, `Name_Jp`, `Name_Fr`, `Image`, `Synopsis`, `Year`, `N
 -- --------------------------------------------------------
 
 --
--- Structure de la table `anime_genres`
+-- Table structure for table `anime_genres`
 --
 
-DROP TABLE IF EXISTS `anime_genres`;
-CREATE TABLE IF NOT EXISTS `anime_genres` (
-  `ID` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `anime_genres` (
+  `ID` int NOT NULL,
   `ID_Anime` int DEFAULT NULL,
-  `ID_Genre` int DEFAULT NULL,
-  PRIMARY KEY (`ID`),
-  KEY `ID_Anime` (`ID_Anime`),
-  KEY `ID_Genre` (`ID_Genre`)
-) ENGINE=InnoDB AUTO_INCREMENT=1579 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `ID_Genre` int DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Déchargement des données de la table `anime_genres`
+-- Dumping data for table `anime_genres`
 --
 
 INSERT INTO `anime_genres` (`ID`, `ID_Anime`, `ID_Genre`) VALUES
@@ -2051,34 +2041,29 @@ INSERT INTO `anime_genres` (`ID`, `ID_Anime`, `ID_Genre`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `arcnarratif`
+-- Table structure for table `arcnarratif`
 --
 
-DROP TABLE IF EXISTS `arcnarratif`;
-CREATE TABLE IF NOT EXISTS `arcnarratif` (
-  `ID` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `arcnarratif` (
+  `ID` int NOT NULL,
   `Name` varchar(255) DEFAULT NULL,
   `Description` text,
-  `ID_Anime` int DEFAULT NULL,
-  PRIMARY KEY (`ID`),
-  KEY `ID_Anime` (`ID_Anime`)
+  `ID_Anime` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `createurs`
+-- Table structure for table `createurs`
 --
 
-DROP TABLE IF EXISTS `createurs`;
-CREATE TABLE IF NOT EXISTS `createurs` (
-  `ID` int NOT NULL AUTO_INCREMENT,
-  `Name` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=183 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `createurs` (
+  `ID` int NOT NULL,
+  `Name` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Déchargement des données de la table `createurs`
+-- Dumping data for table `createurs`
 --
 
 INSERT INTO `createurs` (`ID`, `Name`) VALUES
@@ -2268,31 +2253,26 @@ INSERT INTO `createurs` (`ID`, `Name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `episodes`
+-- Table structure for table `episodes`
 --
 
-DROP TABLE IF EXISTS `episodes`;
-CREATE TABLE IF NOT EXISTS `episodes` (
-  `ID` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `episodes` (
+  `ID` int NOT NULL,
   `ID_Anime` int DEFAULT NULL,
   `ID_ArcNarratif` int DEFAULT NULL,
   `Name` varchar(255) DEFAULT NULL,
   `Numero` int DEFAULT NULL,
-  `Link` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`ID`),
-  KEY `ID_Anime` (`ID_Anime`),
-  KEY `ID_ArcNarratif` (`ID_ArcNarratif`)
+  `Link` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `film`
+-- Table structure for table `film`
 --
 
-DROP TABLE IF EXISTS `film`;
-CREATE TABLE IF NOT EXISTS `film` (
-  `ID` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `film` (
+  `ID` int NOT NULL,
   `Name` varchar(255) DEFAULT NULL,
   `Image` varchar(255) DEFAULT NULL,
   `Synopsis` text,
@@ -2302,44 +2282,34 @@ CREATE TABLE IF NOT EXISTS `film` (
   `ID_Anime` int DEFAULT NULL,
   `Link` varchar(255) DEFAULT NULL,
   `ID_Createur` int DEFAULT NULL,
-  PRIMARY KEY (`ID`),
-  KEY `ID_Univers` (`ID_Univers`),
-  KEY `ID_Studio` (`ID_Studio`),
-  KEY `ID_Anime` (`ID_Anime`),
-  KEY `ID_Createur` (`ID_Createur`)
+  `ID_Source` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `film_genres`
+-- Table structure for table `film_genres`
 --
 
-DROP TABLE IF EXISTS `film_genres`;
-CREATE TABLE IF NOT EXISTS `film_genres` (
-  `ID` int NOT NULL AUTO_INCREMENT,
+CREATE TABLE `film_genres` (
+  `ID` int NOT NULL,
   `ID_Film` int DEFAULT NULL,
-  `ID_Genre` int DEFAULT NULL,
-  PRIMARY KEY (`ID`),
-  KEY `ID_Film` (`ID_Film`),
-  KEY `ID_Genre` (`ID_Genre`)
+  `ID_Genre` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `genres`
+-- Table structure for table `genres`
 --
 
-DROP TABLE IF EXISTS `genres`;
-CREATE TABLE IF NOT EXISTS `genres` (
-  `ID` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `genres` (
+  `ID` int NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Déchargement des données de la table `genres`
+-- Dumping data for table `genres`
 --
 
 INSERT INTO `genres` (`ID`, `name`) VALUES
@@ -2366,18 +2336,16 @@ INSERT INTO `genres` (`ID`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `studios`
+-- Table structure for table `studios`
 --
 
-DROP TABLE IF EXISTS `studios`;
-CREATE TABLE IF NOT EXISTS `studios` (
-  `ID` int NOT NULL AUTO_INCREMENT,
-  `Name` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=94 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `studios` (
+  `ID` int NOT NULL,
+  `Name` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Déchargement des données de la table `studios`
+-- Dumping data for table `studios`
 --
 
 INSERT INTO `studios` (`ID`, `Name`) VALUES
@@ -2478,18 +2446,16 @@ INSERT INTO `studios` (`ID`, `Name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Structure de la table `univers`
+-- Table structure for table `univers`
 --
 
-DROP TABLE IF EXISTS `univers`;
-CREATE TABLE IF NOT EXISTS `univers` (
-  `ID` int NOT NULL AUTO_INCREMENT,
-  `Name` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB AUTO_INCREMENT=204 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE TABLE `univers` (
+  `ID` int NOT NULL,
+  `Name` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Déchargement des données de la table `univers`
+-- Dumping data for table `univers`
 --
 
 INSERT INTO `univers` (`ID`, `Name`) VALUES
@@ -2696,6 +2662,149 @@ INSERT INTO `univers` (`ID`, `Name`) VALUES
 (201, 'Kaiju N°8'),
 (202, 'Dirty Pair'),
 (203, 'Les trois mousquetaires');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `anime`
+--
+ALTER TABLE `anime`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `ID_Univers` (`ID_Univers`),
+  ADD KEY `ID_Source` (`ID_Source`),
+  ADD KEY `ID_Studio` (`ID_Studio`),
+  ADD KEY `ID_Createur` (`ID_Createur`);
+
+--
+-- Indexes for table `anime_genres`
+--
+ALTER TABLE `anime_genres`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `ID_Anime` (`ID_Anime`),
+  ADD KEY `ID_Genre` (`ID_Genre`);
+
+--
+-- Indexes for table `arcnarratif`
+--
+ALTER TABLE `arcnarratif`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `ID_Anime` (`ID_Anime`);
+
+--
+-- Indexes for table `createurs`
+--
+ALTER TABLE `createurs`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `episodes`
+--
+ALTER TABLE `episodes`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `ID_Anime` (`ID_Anime`),
+  ADD KEY `ID_ArcNarratif` (`ID_ArcNarratif`);
+
+--
+-- Indexes for table `film`
+--
+ALTER TABLE `film`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `ID_Univers` (`ID_Univers`),
+  ADD KEY `ID_Studio` (`ID_Studio`),
+  ADD KEY `ID_Anime` (`ID_Anime`),
+  ADD KEY `ID_Createur` (`ID_Createur`);
+
+--
+-- Indexes for table `film_genres`
+--
+ALTER TABLE `film_genres`
+  ADD PRIMARY KEY (`ID`),
+  ADD KEY `ID_Film` (`ID_Film`),
+  ADD KEY `ID_Genre` (`ID_Genre`);
+
+--
+-- Indexes for table `genres`
+--
+ALTER TABLE `genres`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `studios`
+--
+ALTER TABLE `studios`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- Indexes for table `univers`
+--
+ALTER TABLE `univers`
+  ADD PRIMARY KEY (`ID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `anime`
+--
+ALTER TABLE `anime`
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=392;
+
+--
+-- AUTO_INCREMENT for table `anime_genres`
+--
+ALTER TABLE `anime_genres`
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1579;
+
+--
+-- AUTO_INCREMENT for table `arcnarratif`
+--
+ALTER TABLE `arcnarratif`
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `createurs`
+--
+ALTER TABLE `createurs`
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=183;
+
+--
+-- AUTO_INCREMENT for table `episodes`
+--
+ALTER TABLE `episodes`
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `film`
+--
+ALTER TABLE `film`
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `film_genres`
+--
+ALTER TABLE `film_genres`
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `genres`
+--
+ALTER TABLE `genres`
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+
+--
+-- AUTO_INCREMENT for table `studios`
+--
+ALTER TABLE `studios`
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=94;
+
+--
+-- AUTO_INCREMENT for table `univers`
+--
+ALTER TABLE `univers`
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=204;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

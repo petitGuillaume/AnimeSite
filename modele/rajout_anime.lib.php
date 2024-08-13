@@ -26,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Insérez les données de l'anime dans la table "Anime" en utilisant le lien de paramètres
         $sql = "INSERT INTO Anime (Name_Jp, Name_Fr, image, Synopsis, Year, Nb_episodes, Nb_OAV, Nb_Film, ID_univers, ID_Source, Anime_Type, ID_studio, ID_createur) 
-            VALUES (:name_jp, :name_fr, :image, :synopsis, :year, :nb_episodes, :nb_oav, :nb_film, :id_univers, :id_source, :anime_type, :id_studio, :id_createur)";
+                VALUES (:name_jp, :name_fr, :image, :synopsis, :year, :nb_episodes, :nb_oav, :nb_film, :id_univers, :id_source, :anime_type, :id_studio, :id_createur)";
 
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':name_jp', $name_jp);
@@ -43,13 +43,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindParam(':id_studio', $id_studio, PDO::PARAM_INT);
         $stmt->bindParam(':id_createur', $id_createur, PDO::PARAM_INT);
 
-
-
-
-
-        $targetPath = 'resource/img/anime_img/' . $imageFileName;
+        $targetPath = 'ressource/img/anime_img/' . $imageFileName;
         move_uploaded_file($imageTempPath, $targetPath);
-
 
         if ($stmt->execute()) {
             echo "Enregistrement de l'anime inséré avec succès.";
@@ -80,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Nettoyez et validez les entrées utilisateur
         $name_film = $_POST['name_film'];
-        $image = $_POST['image_film'];
+        $image = $_FILES['image']['name'];    
         $synopsis = $_POST['synopsis_film'];
         $year = intval($_POST['year_film']);
         $id_univers = intval($_POST['id_univers']);
@@ -88,13 +83,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $id_studio = intval($_POST['id_studio']);
         $id_createur = intval($_POST['id_createur']);
 
+        $imageFileName = $_FILES['image']['name'];
+        $imageTempPath = $_FILES['image']['tmp_name'];
+
         // Insérez les données de l'anime dans la table "Anime" en utilisant le lien de paramètres
         $sql = "INSERT INTO film (name, image, Synopsis, Year, ID_univers, ID_Source, ID_studio, ID_createur) 
             VALUES (:name_film, :image, :synopsis, :year, :id_univers, :id_source, :id_studio, :id_createur)";
 
         $stmt = $conn->prepare($sql);
         $stmt->bindParam(':name_film', $name_film);
-        $stmt->bindParam(':image', $image);
+        $stmt->bindParam(':image', $imageFileName);
         $stmt->bindParam(':synopsis', $synopsis);
         $stmt->bindParam(':year', $year, PDO::PARAM_INT);
         $stmt->bindParam(':id_univers', $id_univers, PDO::PARAM_INT);
@@ -102,6 +100,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindParam(':id_studio', $id_studio, PDO::PARAM_INT);
         $stmt->bindParam(':id_createur', $id_createur, PDO::PARAM_INT);
 
+         $targetPath = 'ressource/img/film_img/' . $imageFileName;
+        move_uploaded_file($imageTempPath, $targetPath);
+        
+        
         if ($stmt->execute()) {
             echo "Enregistrement de du film inséré avec succès.";
             $film_id = $conn->lastInsertId(); // Obtenez l'ID du dernier anime inséré

@@ -1,11 +1,11 @@
     // Function to update the table content based on filtered data
-    function updateAnimeTable(data) {
+    function updatefilmTable(data) {
         console.log("updatefilmTable");
         var content = '';
         data.forEach(function (film) {
   
           content += '<a href="index.php?detail&id=' + film.ID + '">';
-          content += '<div class="anime-item"><img class="ani" src="ressource/img/anime_img/' + film.Image + '"/>';
+          content += '<div class="anime-item"><img class="ani" src="ressource/img/film_img/' + film.Image + '"/>';
           content += '<div class="bigblock">';
           content += '<div class="blocktittle">';
           content += '<div class="tittle">' + film.Name + '</div>';
@@ -26,9 +26,6 @@
           });
           content += '</div>';
           content += '<div class="minicolon coloneChiffre">';
-          content += '<div class="paragraphe"><span class="gras">Episode : </span>' + film.Nb_episodes + '</div>';
-          content += '<div class="paragraphe"><span class="gras">OAV : </span>' + film.Nb_OAV + '</div>';
-          content += '<div class="paragraphe"><span class="gras">Film : </span>' + film.Nb_Film + '</div>';
           content += '</div> </div></div></div></a>';
   
         });
@@ -37,7 +34,7 @@
       }
   
       // Function to filter and update the table
-      function filterAnime() {
+      function filterFilm() {
         console.log("filterfilm");
         var studioId = $("#studio_filter").val();
         var creatorId = $("#creator_filter").val();
@@ -55,7 +52,7 @@
         $.ajax(
           {
             type: "POST",
-            url: "modele/anime.lib.php", // PHP file that contains functions to fetch anime data
+            url: "modele/film.lib.php", // PHP file that contains functions to fetch anime data
             data: {
               action: "filter",
               studioId: studioId,
@@ -71,7 +68,7 @@
               console.log("Requête AJAX réussie. Réponse du serveur :");
               console.log(response); // Affiche la réponse du serveur dans la console
               console.log("Mise à jour du tableau avec les données filtrées...");
-              updateAnimeTable(response);
+              updatefilmTable(response);
             },
           });
       }
@@ -79,29 +76,29 @@
       // Function to handle form element changes and trigger filtering
       function handleFilterChanges() {
         // Trigger filtering when studio filter changes
-        $("#studio_filter").change(filterAnime);
+        $("#studio_filter").change(filterFilm);
   
         // Trigger filtering when creator filter changes
-        $("#creator_filter").change(filterAnime);
+        $("#creator_filter").change(filterFilm);
   
         // Trigger filtering when univer filter changes
-        $("#univer_filter").change(filterAnime);
+        $("#univer_filter").change(filterFilm);
   
         // Trigger filtering when genre filter changes
-        $("input[name='genre_filter[]']").change(filterAnime);
+        $("input[name='genre_filter[]']").change(filterFilm);
         console.log("test");
   
         // Trigger filtering when search input changes
-        $("#search_input").keyup(filterAnime);
-        $("#yearMin").on("change", filterAnime);
+        $("#search_input").keyup(filterFilm);
+        $("#yearMin").on("change", filterFilm);
   
         // Trigger filtering when yearMax input changes
-        $("#yearMax").on("change", filterAnime);
+        $("#yearMax").on("change", filterFilm);
       }
   
       // Initial page load, fetch all anime data and display the table
       $(document).ready(function () {
-        filterAnime();
+        filterFilm();
         handleFilterChanges();
       });
   

@@ -12,7 +12,7 @@
 <body>
   <!-- Include necessary JavaScript libraries -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="ressource/js/Anime-Script.js" defer></script>
+  <script src="ressource/js/Film-Script.js" defer></script>
 
 
   <div class="blockForm">

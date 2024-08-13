@@ -122,10 +122,6 @@
                 </div>
 
 
-
-
-
-
                 <label>Source Anime :</label>
                 <select name="id_source">
                     <option value="">Select an option</option>
@@ -181,59 +177,26 @@
             </form>
         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         
         <div class="form-item">
 
             <h2>Add New film</h2>
-            <form method="post" action="index.php?rajout_anime">
+            <form method="post" action="index.php?rajout_anime" enctype="multipart/form-data">
             <div class="firstBlock">
                     <div class="middle">
-                <label>Name (French):</label>
+                <label>Nom :</label>
                 <input type="text" name="name_film" required><br>
 
                 <label>Image:</label>
-                <input type="file" name="image_film" accept=".png, .jpg, .jpeg" required><br>
+                <input type="file" name="image" accept=".png, .jpg, .jpeg" required><br>
                 </div>
-<div class="middle">
-                <label>Synopsis:</label>
-                <textarea name="synopsis_film" required></textarea><br>
+                <div class="middle">
+                    <label>Synopsis:</label>
+                    <textarea name="synopsis_film" required></textarea><br>
                 
                     
-                <label>Year:</label>
-                <input type="number" name="year_film" required><br>
+                    <label>Year:</label>
+                    <input type="number" name="year_film" required><br>
                 </div>
                 </div>
                 <div class="SecondBlock">
@@ -354,35 +317,13 @@
 
             </div>
 
-
-
-
                 <input type="hidden" name="form_type" value="add_film">
                 <input type="submit" value="Submit">
             </form>
 
         </div>
 
-
-
-
-
-
-
-
-
-
-
         </div>
-
-
-
-
-
-
-
-
-
 
 
 
@@ -448,9 +389,6 @@
             if (selectedFile) {
                 const formData = new FormData();
                 formData.append("file", selectedFile);
-
-                // Vous devrez effectuer une requête AJAX pour envoyer le formulaire et le fichier au serveur.
-                // Voici un exemple de base en utilisant la bibliothèque Fetch.
                 fetch("url_du_script_de_traitement_sur_le_serveur", {
                     method: "POST",
                     body: formData
