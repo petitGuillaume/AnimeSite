@@ -7,6 +7,7 @@
     margin: 0;
     line-height: 40px;
     justify-content: space-between;
+    
 }
 
 .navbar .bouton {
@@ -16,12 +17,13 @@
     flex-direction: row;
     margin: auto;
     margin-left: 10px;
+    text-decoration: none;
 }
 
 .navbar .bouton2 {
     margin: auto;
     margin-right: 10px;
-
+    text-decoration: none;
 }
 
 .navbar ul {
@@ -35,6 +37,7 @@
     font-weight: bold;
     color: #fff;
     display: flex;
+    text-decoration: none;
 }
 
 .navbar ul {

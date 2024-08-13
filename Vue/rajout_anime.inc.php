@@ -225,7 +225,7 @@
                 <input type="text" name="name_film" required><br>
 
                 <label>Image:</label>
-                <input type="text" name="image_film" required><br>
+                <input type="file" name="image_film" accept=".png, .jpg, .jpeg" required><br>
                 </div>
 <div class="middle">
                 <label>Synopsis:</label>
