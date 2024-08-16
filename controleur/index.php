@@ -20,8 +20,10 @@
          else if (isset($_GET['rajout_anime'])){
             include_once ('controleur/rajout_anime.inc.php');
         }
-         else if (isset($_GET['detail'])){
+         else if (isset($_GET['detail_anime'])){
             include_once ('controleur/detail_anime.inc.php');
+        }else if (isset($_GET['detail_film'])){
+            include_once ('controleur/detail_film.inc.php');
         }
 
         ?>

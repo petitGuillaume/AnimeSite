@@ -4,7 +4,7 @@
         var content = '';
         data.forEach(function (anime) {
   
-          content += '<a href="index.php?detail&id=' + anime.ID + '">';
+          content += '<a href="index.php?detail_anime&id=' + anime.ID + '">';
           content += '<div class="anime-item"><img class="ani" src="ressource/img/anime_img/' + anime.Image + '"/>';
           content += '<div class="bigblock">';
           content += '<div class="blocktittle">';

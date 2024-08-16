@@ -18,10 +18,11 @@
         }
         else if (isset($_GET['modif_anime'])){
             include_once ('controleur/modif_anime.inc.php');
-        }
-         else if (isset($_GET['detail']) && isset($_GET['id'])){
+        } else if (isset($_GET['detail_anime'])){
             include_once ('controleur/detail_anime.inc.php');
-        }    else {
+        }else if (isset($_GET['detail_film'])){
+            include_once ('controleur/detail_film.inc.php');
+        }   else {
             include_once ('controleur/home.inc.php');
         }
 
