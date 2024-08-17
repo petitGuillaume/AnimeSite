@@ -8,7 +8,8 @@
           content += '<div class="anime-item"><img class="ani" src="ressource/img/film_img/' + film.Image + '"/>';
           content += '<div class="bigblock">';
           content += '<div class="blocktittle">';
-          content += '<div class="tittle">' + film.Name + '</div>';
+          content += '<div class="tittle">' + film.Name_Fr + '</div>';
+          content += '<div class="minitittle">' + film.Name_Jp + '</div>';
           content += '</div>';
           content += '<div class="blockcolon">';
           content += '<div class="minicolon">';
@@ -119,18 +120,11 @@
         displayValOne.textContent = sliderOne.value;
         displayValTwo.textContent = sliderTwo.value;
         
-
-
-
         const sliderTrack = document.querySelector('.slider-track');
 
         sliderTrack.style.background = `linear-gradient(to right, #e76f51 100% , #e76f51 100%)`;
 
-
-
-
-        
-        filterAnime();
+        filterFilm();
       }
   
       $(document).on("click", "#reset_filters", resetFilters);

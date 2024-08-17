@@ -44,7 +44,7 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
 
 
 // Interroger la base de données pour obtenir les anime ayant ID_Source égal à l'ID donné
-$relatedSourceQuery = "SELECT image, Name_Fr, film_Type
+$relatedSourceQuery = "SELECT image, Name_Fr
                        FROM film
                        WHERE ID_Source = :filmId";
 $relatedSourceStmt = $pdo->prepare($relatedSourceQuery);

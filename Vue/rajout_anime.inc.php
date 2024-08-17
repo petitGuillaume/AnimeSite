@@ -184,8 +184,11 @@
             <form method="post" action="index.php?rajout_anime" enctype="multipart/form-data">
             <div class="firstBlock">
                     <div class="middle">
-                <label>Nom :</label>
-                <input type="text" name="name_film" required><br>
+                    <label>Nom (Japonais):</label>
+                        <input type="text" name="name_jp" required><br>
+
+                        <label>Nom (Français):</label>
+                        <input type="text" name="name_fr" required><br><br>
 
                 <label>Image:</label>
                 <input type="file" name="image" accept=".png, .jpg, .jpeg" required><br>

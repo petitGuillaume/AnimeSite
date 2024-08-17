@@ -74,7 +74,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     } elseif ($_POST['form_type'] === 'add_film') {
 
         // Nettoyez et validez les entrées utilisateur
-        $name_film = $_POST['name_film'];
+        $name_jp = $_POST['name_jp'];
+        $name_fr = $_POST['name_fr'];
         $image = $_FILES['image']['name'];    
         $synopsis = $_POST['synopsis_film'];
         $year = intval($_POST['year_film']);
@@ -87,11 +88,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $imageTempPath = $_FILES['image']['tmp_name'];
 
         // Insérez les données de l'anime dans la table "Anime" en utilisant le lien de paramètres
-        $sql = "INSERT INTO film (name, image, Synopsis, Year, ID_univers, ID_Source, ID_studio, ID_createur) 
-            VALUES (:name_film, :image, :synopsis, :year, :id_univers, :id_source, :id_studio, :id_createur)";
+        $sql = "INSERT INTO film (Name_Jp, Name_Fr, image, Synopsis, Year, ID_univers, ID_Source, ID_studio, ID_createur) 
+            VALUES (:name_jp, :name_fr, :image, :synopsis, :year, :id_univers, :id_source, :id_studio, :id_createur)";
 
         $stmt = $conn->prepare($sql);
-        $stmt->bindParam(':name_film', $name_film);
+        $stmt->bindParam(':name_jp', $name_jp);
+        $stmt->bindParam(':name_fr', $name_fr);
         $stmt->bindParam(':image', $imageFileName);
         $stmt->bindParam(':synopsis', $synopsis);
         $stmt->bindParam(':year', $year, PDO::PARAM_INT);

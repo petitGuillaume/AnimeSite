@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 13, 2024 at 05:39 PM
+-- Generation Time: Aug 17, 2024 at 03:53 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -2273,7 +2273,8 @@ CREATE TABLE `episodes` (
 
 CREATE TABLE `film` (
   `ID` int NOT NULL,
-  `Name` varchar(255) DEFAULT NULL,
+  `Name_Jp` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `Name_Fr` varchar(255) DEFAULT NULL,
   `Image` varchar(255) DEFAULT NULL,
   `Synopsis` text,
   `Year` int DEFAULT NULL,
@@ -2284,6 +2285,15 @@ CREATE TABLE `film` (
   `ID_Createur` int DEFAULT NULL,
   `ID_Source` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `film`
+--
+
+INSERT INTO `film` (`ID`, `Name_Jp`, `Name_Fr`, `Image`, `Synopsis`, `Year`, `ID_Univers`, `ID_Studio`, `ID_Anime`, `Link`, `ID_Createur`, `ID_Source`) VALUES
+(1, 'Gekijouban Aa! Megamisama', 'Ah! My Goddess : Le Film', 'Ah! My Goddess.jpg', 'Cela fait 3 ans que Belldandy est arrivée dans la vie de Keichi Morisato et qu\'ensembles ils vivent un vie à peu près tranquille, mais des événements importants sont en train de se passer. Une fée a levé les scellés de celui qui a été enfermé pour l\'éternité. Ce dernier libéré se présente à Belldandy, celle-ci le présente à Keichi comme son mentor Celestine dont elle n\'avait plus eu de nouvelles depuis plusieurs années. Mais Celestin s\'empare de Belldandy...', 2000, 18, 14, NULL, NULL, 18, 0),
+(2, 'Air', 'Air: The Movie', 'Air (film).jpg', 'Kunisaki Yukito est un jeune homme qui gagne sa vie grâce à des spectacles avec sa marionnette qu\'il contrôle sans fil. Il parcourt le monde à la recherche d\'une fille ayant des ailes lui permettant de voler, poursuivant ainsi le rêve de sa mère. Un jour il arrive dans un village et fait la rencontre de Misuzu, une jeune fille bizarre et naïve. La mère de celle-ci, une « adulte » irresponsable, accepte qu\'il loge chez elles s\'il s\'occupe de Misuzu et plus particulièrement de son réflexe : elle dit tout le temps « Gao » et cela l\'énerve. Misuzu demande à Yukito de l\'aider pour son devoir d\'été mais cet été va changer leurs vies.', 2005, 27, 1, NULL, NULL, 26, 37),
+(3, 'Waga Seishun no Arcadia', 'Albator 84 - Le film : L\'Atlantis de ma jeunesse', 'Albator 84 Film L\'arcadia de ma jeunesse.jpg', 'Les Humanoïdes ont envahi la Terre et réduit la population à l\'esclavage. Albator rencontre Alfred, un ingénieur qui a mis au point un magnifique vaisseau, l\'Atlantis. Alfred, qui veut se rebeller contre les Hunanoïdes, recherche un capitaine pour l\'Atlantis. C\'est décidé, les deux héros vont s\'unir pour combattre les Hunanoïdes épaulés par la Femme Pirate Emeraldas.', 1982, 1, 1, NULL, NULL, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -2296,6 +2306,24 @@ CREATE TABLE `film_genres` (
   `ID_Film` int DEFAULT NULL,
   `ID_Genre` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `film_genres`
+--
+
+INSERT INTO `film_genres` (`ID`, `ID_Film`, `ID_Genre`) VALUES
+(1, 1, 1),
+(2, 1, 2),
+(3, 1, 5),
+(4, 1, 7),
+(5, 1, 10),
+(6, 2, 2),
+(7, 2, 7),
+(8, 2, 10),
+(9, 3, 1),
+(10, 3, 3),
+(11, 3, 7),
+(12, 3, 16);
 
 -- --------------------------------------------------------
 
@@ -2780,13 +2808,13 @@ ALTER TABLE `episodes`
 -- AUTO_INCREMENT for table `film`
 --
 ALTER TABLE `film`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `film_genres`
 --
 ALTER TABLE `film_genres`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `genres`

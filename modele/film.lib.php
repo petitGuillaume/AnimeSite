@@ -197,13 +197,16 @@ function fetchCreator()
     $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8", $dbUser, $dbPass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Query to fetch studio data
-    $query = "SELECT c.ID, c.Name FROM createurs  c WHERE EXISTS (
-      SELECT *
-      FROM film f
-      WHERE f.ID_studio = c.ID
-      GROUP BY f.ID_studio
-  ) order by Name asc";
+    // Corrected Query to fetch creators data
+    $query = "SELECT c.ID, c.Name 
+              FROM createurs c 
+              WHERE EXISTS (
+                SELECT * 
+                FROM film f 
+                WHERE f.Id_createur = c.ID
+                GROUP BY f.Id_createur
+              ) 
+              ORDER BY c.Name ASC";
     $stmt = $pdo->query($query);
     $creators = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -253,13 +256,13 @@ function fetchUniver()
 
     // Query to fetch genre data
     $query = "SELECT u.*
-    FROM univers u
+    FROM univers u 
     WHERE EXISTS (
         SELECT 1
         FROM film f
-        WHERE f.ID_univers = u.ID
-        GROUP BY f.ID_univers
-        HAVING COUNT(*) >= 2) order by u.name asc";
+        WHERE f.ID_Univers  = u.ID
+        GROUP BY f.ID_Univers 
+        HAVING COUNT(*) >= 2) order by u.name asc" ;
     $stmt = $pdo->query($query);
     $univers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
@@ -269,5 +272,3 @@ function fetchUniver()
     return array(); // Return an empty array in case of an error
   }
 }
-
-?>
