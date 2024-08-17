@@ -46,11 +46,18 @@ WHERE 1=1";
 
     if (!empty($genres)) {
       $genreIds = implode(',', $genres);
-      $query .= " AND ID_film IN (SELECT ID_film FROM film_Genres WHERE ID_Genre IN ($genreIds))";
-    }
+      $numGenres = count($genres);
+
+  $query .= " AND ID_film IN (
+    SELECT ID_film
+    FROM film_genres
+    WHERE ID_Genre IN ($genreIds)
+    GROUP BY ID_film
+    HAVING COUNT(DISTINCT ID_Genre) = $numGenres
+  )";  }
 
     if (!empty($searchTerm)) {
-      $query .= " AND film.Name  LIKE :searchTerm  GROUP BY Film.ID, Studios.Name, univers.Name, Createurs.Name";
+      $query .= " AND (Name_Jp LIKE :searchTerm OR Name_Fr LIKE :searchTerm)  GROUP BY Film.ID, Studios.Name, univers.Name, Createurs.Name";
     }
     else{
       $query .= " GROUP BY Film.ID, Studios.Name, univers.Name, Createurs.Name";
@@ -262,7 +269,7 @@ function fetchUniver()
         FROM film f
         WHERE f.ID_Univers  = u.ID
         GROUP BY f.ID_Univers 
-        HAVING COUNT(*) >= 2) order by u.name asc" ;
+        HAVING COUNT(*) >= 1) order by u.name asc" ;
     $stmt = $pdo->query($query);
     $univers = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

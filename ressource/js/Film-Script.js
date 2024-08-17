@@ -48,7 +48,7 @@
         var searchTerm = $("#search_input").val().trim().toLowerCase();
   
         // Fetch all anime data
-        console.log("ajax");
+        console.log(searchTerm  + "là");
   
         $.ajax(
           {

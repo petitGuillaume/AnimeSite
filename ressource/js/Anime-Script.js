@@ -51,7 +51,7 @@
         var searchTerm = $("#search_input").val().trim().toLowerCase();
   
         // Fetch all anime data
-        console.log("ajax");
+        console.log(searchTerm);
   
         $.ajax(
           {
@@ -123,9 +123,6 @@
         displayValOne.textContent = sliderOne.value;
         displayValTwo.textContent = sliderTwo.value;
         
-
-
-
         const sliderTrack = document.querySelector('.slider-track');
 
         sliderTrack.style.background = `linear-gradient(to right, #e76f51 100% , #e76f51 100%)`;
@@ -152,12 +149,6 @@
       document.getElementById("backToTop").addEventListener("click", () => {
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
-
-
-
-
-
-
 
 
 
