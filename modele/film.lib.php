@@ -60,7 +60,7 @@ WHERE 1=1";
       $query .= " AND (Name_Jp LIKE :searchTerm OR Name_Fr LIKE :searchTerm)  GROUP BY Film.ID, Studios.Name, univers.Name, Createurs.Name";
     }
     else{
-      $query .= " GROUP BY Film.ID, Studios.Name, univers.Name, Createurs.Name";
+      $query .= " GROUP BY Film.ID, Studios.Name, univers.Name, Createurs.Name ORDER BY  film.Name_Fr ASC";
     }
 
     // Prepare the query
