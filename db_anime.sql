@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 20, 2024 at 07:47 PM
+-- Generation Time: Aug 21, 2024 at 03:19 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -444,7 +444,17 @@ INSERT INTO `anime` (`ID`, `Name_Jp`, `Name_Fr`, `Image`, `Synopsis`, `Year`, `N
 (388, 'Dirty Pair Flash', 'Dirty Pair Flash', 'Dirty Pair Flash.jpg', 'En 2248, Dan et Danny sont à 17 ans, deux Anges de la Galaxie, en d\'autres termes des agents spéciaux de la galaxie travaillant pour la WWWA.\r\n\r\nElles font leur métier en causant d\'énormes dommages collatéraux. Elles adoptent un petit chat, Mughi, durant leur première mission.', 1994, 0, 16, 0, 202, 383, 'Remake', 13, 181),
 (389, 'Dirty Pair Flash 2', 'Dirty Pair Flash 2', 'Dirty Pair Flash 2.jpg', 'Dans ces nouvelles aventures, Kei et Yuri continuent à enchaîner les catastrophes au nom de la WWWA.\r\nCette fois elles devront donner des conseils relationnels à un ordinateur, affronter des fantômes, ou encore se rendre sur une planète parc d\'attraction.', 1995, 0, 5, 0, 202, 388, 'Suite', 13, 181),
 (390, 'Dirty Pair Flash 3', 'Dirty Pair Flash 3', 'Dirty Pair Flash 3.jpg', 'Dans cette série d\'OAV les \"Anges de la Galaxie\" auront affaire à des assassins ainsi qu\'a une organisation criminelle, prête à tout pour stopper Yuri et Kei.\r\n\r\nCes dernières ne cherchent toutefois qu\'à retrouver le filleul de Kei, les aventures des meilleurs agents de la WWWA continuent ainsi que les nombreuses catastrophes que provoqueront nos héroïnes.', 1995, 0, 5, 0, 202, 389, 'Suite', 13, 181),
-(391, 'Anime Sanjuushi', 'Sous le Signe des Mousquetaires', 'Sous le signe des mousquetaires.jpg', 'En 1625, D\'Artagnan est un jeune homme pauvre qui habite en Gascogne, dans le sud de la France.\r\nC\'est sur un coup de tête que D\'Artagnan décide de partir à Paris où il cherche à entrer au service du Roi. Arrivé à Paris, D\'Artagnan se sent complètement perdu et désorienté, pour sûr, il ne connait pas du tout la ville... Heureusement, il rencontre plusieurs personnes qui lui viennent en aide : il y a d\'abord, Jean, un petit garçon orphelin mais débrouillard qui connaît Paris comme sa poche. Et puis il y a aussi Athos, Porthos et Aramis, les trois valeureux mousquetaires du roi qu\'il affrontera pour gagner leur confiance.\r\nC\'est ensemble qu\'ils vont vivre de multiples péripéties et aventures.', 1987, 52, 0, 1, 203, 0, 'Original', 88, 182);
+(391, 'Anime Sanjuushi', 'Sous le Signe des Mousquetaires', 'Sous le signe des mousquetaires.jpg', 'En 1625, D\'Artagnan est un jeune homme pauvre qui habite en Gascogne, dans le sud de la France.\r\nC\'est sur un coup de tête que D\'Artagnan décide de partir à Paris où il cherche à entrer au service du Roi. Arrivé à Paris, D\'Artagnan se sent complètement perdu et désorienté, pour sûr, il ne connait pas du tout la ville... Heureusement, il rencontre plusieurs personnes qui lui viennent en aide : il y a d\'abord, Jean, un petit garçon orphelin mais débrouillard qui connaît Paris comme sa poche. Et puis il y a aussi Athos, Porthos et Aramis, les trois valeureux mousquetaires du roi qu\'il affrontera pour gagner leur confiance.\r\nC\'est ensemble qu\'ils vont vivre de multiples péripéties et aventures.', 1987, 52, 0, 1, 203, 0, 'Original', 88, 182),
+(392, 'Suicide Squad ISEKAI', 'Suicide Squad ISEKAI', 'Suicide Squad ISEKAI.jpg', 'Dans la ville de Gotham rongée par le crime, Amanda Waller, cheffe de l\'A.R.G.U.S., a rassemblé un groupe de criminels notoires pour une mission : Harley Quinn, Deadshot, Peacemaker, Gueule d\'argile et King Shark. Ces super-vilains sont envoyés dans un autre monde relié au nôtre par une porte. À cause des puces explosives plantées dans leur cou, ils ne peuvent ni s\'enfuir, ni se cacher et échouer à la mission signifie un aller simple pour l\'au-delà !\r\n\r\nHarley Quinn et son équipe parviendront-ils à conquérir ce nouveau monde ?', 2024, 10, 0, 0, 205, 0, '0riginal', 73, 185),
+(393, 'Watashi no Yuri wa Oshigoto desu!', 'Yuri Is My Job!', 'Yuri is my job.jpg', 'Hime est une jeune fille gentille et mignonne qui n\'aspire qu\'à une chose : être aimée. Mais alors qu\'elle se promène un jour, elle blesse accidentellement une autre fille... Celle-ci lui suggère, pour se racheter, de venir travailler dans son café ; un établissement sur le thème du yuri, dans lequel elle va faire la rencontre de Mitsuki...', 2023, 12, 0, 0, 206, 0, 'original', 59, 186),
+(394, ' Modifier Maria-sama ga Miteru OAV', 'Maria-sama ga Miteru 3rd', 'Maria-sama ga Miteru 3rd.jpg', 'OAV1 : Sachiko propose à Yumi de venir avec elle à sa maison secondaire de campagne. C\'est l\'occasion pour Yumi d\'approfondir sa relation avec Sachiko cependant elle ferra la rencontre de quelques amies de Sachiko toutes plus jalouses les unes que les autres de son lien très fort avec cette dernière.\r\n\r\nOAV2 : Yumi essaie de faire passer à Sachiko sa phobie des hommes. Pour cela elle et ses amies du conseil déciderons de les lui faire rencontrer, face à face, sans aucun moyen de fuir, et sans qu\'elle soit au courant, les membres du conseil d\'une école pour garçon, qui sont en réalité des élèves de l\'école du frère de Yumi.\r\n\r\nOAV3 : Yumi et les autres du conseil apportent leur soutien au festival de l\'école pour garçons. C\'est aussi l\'occasion d\'introduire Kanako l\'éventuelle petit sœur de Yumi qui se rapproche de cette dernière.\r\n\r\nOAV4 : Les filles participent aux jeux sportifs de leur école. Une bonne occasion de voir la relation Yumi / Sachiko privilégiée et aussi de voir la relation compliquée entre Yumi et Kanoko.\r\n\r\nOAV5 : Les petites soeurs partent en voyage scolaire en Italie. A cette occasion nous voyons qu\'elles montrent le sentiment de manque qu\'elles ressentent sans leur onee-sama, surtout Yumi qui pense continuellement à elle.', 2006, 0, 5, 0, 126, 238, 'suite', 9, 117),
+(395, 'Kidō Senshi Victory Gundam', 'Mobile Suit Victory Gundam', 'Mobile Suit Victory Gundam.jpg', 'Victory Gundam ou V Gundam (ガンダム de 機動戦士 V, Kidō Senshi Bikutori Gandamu de costume) est un dessin animé de la série Gundam. Il se compose de 51 épisodes, et a été réalisé par le créateur de Gundam : Yoshiyuki Tomino. La série a d\'abord été diffusé sur TV Asahi (et sa station ANN) et plus tard par la chaîne de dessins animés par satellite, Animax, au Japon puis dans le monde entier.\r\n\r\nVictory Gundam se déroule l\'année UC 0153, après le conflit entre la Fédération et Crossbone Vanguard pour le F-91. Par conséquent, l\'action a lieu bien après le conflit entre la Fédération de la terre et la principauté de Zeon (que l\'on peut situer après \"Gundam : Char\'s Counterattack\").\r\n\r\nLa Fédération, considérablement affaiblie, est attaquée par les forces de BESPA de l\'empire de Zanscare. La ligue militaire AEUG se met sur leur chemin. Le V-Gundam est l\'arme secrète de cette ligue contre les envahisseurs de BESPA.', 1993, 51, 0, 0, 15, 0, 'original', 13, 118),
+(396, 'Elemental Gelade', 'Erementar Gerad', 'Erementar Gerad.jpg', 'Coud Van Giruet est un jeune pirate du ciel, membre du groupe des Red Lynx. Un jour, à l\'occasion d\'un abordage, il découvre une jeune fille scellée et enfermée dans une boîte. Curieux, il brise le sceau et la réveille.\r\nD\'abord très méfiante, elle lui avouera finalement s\'appeler Reverie Metherlance et être une Edil Raid, c\'est-à-dire un être capable de passer un contrat avec un humain et de se transformer en arme.\r\nElle ne souhaite toutefois pas conclure de pacte avec qui que ce soit, son but étant de se rendre à l\'Edil Garden, une terre sainte pour son peuple.\r\nMalheureusement, les pouvoirs de la jeune fille sont très convoités et, à l\'occasion d\'une attaque, elle choisira finalement de faire confiance à Coud et de passer un contrat avec lui. Le jeune homme l\'accompagnera donc dans son périple.', 2005, 26, 0, 0, 207, 0, 'original', 33, 187),
+(397, 'Gunnm 3D Special', 'Gunnm 3D Special', 'Gunnm 3D Special.jpg', 'Un clip vidéo de 3 minutes en 3D-CGI inclus dans le volume 6 de la réimpression du manga Gunnm : Complete Edition. Il montre Alita dans une course de motoball de la Troisième Ligue avec des joueurs de deux de ses races comme « Armor » Togo, Degchalev, et Valdicci, et décrit les événements de ces deux courses.', 2000, 0, 1, 0, 50, 0, 'original', 95, 46),
+(398, 'Azumanga Web Diaoh ', 'Azumanga Web Diaoh ', 'Azumanga Web Daioh (2000).jpg', 'Chiyo apporte une caméra vidéo à l\'école pour un sujet de classe.\r\nMais quand Tomo met la main dessus, des tas de problèmes se produisent partout dans le campus.', 2000, 0, 1, 0, 33, 0, 'original', 12, 31),
+(399, 'Azumanga Daioh : The Very Short Movie', 'Azumanga Daioh : The Very Short Movie', 'Azumanga Daioh The Very Short Movie (2001).jpg', 'Dans ce court spécial, Osaka est encore en train d\'avoir un rêve étrange où les tresses de Chiyo-chan sont possédées.', 2001, 0, 1, 0, 33, 0, 'original', 12, 31),
+(400, 'Ane Log (Flash Animation)', 'Ane Log (Flash Animation)', 'Ane log (Flash).jpg', 'Quand il était plus jeune, Akira Konoe demanda en mariage sa grande sœur Moyako. Depuis lors, Moyako pense que son frère est un pervers obsédé par sa grande sœur. Cependant, cette perversion ne se passe que dans son imagination ce qui l\'amène à imaginer toutes sortes de situations perverses avec son frère !', 2014, 0, 6, 0, 29, 0, 'original', 21, 28),
+(401, 'Air In Summer', 'Air In Summer', 'Air in summer.jpg', 'Air In Summer développe les personnages apparut dans les épisodes 9 et 10 de Air TV, mettant en scène des personnages de l\'ère féodal. Kannabi-No-Mikoto, ou tout simplement Kanna, est une jeune fille se révélant être un être ailé. Avec l\'aide d\'une de ses servantes, Uraha, et de Ryuuya un samourai en charge de sa protection, elle se lance dans un voyage afin de rencontrer sa mère qui est la dernière être ailée avec elle... Dans ces deux épisodes, nous verrons les relations entre ce trio de personnages être développés d\'une façon drôle et émouvante.', 2005, 0, 2, 0, 27, 37, 'parallèle', 19, 26);
 
 -- --------------------------------------------------------
 
@@ -2036,7 +2046,37 @@ INSERT INTO `anime_genres` (`ID`, `ID_Anime`, `ID_Genre`) VALUES
 (1575, 390, 16),
 (1576, 391, 2),
 (1577, 391, 3),
-(1578, 391, 11);
+(1578, 391, 11),
+(1579, 392, 1),
+(1580, 392, 3),
+(1581, 392, 10),
+(1582, 393, 2),
+(1583, 393, 5),
+(1584, 393, 19),
+(1585, 394, 2),
+(1586, 394, 7),
+(1587, 394, 19),
+(1588, 395, 1),
+(1589, 395, 7),
+(1590, 395, 14),
+(1591, 395, 16),
+(1592, 396, 2),
+(1593, 396, 3),
+(1594, 396, 5),
+(1595, 396, 10),
+(1596, 397, 1),
+(1597, 397, 16),
+(1598, 398, 5),
+(1599, 398, 18),
+(1600, 399, 5),
+(1601, 399, 18),
+(1602, 400, 5),
+(1603, 400, 8),
+(1604, 400, 18),
+(1605, 401, 2),
+(1606, 401, 5),
+(1607, 401, 7),
+(1608, 401, 10);
 
 -- --------------------------------------------------------
 
@@ -2250,7 +2290,10 @@ INSERT INTO `createurs` (`ID`, `Name`) VALUES
 (181, 'Haruka Takachiho'),
 (182, 'Alexandre Dumas'),
 (183, 'Mamoru Oshii'),
-(184, 'Hideki Kakinuma');
+(184, 'Hideki Kakinuma'),
+(185, 'DC Comics'),
+(186, 'Miman'),
+(187, 'Mayumi Azuma ');
 
 -- --------------------------------------------------------
 
@@ -2399,7 +2442,58 @@ INSERT INTO `film` (`ID`, `Name_Jp`, `Name_Fr`, `Image`, `Synopsis`, `Year`, `ID
 (103, 'Naruto The Movie 3 : Mikazuki Shima no Animal Panic Dattebayo', 'Naruto Film 3 : Mission Spéciale au Pays de la Lune', 'Naruto Film 3 - Mission Spéciale au Pays de la Lune.jpg', 'Naruto, Kakashi, Sakura et Lee sont envoyés en mission pour escorter un prince durant son voyage à travers le monde pour ensuite le ramener chez lui, au Pays de la Lune. Etant un pays très riche, le prince n\'hésite pas à acheter tout ce qu\'il voit, et lors de son voyage il tombera sur un cirque qui possède un tigre à dents de sabre très rare et le prince veut le posséder à tout prix. Le prince achète alors le zoo entier. La mission de la Team 7 et Lee qui était de simplement protéger le prince se transforme en une mission pour protéger ET le prince qui n\'écoute personne ET les animaux qu\'il vient d\'acheter. Mais ils parviennent malgré cela à rentrer au pays de la Lune, indemnes. Mais cependant, trois ninjas aux techniques terrifiantes les attends.', 2006, 93, 20, NULL, NULL, 87, 0),
 (104, 'Naruto Shippuden Movie 7 : The Last', 'Naruto Shippuden film 7 : The Last', 'Naruto the last.jpg', 'La lune est proche de la collision !\r\nÀ ce rythme, vu sa trajectoire, elle va tomber sur la terre en devenant une météorite !\r\nLe compte à rebours vers l\'apocalypse commence !\r\nComment Naruto va-t-il empêcher cette catastrophe ?!\r\n\r\nAlors que la lune se rapproche dangereusement de la terre, Konoha doit faire face à un autre problème : Hanabi, la petite sœur d\'Hinata, se fait kidnapper par « un homme mystérieux et à l\'identité inconnue ».\r\nNaruto, Sakura, Sai, Shikamaru et Hinata vont partir en mission de sauvetage afin de ramener Hanabi au village', 2014, 93, 20, NULL, NULL, 87, 0),
 (105, 'Mahou Sensei Negima! Anime Final', 'Negima Le Maître Magicien Final', 'Negima Film Anime Final.jpg', 'Après être revenus du monde magique, ils sont de retour en classe... Malheureusement, c\'est bientôt la fin d\'année et la remise des diplômes est pour demain.\r\nDe plus Negi va devoir prendre une partenaire pour devenir Magi magister... Les 29 autres élèves qui ne seront pas choisis auront la mémoire effacée au sujet de l\'existence de la magie et du monde magique. Toutes veulent alors s\'emparer du cœur de Negi !\r\nMais dès le soir venu, un danger apparaît...', 2011, 66, 42, NULL, NULL, 58, 0),
-(106, ' Gekijouban Non Non Biyori', 'Non Non Biyori : Vacation', 'Non Non Biyori Vacation.jpg', 'Les vacances d\'été sont bientôt terminées. Après une journée au centre commercial, Suguru gagne un voyage gratuit pour quatre personnes à la tombola. Les cinq élèves de l\'école d\'Asahigaoka, accompagnés de Hikage, Konomi, Kaede et leur professeur Kazuho, partent pour trois jours direction Okinawa.\r\nArrivés sur place, Natsumi se lie d\'amitié avec Aoi, une fille de son âge qui travaille à l\'hôtel où ils séjournent.', 2018, 130, 47, NULL, NULL, 121, 0);
+(106, ' Gekijouban Non Non Biyori', 'Non Non Biyori : Vacation', 'Non Non Biyori Vacation.jpg', 'Les vacances d\'été sont bientôt terminées. Après une journée au centre commercial, Suguru gagne un voyage gratuit pour quatre personnes à la tombola. Les cinq élèves de l\'école d\'Asahigaoka, accompagnés de Hikage, Konomi, Kaede et leur professeur Kazuho, partent pour trois jours direction Okinawa.\r\nArrivés sur place, Natsumi se lie d\'amitié avec Aoi, une fille de son âge qui travaille à l\'hôtel où ils séjournent.', 2018, 130, 47, NULL, NULL, 121, 0),
+(107, 'City Hunter : Ai to Shukumei no Magnum', 'City Hunter : Amour, Destin et Magnum 357', 'Nicky Larson Film 01 Amour Destin et un Magnum 357.jpg', 'M. Kilhiman détient des informations qu\'il avait l\'intention de vendre à la police japonaise, mais il se fait abattre d\'une balle dans la tête par un tueur nommé Helsen, dès son arrivée à l\'aéroport.\r\n\r\nParallèlement à cela, Nina Stenberg, une pianiste de talent, arrive au Japon pour un concert de charité. Elle en profite pour demander de l\'aide à Ryô et Umibôzu afin de retrouver son père qu\'elle n\'a jamais connu.\r\n\r\nMais les deux affaires semblent étroitement liées et le face à face Ryo/Helsen semble inévitable...', 1989, 19, 13, NULL, NULL, 6, 121),
+(108, 'City Hunter : Bay City Wars', 'City Hunter Film 2 : Bay City Wars', 'Nicky Larson film 02 Bay City Wars.jpg', 'Alors que Miki et Kaori assistent à la réception organisée à l\'occasion de l\'inauguration de l\'hôtel ultra moderne Bay City, celle-ci est interrompue par l\'attaque d\'un groupe armé qui prend rapidement le contrôle du bâtiment et de la salle de contrôle du super ordinateur qui commande tout l\'hôtel. Pendant ce temps, Ryo cherche désespérément son invitation mais ne la trouve pas. C\'est alors qu\'il tombe sur une jeune femme qui est poursuivie par Falcon, mais pendant que ces deux idiots se battent, elle est enlevée. Ils prennent alors en chasse la voiture qui les mène au Bay City. Constatant la situation, Ryo et Falcon décident de prendre d\'assaut le bâtiment...', 1990, 19, 13, NULL, NULL, 6, 121),
+(109, 'City Hunter : Shinjuku Private Eyes', 'City Hunter Film 3 : Private Eyes', 'Nicky Larson film 03 private eyes.jpg', 'Un homme est victime d\'un accident de la route, son téléphone est récupéré par un inconnu. Plus tard, Ryô Saeba, est contacté par Ai Shindô, une jeune mannequin prise pour cible par de mystérieux mercenaires et qui pourrait bien être la clé d\'une conspiration menaçant toute la ville.\r\n\r\nRyô et Kaori vont devoir protéger leur cliente et sauver Tokyo avec l\'aide de leurs amis.', 2019, 19, 13, NULL, NULL, 6, 121),
+(110, 'City Hunter Movie: Tenshi no Namida', 'City Hunter Film 4 : Angel Dust', 'Nicky Larson film 04 Angel Dust.jpg', 'Nicky Larson est City Hunter, un détective privé opérant à Tokyo avec son énergique partenaire Laura. Un jour, une inconnue prénommée Angie fait appel à eux pour une demande étrangement simple : retrouver son chat ! Ils acceptent la mission, Laura pour la généreuse récompense et Nicky pour les charmes d’Angie. En parallèle, Hélène, lieutenante de la police de Tokyo, enquête sur l\'Angel Dust, une technologie mystérieuse qui transforme les soldats en surhommes mais attention, le trio des Cat\'s Eye est aussi sur le coup ! Quel est le lien entre ces deux affaires ? Nicky Larson va se retrouver au cœur d’une bataille épique, qui l\'amènera sur les traces de son propre passé.', 2023, 19, 13, NULL, NULL, 6, 121),
+(111, 'Kidou Keisatsu Patlabor The Movie', 'Patlabor - Film 1 ', 'Patlabor film 01.jpg', 'Afin de lutter contre le crime, la police de Tokyo utilise des robots avancés : les Labors, qui sont aussi utilisés à d\'autres fins. Mais le suicide d\'un inconnu sur le gigantesque chantier de construction du projet Babylon déclenche une série d\'évènements touchant toute la capitale.\r\n\r\nDeux officiers de la division mobile de la police, Noah Izumi et Azuma Shinohara, enquêtent en parallèle sur un récent problème de dysfonctionnement sur les Labors causant d\'importants dégâts matériels dans la ville. Mais le plus inquiétant reste la découverte d\'un virus, nommé Babel, ayant pour but de prendre le contrôle des milliers de Labors en fonctionnement.', 1989, 194, 9, NULL, NULL, 176, 0),
+(112, 'Kidou Keisatsu Patlabor 2 the Movie', 'Patlabor 2 - Le Film', 'Patlabor film 02.jpg', 'En l\'an 2002, devant la prolifération des robots Labor, une escouade Patlabor est créée afin d\'empêcher l\'utilisation de cette technologie par des criminels. La destruction, en Asie du Sud-Est, d\'une équipe de Labor, est la déclaration d\'une guerre terroriste mondiale.\r\nDésormais, l\'escouade Patlabor doit protéger la ville, sous les ordres d\'un responsable ambigu, qui n\'est autre que Nagumo..', 1993, 194, 6, NULL, NULL, 176, 0),
+(113, 'Wasted 13 : Kidou Keisatsu Patlabor', 'Patlabor 3 - Le Film WXIII', 'Patlabor film 03.jpg', 'La baie de Tokyo est le théâtre de tragiques événements. Plusieurs accidents s\'y produisent et l\'origine du phénomène qui les cause demeure encore un mystère. Les agents Kusumi et Hata, chargés d\'élucider cette sombre affaire, s\'aperçoivent que les diverses victimes sont à la fois les hommes et les Labor, ces gigantesques robots mis au point par les entreprises de construction japonaises à la fin du siècle et qui permettent d\'effectuer de cyclopéens travaux d\'aménagement.', 2001, 194, 3, NULL, NULL, 176, 0),
+(114, 'Mahou Shoujo Madoka★Magica the Movie Part I : Hajimari no Monogatari', 'Puella Magi Madoka★Magica the Movie Part I : The Beginning Story', 'Puella Magi Madoka Magica-Film 1 Au commencement.jpg', 'Madoka Kaname est une jeune fille qui vit avec ses amies Sayaka Miki et Hitomi Shizuki dans la ville de Mitakihara.\r\n\r\nLors d\'une journée banale au centre commerciale, elle sauvera un petit animal des griffes de sa camarade de classe fraîchement transférée : Homura Akemi. Cet acte anodin va bouleverser son quotidien. En effet, l\'animal se nommant Kyuubey, a la capacité d\'exaucer les voeux des jeunes filles. En échange, celles-ci sont sollicités pour combattre des sorcières dans des dimensions extra-terrestres, combats qui sont non sans risques. Ces jeune filles deviennent alors des Puella Magi.', 2012, 73, 42, NULL, NULL, 68, 133),
+(115, 'Mahou Shoujo Madoka★Magica the Movie Part II : Eien no Monogatari', 'Puella Magi Madoka★Magica the Movie Part II : The Eternal Story', 'Puella Magi Madoka Magica-Film 2 Une histoire infinie.jpg', 'Homura Akemi sauve de justesse Madoka Kaname, Kyôko Sakura et Sayaka Miki des mains d\'une puissante sorcière. Les jeunes filles découvrent alors que Sayaka est désormais une sorcière, et qu\'il est impossible de la sauver.\r\nKyôko décide d\'aller la combattre pour tenter de la faire revenir à la raison.\r\nDe son côté, Homura prépare son plan qui consiste à combattre la nuit des Walpurgis, une très puissante sorcière et à protéger coûte que coûte Madoka de son destin.', 2012, 73, 42, NULL, NULL, 68, 133),
+(116, 'Mahou Shoujo Madoka★Magica the Movie Part III : Hangyaku no Monogatari', 'Puella Magi Madoka Magica the Movie Part III : The Rebellion Story', 'Puella Magi Madoka Magica-Film 3 Rebellion.jpg', 'Homura Akemi est la seule personne à se souvenir encore de Madoka après le sacrifice de cette dernière.\r\nElle a échoué dans la mission qu\'elle s\'était imposée mais n\'a pas abandonné l\'espoir de revoir son amie. Pour survivre, elle continue donc le combat.', 2013, 73, 42, NULL, NULL, 68, 133),
+(117, 'Ranma ½ : Chuugoku Nekonron Daikessen! Okite Yaburi no Gekitou Hen!!', 'Ranma 1/2 - Film 1 : La Grande Bataille De Chine', 'Ranma ½ Film 01 La Grande Bataille De Chine.jpg', 'Une jeune fille, accompagnée d\'un drôle d\'éléphant, recherche activement Happosai. Cette dernière possède un étrange parchemin, qui tombe entre les mains d\'Akane. Dès lors, la fiancée de Ranma est condamnée à devenir l\'épouse d\'un mystérieux prince !\r\n\r\nAccompagné de Ryôga, Mousse, Shampoo, et bien d\'autres personnages tout aussi haut en couleur, Ranma se jette à la poursuite du dirigeable où Akane est détenue prisonnière.\r\n\r\nParviendront-ils à annuler ce mariage forcé ?', 1991, 17, 9, NULL, NULL, 17, 21),
+(118, 'Ranma ½ : Kessen Tougenkyou! Hanayomewo Torimodose!', 'Ranma 1/2 : Film 2 - Rendez-nous nos copines ', 'Ranma ½ Film 02 Rendez-nous Nos Copines.jpg', 'Kuno a la merveilleuse idée d\'inviter Akane sur son yacht, évidemment les autres parasites n\'hésitent pas à s\'incruster et tous se retrouvent à la plage ! Mais bien rapidement des choses étranges se déroulent, en effet les filles disparaissent sans laisser la moindre trace... Ranma décide de prendre les choses en main en se changeant en fille afin d\'attirer le voleur...\r\n\r\nMais ou sont passées les filles ?', 1992, 17, 9, NULL, NULL, 17, 21),
+(119, 'Ranma ½ : Chou Musabetsu Kessen! Ranma Team vs Densetsu no Houou', 'Ranma 1/2 - Film 3 : Le Phenix Légendaire', 'Ranma ½ Film 03 Le phénix légendaire.jpg', 'Kuno (Julian) trouve dans une brocante un drôle d\'oiseau qui s\'est logé sur sa tête. Il s\'agit en fait d\'un phénix lui conférant de grands pouvoirs. Ce poussin prend pour ennemi la 1ère personne qu\'il voit. cette dernière se trouvant être bien entendu Ranma (aussi bien en fille qu\'en garçon), le poussin ne lui laisse aucun répit, tout en trainant Kuno sous lui ! La solution pour qu\'il s\'en aille de la tête de Kuno ? Le nourrir afin qu\'il grandisse et puisse prendre son envol. Mais l\'animal grossit de plus en plus sans pour autant s\'envoler...', 1994, 17, 9, NULL, NULL, 17, 21),
+(120, 'Rurouni Kenshin : Meiji Kenkaku Romantan - Ishin Shishi e no Requiem', 'Kenshin le vagabond - Requiem pour les Ishin Shishi', 'Rurouni Kenshin Ishin Shishi no Requiem.jpg', 'Kenshin et ses amis rencontrent un groupe de personnes décidées à renverser le gouvernement actuel par la force. Kenshin et ses amis se promènent dans Yokohama et assistent à une confrontation entre des marchants saouls et une jeune femme. Un homme s\'interpose alors pour défendre la jeune femme. Le samuraï s\'appel Takimi Shigure et se lie d\'amitié avec Kenshin. Mais Takimi et sa bande ont juré de se venger du gouvernement. Kenshin se dresse alors devant lui pour l\'empêcher de commettre d\'autres meurtres. Lorsque Takimi apprend la véritable identité de Kenshin, son combat devient personnel et Kenshin n\'aura pas le choix...', 1997, 55, 88, NULL, NULL, 52, 0),
+(121, 'Gekijouban Bishoujo Senshi Sailor Moon Eternal', 'Sailor Moon Eternal film 1', 'Sailor Moon Eternal 01.jpg', 'Alors qu\'Usagi et son groupe viennent tout juste de venir à bout d\'un puissant ennemi, un mystérieux cirque s\'installe en ville.\r\nPeu après, les Sailor se trouvent confrontées à de nouveaux ennemis s\'attaquant aux rêves des gens.', 2021, 77, 1, NULL, NULL, 72, 0),
+(122, ' Modifier Gekijouban Bishoujo Senshi Sailor Moon Eternal 2', 'Sailor Moon Eternal film 2', 'Sailor Moon Eternal 02.jpg', '\r\nAlors qu\'Usagi et son groupe viennent tout juste de venir à bout d\'un puissant ennemi, un mystérieux cirque s\'installe en ville.\r\nPeu après, les Sailor se trouvent confrontées à de nouveaux ennemis s\'attaquant aux rêves des gens.', 2021, 77, 1, NULL, NULL, 72, 0),
+(123, 'Gekijouban Bishoujo Sailor Moon R', 'Sailor Moon R, le film: La Fleur Maléfique', 'Sailor Moon R Le Film.jpg', 'Quand il était petit, Mamoru avait rencontré Fiore, un étrange garçon devenu un ami très proche. Celui-ci fut forcé de partir, mais lui fit la promesse de revenir avec des fleurs.\r\nAyant grandi, Mamoru retrouve Fioré qui est devenu fort étrange...', 1993, 77, 1, NULL, NULL, 72, 144),
+(124, 'Sailor Moon SuperS Movie : Black Dream Hole', 'Sailor Moon SuperS Movie : Black Dream Hole', 'Sailor Moon Super S.jpg', 'Tous les enfants, où qu\'ils soient dans le monde, dorment la nuit ignorant le danger qui se cache dans les ténèbres.\r\n\r\nMais un soir, un homme étrange apparait et joue une mélodie magnifique grâce à sa flute. Les enfants sont peu à peu attirés par celle-ci et disparaissent.\r\n\r\nC\'est en fait la reine, Badiyanu, et ses serviteurs qui ont besoin des rêves des enfants pour accroitre la puissance du \"Black Dream Hole\" et, ensuite, pour détruire la Terre.\r\n\r\nSailor Moon et les Sailor Soldiers vont-elles mettre fin à ce danger imminent ? C\'est la grande question...', 1995, 77, 1, NULL, NULL, 72, 146),
+(125, 'Sailor Moon S : Hearts in Ice', 'Sailor Moon S : Hearts in Ice', 'Sailor Moon S Le Film.jpg', 'Ce deuxième film est très axé sur Luna, la petite chatte noir de Usagi.\r\n\r\nOn y retrouve nos guerrières a la période de Noël, combattant une envahisseuse appelée la \"Reine des glaces\".\r\n\r\nA la suite de ce combat, Luna voit son vœu de devenir humaine se réaliser.', 1994, 77, 1, NULL, NULL, 72, 145),
+(126, 'Saint Seiya : Jashin Eris', 'Saint Seiya Film 1 : Eris et la légende de la pomme d\'or', 'Saint seiya  01 Éris - La Légende de la pomme d\'or.jpg', 'Les chevaliers de Bronze à l\'orphelinat mènent un après-midi tranquille.\r\nUne étoile filante tombant du ciel avec une pomme d\'or tentera Erii, cette dernière sera l\'instrument d\'Eris la déesse de la discorde et de ses Ghost Five mais Athéna et ses chevaliers se dresseront contre eux pour l\'avenir de l\'Humanité.', 1987, 20, 1, NULL, NULL, 19, 28),
+(127, 'Saint Seiya : Kamigami no Atsuki Tatakai', 'Saint Seiya Film 2 : La bataille des Dieux', 'Saint Seiya 2 La Guerre des Dieux.jpg', 'Sibérie Orientale, un homme est pourchassé par des soldats d\'Asgard quand Hyôga le sauve. Le vieil homme le prévient du danger que court son royaume et Hyoga se rends au Royaume d\'Asgard pour voir ce qui se passe mais il disparaît sans laisser de traces.\r\nC\'est ainsi que Saori accompagnée de Seiya, Shiryu et Shun se rendent à Asgard pour savoir ce qui est advenu de Hyôga mais aucune réponse. Saori sera victime d\'un piège de Dorbal, l\'ardente bataille des dieux a commencé entre les Dieu Guerriers d\'Asgard et les Chevaliers de Bronze du Sanctuaire.', 1988, 20, 1, NULL, NULL, 19, 28),
+(128, 'Saint Seiya : Shinku no Shounen Densetsu', 'Saint Seiya Film 3 : Les guerriers d\'Abel', 'Saint Seiya 3.jpg', 'En une matinée ensoleillée, Saori dans son jardin reçoit la visite d\'un homme : Abel. Abel est le frère aîné d\'Athéna et est symbolisé par le soleil.\r\nLors d\'une discussion entre frère-soeur, Seiya et Cie se rendent chez Saori et découvrent la présence d\'Abel et de ses Corona Saints ainsi que les Gold Saints morts lors de la bataille des douze maisons.\r\nSaori décide de partir avec son frère et laisse ses bronzes en retrait. Seiya pas d\'accord avec cette décision recevra une déroute d\'Atlas de la Carène.\r\nLes bronzes décideront plus tard de sen rendre à Dignity Hill ou se trouve le temple de Corona mais leurs ennemis ont prévu cette visite.', 1988, 20, 1, NULL, NULL, 19, 28),
+(129, 'Saint Seiya : Saishuu Seisen no Senshi-tachi', 'Saint Seiya Film 4 : Le temple de Lucifer', 'Saint seiya 4 Le Temple de Lucifer.jpg', 'Après le combat contre Poséidon, nos chevaliers se reposent tranquillement chez eux mais le repos est de courte durée puisque le sanctuaire est attaqué par des esprits qui terrassent les chevaliers d\'or d\'un seul coup.\r\nLe responsable de ce massacre est Lucifer qui va défier Athéna en lui soumettant au sacrifice sinon celui-ci déchaînera la colère d\'Eris, d\'Abel et de Poséidon sur la Terre.\r\nLes Bronze devront alors lutter contre les guerriers de Lucifer pour la paix de l\'humanité.', 1989, 20, 1, NULL, NULL, 19, 28),
+(130, 'Saint Seiya LEGEND of SANCTUARY', 'Les Chevaliers du Zodiaque - La Légende du Sanctuaire', 'Saint seiya 6 La légende du sanctuaire.jpg', '\r\n\r\nAu commencement, il y avait une Déesse chargée de protéger la Terre, Athéna. Gardienne de l\'équilibre, elle fut cachée des Forces du Mal.Quand sa vie est menacée, Seiya et les Chevaliers de Bronze endossent leurs armures. Ce sont les Protecteurs d\'Athéna, les Chevaliers du Zodiaque. Pour sauver leur Déesse et l’avenir de la Terre, ils vont devoir atteindre le Sanctuaire du Grand Pope et y affronter sa légendaire armée des 12 Chevaliers d\'Or. La plus grande bataille des Chevaliers du Zodiaque débute aujourd\'hui.\r\n', 2014, 20, 1, NULL, NULL, 19, 0),
+(131, 'Saint Seiya Tenkai-hen Jousou ~Overture~', 'Saint Seiya : Le Chapitre Céleste - Ouverture', 'Saint seiya 5 Chapitre du Monde Céleste - Ouverture.jpg', 'Après le combat contre les spectres d\'Hadès, Seiya est plus mort que vif et Saori veille sur lui.\r\n\r\nCependant des visiteurs venus d\'ailleurs viennent tuer Seiya car ce dernier avec l\'aide des chevaliers de Bronze ont défié les Dieux. Saori ne voulant pas impliquer Seiya et les autres chevaliers remet son Sanctuaire à Artémis et est prête à recevoir la punition.\r\n\r\nSeiya sentant le danger décide de partir à la recherche de Saori malgré son sale état et trouve Marine qui lui demande de se rendre au Sanctuaire. Il y retrouve Shaina, Jabu et Ichi qui sont aux ordres d\'Artémis et il livre une lutte contre ses anciens camarades mais son cosmos est trop faible.\r\n\r\nIl retrouve son armure et décide de partir à la lutte mais les autres aussi vont se battre. Shun et Ikki affronteront Theseus, Shiryu et Hyoga seront confrontés à Odysseus et Seiya affrontera Tôma d\'Icare.', 2004, 20, 1, NULL, NULL, 19, 0),
+(132, 'Card Captor Sakura The Movie', 'Sakura, chasseuse de cartes Film 1 - Le voyage à Hong-Kong', 'Sakura film 1.jpg', 'Quelle joie pour Sakura ! Elle a gagné le 1e prix à une loterie : un voyage à Hong Kong pour 4 personnes ! Accompagnée de Kero (Keroberos), Tiffany (Tomoyo Daidoji), Thomas (Tôya Kinomoto) et Matthieu (Yukito Tsukishiro), notre chasseuse s\'envole vers la grande ville chinoise où elle rencontre Lionel (Shaolan Li) et sa cousine Stéphanie (Meiling Li). Durant sa visite dans le pays, elle a de sombres visions plutôt douteuses : est-ce vraiment par hasard qu\'elle a été conduite dans cette ville où a jadis vécu le maître des cartes Clow Reed ?', 1999, 137, 3, NULL, NULL, 21, 262),
+(133, 'Card Captor Sakura Movie 2 : Fuuin Sareta Card', 'Sakura, chasseuse de cartes Film 2 - La Carte Scellée', 'Sakura Film 2.jpg', 'C\'est l\'été et Sakura prépare un spectacle avec ses amis d\'école pour la grande fête de Nadeshiko. Notre Sakura doit jouer une pièce de théâtre et bien sûr, elle tient le premier rôle. Son ami Shaolan (Lionel) est justement de retour pour cette grande fête et Sakura prend la décision d\'essayer de lui avouer ses sentiments, ce qui ne sera pas facile puisque, dans le même temps, toutes les cartes de Sakura disparaissent...', 2000, 137, 3, NULL, NULL, 21, 262),
+(134, 'Slayers : The Motion Picture', 'Slayers Film 1 Perfect', 'slayers Film 1 perfect.jpg', 'Toujours en quête d\'aventure, de richesses et de gourmandises à se mettre sous la dent, Lina Inverse et sa comparse Naga le Serpent décident de se rendre sur l\'île Mipross afin de profiter des vertus de ses sources chaudes si réputées.\r\n\r\nCes vacances ne s\'annoncent pas si mal mais c\'est sans compter le vieux sage qui harcèle Lina dans ses rêves et un certain démon nommé Joyrock qui ne semble pas étranger aux soucis qu\'elles rencontrent lors de leur séjour.', 1995, 82, 12, NULL, NULL, 76, 0),
+(135, 'Slayers Return', 'Slayers Film 2 : Return', 'Slayers Film 2 Return.jpg', 'Le second film de Slayers, toujours avec Lina et Naga. Les villageois du village de Biaz sont forcés d\'aider l\'organisation Zein à dominer le monde. Aussi, ils supplient les deux magiciennes d\'arrêter cette organisation. Elles acceptent de suite, car les rumeurs sur le trésor d\'Elfin disent qu\'il se trouve enterré sous le village de Biaz.', 1996, 82, 12, NULL, NULL, 76, 0),
+(136, 'Slayers Great', 'Slayers Film 3 : Great', 'Slayers Film 3 Great.jpg', 'Rya Einburg voudrait Galia pour elle toute seule. En effet, Galia est un créateur de golems, comme son frère Huey. Mais le jour où Lina et Naga la sauvèrent d\'un golem, tout se changea pour elle... en problèmes.', 1997, 82, 12, NULL, NULL, 76, 0),
+(137, 'Slayers Gorgeous', 'Slayers Film 4 : Gorgeous', 'Slayers Film 4 Gorgeous.jpg', 'Le quatrième film de Slayers, avec Lina et Naga. Les deux magiciennes arrivent dans un pays envahi par des dragons. En effet le père et la fille se combattent pour savoir qui contrôlera le royaume, avec leurs dragons. Mais Lina et Naga deviennent ennemies ! Lina veut sauver le royaume, avec le père. Naga veut le remettre aux mains de la fille. Un conflit encore pus grand à lieu alors...', 1998, 82, 12, NULL, NULL, 76, 0),
+(138, 'Slayers Premium', 'Slayers Film 5 Premium', 'Slayers Film 5 premium.jpg', ' Dans ce film, Lina Inverse et Gourry Gabriev voyagent vers la ville d\'Acassi, connue pour sa délicieuse viande de pieuvre. Cependant, la viande de pieuvre est maudite. La personne qui en mange ne parlera plus qu\'uniquement le langage des pieuvres. Les sorciers et les sorcières maudites également touchés par ce sort ne peuvent pas remédier à cette situation.', 2001, 82, 97, NULL, NULL, 76, 0),
+(139, 'Saraba Uchuu Senkan Yamato : Ai no Senshi-tachi', 'Farewell Space Battleship Yamato - Soldiers of Love', 'Space Battleship Yamato Film 02.jpg', 'Après avoir battu Desler, l\'équipage du Yamato se sépare. La Terre est en train de se reconstruire, jusqu\'à ce que Shima et Sanada interceptent une transmission d\'une femme nommée Thérésa à propos d\'une comète blanche qui détruit tout sur son passage. Appliquant une mutinerie, le Yamato lance depuis la Terre une attaque envers un ennemi, contre qui même le Wave Motion Gun est inutile.', 1978, 198, 1, NULL, NULL, 1, 372),
+(140, 'Uchuu Senkan Yamato', 'Space Battleship Yamato', 'Space Battleship Yamato Film 01.jpg', 'En l\'an 2199, la race Gamilon déclare la guerre aux humains, avec l\'intention de s\'emparer de la Terre. Les combattants sur Terre font tout ce qui est en leur pouvoir pour maintenir la stabilité de la planète, mais la technologie extraterrestre s\'avère bien trop avancée et les destructions qui en résultent rendent la surface de la planète Terre totalement inhabitable. Les abris souterrains s\'affaiblissent également et, si rien ne change, les humains disparaîtront dans moins d\'un an.\r\n\r\nMais alors que tout semble perdu, la reine Starsha de la planète Iscandar offre une main secourable. La clé de la victoire réside dans le Cosmo-Cleaner D, qui peut éliminer les radiations dont souffre la Terre. Cependant, le seul moyen de mettre la main sur cet appareil salvateur est que quelqu\'un de la Terre se rende sur Iscandar - à 148 000 années-lumière de distance - pour le récupérer. Le problème, c\'est qu\'il reste moins d\'un an avant que le temps ne soit écoulé.\r\n\r\nLe destin de l\'humanité entière repose entre les mains de l\'équipage d\'un vaisseau récupéré lors de la Seconde Guerre mondiale, le cuirassé spatial Yamato. ', 1977, 198, 45, NULL, NULL, 1, 372),
+(141, 'Uchuu Senkan Yamato : Aratanaru Tabidachi', 'Space Battleship Yamato: The New Voyage', 'Space Battleship Yamato Film 03 The New Voyage.jpg', 'Après la bataille contre l\'Empire de la Comète Blanche, le Yamato revient sur Terre pour des réparations et recrute de nouveaux membres d\'équipage. Desler revient sur sa planète natale pour rendre un dernier hommage, mais trouve la flotte de l\'Empire de la Nébuleuse Noire qui dépouille la planète pour le minerai. L\'Empire de la Nébuleuse Noire cible également Iscandar, et Desler suscite l\'aide de Kodai et de l\'équipe du Yamato pour sauver la reine Starscha.', 1979, 198, 45, NULL, NULL, 1, 373),
+(142, 'Yamato yo Towa ni', 'Space Battleship Yamato Forever!', 'Space Battleship Yamato Film 04.jpg', 'L\'Empire de la Nébuleuse Noire attaque la Terre et menace de la faire exploser avec une bombe qu\'ils y ont placée, si elle cherchait à contre-attaquer.\r\n\r\nLe dernier espoir de la Terre est placé sur l\'équipage du Yamato qui se rend sur la planète de la Nébuleuse Noire, essayant de trouver un moyen de neutraliser la bombe avant qu\'il ne soit trop tard.', 1980, 198, 45, NULL, NULL, 1, 373);
+INSERT INTO `film` (`ID`, `Name_Jp`, `Name_Fr`, `Image`, `Synopsis`, `Year`, `ID_Univers`, `ID_Studio`, `ID_Anime`, `Link`, `ID_Createur`, `ID_Source`) VALUES
+(143, 'Uchuu Senkan Yamato - Kanketsuhen', 'Space Battleship Yamato - Final Chapter', 'Space Battleship Yamato Film 05 Final Chapter.jpg', 'L\'arrivée d\'Aquarius, une planète aquatique qui inondera la Terre, menace l\'humanité. Le Yamato doit parvenir à stopper cette avancée qui a été organisée par les Dinguil, une autre race qui a perdu sa planète d\'habitat à cause d\'Aquarius.', 1983, 198, 45, NULL, NULL, 1, 374),
+(144, 'Uchuu Senkan Yamato Fukkatsu-hen', 'Space Battleship Yamato: Rebirth Chapter', 'Space Battleship Yamato Film 06.jpg', 'En l\'an 2220 après J.-C., la Fédération de la Terre lance un plan d\'évacuation de la Terre en découvrant qu\'un trou noir ambulant capable de détruire tout ce qui se trouve sur son chemin est en route vers le système solaire. Alors que les habitants de la Terre se préparent à s\'installer sur la planète Amare, dont le dirigeant offre refuge, les tyrans connus sous le nom d \'«Empire S.U.S.» attaquent la première flotte d\'évacuation de la Terre. Après avoir appris que son épouse, le capitaine Yuki Mori-Kodai, a disparu dans la bataille et que le légendaire vaisseau spatial Yamato a été entièrement reconstruit, Susumu Kodai accepte le commandement du navire car il compte non seulement aider l\'humanité une fois de plus, mais aussi retrouver Yuki et espère améliorer la relation avec sa fille Miyuki, qui le blâme de la disparition de sa mère. Mais pour remplir la mission, le Yamato doit mener des batailles contre l\'Empire S.U.S, qui a l\'intention de gâcher les espoirs de l\'humanité de trouver un nouvel endroit pour vivre et transformer la Terre en énergie pour leurs propres besoins égoïstes.', 2009, 198, 45, NULL, NULL, 1, 0),
+(145, 'Uchuu Senkan Yamato 2199 : Hoshimeguru Hakobune', 'Space Battleship Yamato 2199 : L\'Arche voyageant à travers les étoiles', 'space battleship yamato film 7 L\'Odyssée De L\'Arche Céleste (2014).jpg', 'Cela fait 7 mois que le cuirassé spatial Yamato a quitté la Terre, le régime du tyran Dessler qui régnait sur Gamilas est tombé.\r\n\r\nAyant quitté Iscandar avec le dispositif devant régénérer la planète bleue, cela fait un mois qu\'il est en route pour rentrer et se prépare à quitté le Grand Nuage de Magellan mais un nouvel ennemi entre en scène.\r\n\r\nLe vaisseau Gatlantis équipé d\'un canon extrêmement puissant est à la tête d\'une flotte asservissant ou détruisant tout sur son passage.\r\n\r\nCerné par les forces du Général Gutaba, le Yamato arrive à s\'échapper et atteint une étrange planète...', 2014, 198, 33, NULL, NULL, 1, 375),
+(146, 'Tamako Love Story', 'Tamako Love Story', 'Tamako Love Story.jpg', 'A travers Tamako et l\'élu de son coeur, le film aborde la difficulté des amours adolescentes.', 2014, 176, 19, NULL, NULL, 162, 336),
+(147, 'Toriko 3D : Kaimaku Gourmet Adventure !!', 'Toriko Film 1 : Kaimaku Gourmet Adventure !!', 'Toriko film 01 Kaimaku Gourmet Adventure!!.jpg', 'Un jeune garçon, Peck est à la recherche du fameux Bishoku-ya, Toriko. Parfaitement aux courants ses exploits, il compte sur ce dernier pour l\'aider à sauver son village. En effet, la sécurité de son village est menacée depuis l\'arrivée d\'un animal féroce, le Gerold.\r\nToriko et Peck réussiront-ils à garantir la sécurité des villageois ?', 2011, 149, 1, NULL, NULL, 138, 277),
+(148, 'Gekijō-ban Toriko Bishoku-shin no Chō Shoku Takara', 'Toriko film 2 Secret Recipe of Gourmet God!', 'Toriko film Secret Recipe of Gourmet God!.jpg', 'L\'histoire se déroule dans un monde imaginaire où le goût et la texture des aliments sont très importants et sont au cœur de l\'économie.\r\n\r\nTout le monde se met en quête de nouvelles saveurs, et de nouveaux professionnels font leur apparition ; Les Gourmet Hunter ! Ils ont une connaissance extrême des aliments et ont foulé des terres inconnues.\r\n\r\nNous suivons la vie du chef cuisinier Komatsu et de Toriko, Gourmet Hunter qui poursuit sa quête du menu parfait, qui serait composé de tous les meilleurs aliments à travers le monde sans oublier l\'ingrédient légendaire : G.O.D.', 2013, 149, 1, NULL, NULL, 138, 277),
+(149, 'Trigun : Badlands Rumble', 'Trigun : Badlands Rumble', 'Trigun.jpg', 'Le légendaire hors-la-loi Gasback décide d\'attaquer une banque avec l\'aide de ses complices. Cependant ces derniers le trahissent et se rebellent contre lui. Alors qu\'ils s\'apprêtent à tuer Gasback, le célèbre typhon humanoïde Vash the Stampede intervient pour le sauver. Les complices prennent alors la fuite avec l\'argent volé.\r\n\r\nC\'est vingt ans plus tard que Gasback décide d\'exécuter sa vengeance en s\'attaquant à la ville de son ex-complice devenu riche. Le retour de Vash the Stampede, l\'homme à $$60, 000, 000, 000, s\'impose.', 2010, 178, 3, NULL, NULL, 163, 0),
+(150, 'Shoujo Kakumei Utena : Adolescence Mokushiroku', 'Utena - Apocalypse d\'Adolescence', 'Utena.jpg', 'Utena Tenjou tout juste arrivée à l\'académie Ohtori se voit entrainée dans une série de duels à l\'épée dont le but est d\'obtenir la Fiancée de la Rose, Anthy Himemiya, qui détiendrait un mystérieux pouvoir permettant de réaliser le voeu du gagnant. Dans cet endroit aussi étrange que les événements qui s\'y déroulent, Utena décide de participer à cette course au pouvoir afin de réaliser son rêve de devenir un prince.', 1999, 179, 12, NULL, NULL, 164, 0),
+(151, 'Taiho Shichau zo The Movie', 'You\'re Under Arrest! The Movie', 'You\'re Under Arrest - the movie.jpg', 'Miyuki et Natsumi sont de retour à Bokuto après un stage d\'un an effectué dans d\'autres services. Mais leur première journée n\'est pas de tout repos : après avoir dû résoudre les problèmes liés à la panne subite et pour le moins étrange de plusieurs feux de signalisation, les voilà réquisitionnées pour participer à l\'arrestation de trafiquants d\'armes. Comme si cela ne suffisait pas, le chef se fait arrêter par le commissaire principal et des terroristes menacent de faire sauter les ponts qui enjambent la rivière Sumida...', 1999, 154, 9, NULL, NULL, 18, 0),
+(152, 'Yu Yu Hakusho : The Movie', 'Yu Yu Hakusho Film 1', 'YuYu Hakusho film 1.jpg', 'Durant les vacances d\'été, Yusuke et Kuwabara continuent de pratiquer leur activité préférée : se battre. Mais leurs vacances tournent court lorsque Botan arrive et leur annonce que Koenma a été kidnappé. Les ravisseurs exigent en échange le Sceau d\'or, un Sceau dont la puissance est telle, que même le grand Enma ne peut pas s\'y opposer.\r\nYusuke, Kuwabara, et tous les autres partent donc libérer Koenma avant qu\'il ne soit jeté dans la lave.', 1993, 155, 20, NULL, NULL, 143, 286),
+(153, 'Yu Yu Hakusho Movie 2 : Meikai Shitou Hen - Honoo no Kizuna', 'Yu Yu Hakusho Film 2 : La légende du royaume des ombres', 'YuYu Hakusho film 2.jpg', 'Yakumo, monarque déchu du Royaume des Ombres arrive sur Terre pour ouvrir les cinq portes. Les éléments sacrés qu\'elles enferment lui serviront à faire renaître son univers. Banni après avoir perdu la guerre contre le Royaume des Morts, le temps de la vengeance est enfin arrivé. Yusuke et ses amis, prévenus du danger par Botan, parviendront-ils à contrer les plans de Yakumo ?', 1994, 155, 20, NULL, NULL, 143, 286),
+(154, 'Kidou Senshi Z Gundam I : Hoshi wo Tsugu Mono', 'Mobile Suit Zeta Gundam Film 1 : Les Héritiers des étoiles', 'Zeta Gundam film 1.jpg', '\r\nL\'histoire se déroule sept ans après Mobile Suit Gundam et la guerre d\'indépendance de Zeon, en l\'an U.C. 0087. Rendue exsangue et très méfiante par cette longue guerre, la Fédération crée en U.C. 0083 une armée d\'élite, les Titans. Leur rôle est de traquer les survivants des Forces de Zeon et de garantir le maintien de la paix. Mais les Titans gagnent de plus en plus en autonomie et en viennent à réprimer par la force armée toute opposition politique au gouvernement, en faisant usage de méthodes excessivement brutales et très expéditives.\r\n\r\nEn U.C. 0085, c\'est l\'incident de la Colonie no 30 de Side-1 où les Titans exterminent les 10 millions d\'habitants de la colonie, après qu\'une gigantesque manifestation d\'opposants politique ait mis le feu aux poudre. Parmi l\'opposition politique se fait sentir un besoin urgent : celui de créer une force paramilitaire soutenue par d\'importants appuis politiques et industriels, pour contrebalancer la puissance des Titans. De ce besoin va naître l\'Anti-Earth Union Group, ou AEUG.\r\n\r\nKamille Bidan est un jeune adolescent de la Fédération, habitant la colonie Side-7, rebaptisée Gryps par les Titans. Délaissé par ses parents, qui privilégient leurs emplois d\'ingénieurs auprès des Titans, Kamille est un brillant jeune homme, lui-même doué pour l\'ingénierie et le pilotage. Par un extraordinaire concours de circonstance, il va se retrouver impliqué dans un accrochage entre les Titans et l\'AEUG...', 2005, 15, 13, NULL, NULL, 118, 244),
+(155, 'Kidou Senshi Z Gundam II : Koibito-tachi', 'Mobile Suit Zeta Gundam II : Amants', 'Zeta Gundam film 2.jpg', 'Suite directe du premier film, Mobile Suit Zeta Gundam : A New Translation-Heirs to the Stars. Amuro Ray les a rejoints, mais Kamille et l\'AEUG continuent de combattre contre les Titans. Les femmes auront une grande importance dans cette partie. Le cœur de héros va-t-il chavirer ?', 2005, 15, 13, NULL, NULL, 118, 244),
+(156, 'Kidou Senshi Z Gundam III : Hoshi no Kodou wa Ai', 'Mobile Suit Zeta Gundam III : C\'est l\'amour qui fait battre les étoiles', 'Zeta Gundam film 3.jpg', 'Haman Karn, représentante des forces Neon Zeon, est venue en aide à nos protagonistes. Mais cette aide n\'est que pour servir ses intérêts. Pendant ce temps, Scirocco est de retour et s\'impose chez les Titans. Quelle sera le dénouement de cette histoire ?', 2006, 15, 13, NULL, NULL, 118, 244);
 
 -- --------------------------------------------------------
 
@@ -2902,7 +2996,222 @@ INSERT INTO `film_genres` (`ID`, `ID_Film`, `ID_Genre`) VALUES
 (482, 105, 3),
 (483, 105, 10),
 (484, 106, 5),
-(485, 106, 18);
+(485, 106, 18),
+(486, 107, 1),
+(487, 107, 5),
+(488, 107, 9),
+(489, 108, 1),
+(490, 108, 5),
+(491, 108, 9),
+(492, 109, 1),
+(493, 109, 5),
+(494, 109, 9),
+(495, 110, 1),
+(496, 110, 5),
+(497, 110, 9),
+(498, 111, 1),
+(499, 111, 7),
+(500, 111, 9),
+(501, 111, 14),
+(502, 111, 16),
+(503, 112, 1),
+(504, 112, 7),
+(505, 112, 9),
+(506, 112, 14),
+(507, 112, 16),
+(508, 113, 1),
+(509, 113, 7),
+(510, 113, 9),
+(511, 113, 14),
+(512, 113, 16),
+(513, 114, 3),
+(514, 114, 7),
+(515, 114, 10),
+(516, 115, 1),
+(517, 115, 3),
+(518, 115, 7),
+(519, 115, 10),
+(520, 116, 1),
+(521, 116, 3),
+(522, 116, 7),
+(523, 116, 10),
+(524, 116, 19),
+(525, 117, 2),
+(526, 117, 3),
+(527, 117, 5),
+(528, 118, 1),
+(529, 118, 2),
+(530, 118, 3),
+(531, 118, 5),
+(532, 119, 1),
+(533, 119, 2),
+(534, 119, 3),
+(535, 119, 5),
+(536, 119, 10),
+(537, 117, 1),
+(538, 117, 10),
+(539, 118, 10),
+(540, 120, 1),
+(541, 120, 7),
+(542, 120, 11),
+(543, 121, 1),
+(544, 121, 2),
+(545, 121, 7),
+(546, 121, 10),
+(547, 122, 1),
+(548, 122, 2),
+(549, 122, 7),
+(550, 122, 10),
+(551, 123, 1),
+(552, 123, 2),
+(553, 123, 10),
+(554, 124, 1),
+(555, 124, 2),
+(556, 124, 3),
+(557, 124, 5),
+(558, 124, 7),
+(559, 124, 10),
+(560, 125, 1),
+(561, 125, 2),
+(562, 125, 3),
+(563, 125, 5),
+(564, 125, 7),
+(565, 125, 10),
+(566, 126, 1),
+(567, 126, 3),
+(568, 126, 4),
+(569, 126, 10),
+(570, 127, 1),
+(571, 127, 3),
+(572, 127, 4),
+(573, 127, 10),
+(574, 128, 1),
+(575, 128, 3),
+(576, 128, 4),
+(577, 128, 10),
+(578, 129, 1),
+(579, 129, 3),
+(580, 129, 4),
+(581, 129, 10),
+(582, 130, 1),
+(583, 130, 3),
+(584, 130, 4),
+(585, 130, 5),
+(586, 130, 7),
+(587, 130, 10),
+(588, 131, 1),
+(589, 131, 3),
+(590, 131, 4),
+(591, 131, 10),
+(592, 132, 3),
+(593, 132, 5),
+(594, 132, 7),
+(595, 132, 10),
+(596, 132, 13),
+(597, 133, 1),
+(598, 133, 2),
+(599, 133, 3),
+(600, 133, 5),
+(601, 133, 7),
+(602, 133, 10),
+(603, 133, 14),
+(604, 134, 3),
+(605, 134, 5),
+(606, 134, 10),
+(607, 135, 3),
+(608, 135, 5),
+(609, 135, 10),
+(610, 136, 1),
+(611, 136, 3),
+(612, 136, 5),
+(613, 136, 10),
+(614, 137, 1),
+(615, 137, 3),
+(616, 137, 5),
+(617, 137, 10),
+(618, 138, 1),
+(619, 138, 3),
+(620, 138, 5),
+(621, 138, 10),
+(622, 139, 1),
+(623, 139, 3),
+(624, 139, 7),
+(625, 139, 16),
+(626, 140, 3),
+(627, 140, 7),
+(628, 140, 16),
+(629, 141, 1),
+(630, 141, 3),
+(631, 141, 7),
+(632, 141, 16),
+(633, 142, 1),
+(634, 142, 2),
+(635, 142, 3),
+(636, 142, 7),
+(637, 142, 16),
+(638, 143, 1),
+(639, 143, 3),
+(640, 143, 7),
+(641, 143, 16),
+(642, 144, 1),
+(643, 144, 3),
+(644, 144, 7),
+(645, 144, 16),
+(646, 145, 1),
+(647, 145, 3),
+(648, 145, 7),
+(649, 145, 16),
+(650, 146, 2),
+(651, 146, 5),
+(652, 146, 18),
+(653, 147, 1),
+(654, 147, 3),
+(655, 147, 4),
+(656, 147, 5),
+(657, 148, 1),
+(658, 148, 3),
+(659, 148, 4),
+(660, 148, 5),
+(661, 148, 10),
+(662, 149, 1),
+(663, 149, 3),
+(664, 149, 5),
+(665, 149, 16),
+(666, 150, 1),
+(667, 150, 2),
+(668, 150, 4),
+(669, 150, 7),
+(670, 150, 10),
+(671, 150, 19),
+(672, 151, 1),
+(673, 151, 5),
+(674, 151, 7),
+(675, 152, 1),
+(676, 152, 3),
+(677, 152, 4),
+(678, 152, 5),
+(679, 152, 7),
+(680, 152, 10),
+(681, 153, 1),
+(682, 153, 3),
+(683, 153, 4),
+(684, 153, 5),
+(685, 153, 7),
+(686, 153, 10),
+(687, 154, 1),
+(688, 154, 7),
+(689, 154, 14),
+(690, 154, 16),
+(691, 155, 1),
+(692, 155, 2),
+(693, 155, 7),
+(694, 155, 14),
+(695, 155, 16),
+(696, 156, 1),
+(697, 156, 2),
+(698, 156, 7),
+(699, 156, 14),
+(700, 156, 16);
 
 -- --------------------------------------------------------
 
@@ -3051,7 +3360,8 @@ INSERT INTO `studios` (`ID`, `Name`) VALUES
 (93, 'Agent 21'),
 (94, 'Studio 4°C'),
 (95, 'Studio Anima'),
-(96, 'Oh! Production');
+(96, 'Oh! Production'),
+(97, 'HAL Film Maker');
 
 -- --------------------------------------------------------
 
@@ -3272,7 +3582,10 @@ INSERT INTO `univers` (`ID`, `Name`) VALUES
 (201, 'Kaiju N°8'),
 (202, 'Dirty Pair'),
 (203, 'Les trois mousquetaires'),
-(204, 'Gall Force');
+(204, 'Gall Force'),
+(205, 'DC Comics'),
+(206, 'Yuri Is My Job!'),
+(207, 'Erementar Gerad');
 
 --
 -- Indexes for dumped tables
@@ -3361,13 +3674,13 @@ ALTER TABLE `univers`
 -- AUTO_INCREMENT for table `anime`
 --
 ALTER TABLE `anime`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=392;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=402;
 
 --
 -- AUTO_INCREMENT for table `anime_genres`
 --
 ALTER TABLE `anime_genres`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1579;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1609;
 
 --
 -- AUTO_INCREMENT for table `arcnarratif`
@@ -3379,7 +3692,7 @@ ALTER TABLE `arcnarratif`
 -- AUTO_INCREMENT for table `createurs`
 --
 ALTER TABLE `createurs`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=185;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=188;
 
 --
 -- AUTO_INCREMENT for table `episodes`
@@ -3391,13 +3704,13 @@ ALTER TABLE `episodes`
 -- AUTO_INCREMENT for table `film`
 --
 ALTER TABLE `film`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
 
 --
 -- AUTO_INCREMENT for table `film_genres`
 --
 ALTER TABLE `film_genres`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=486;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=701;
 
 --
 -- AUTO_INCREMENT for table `genres`
@@ -3409,13 +3722,13 @@ ALTER TABLE `genres`
 -- AUTO_INCREMENT for table `studios`
 --
 ALTER TABLE `studios`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=97;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 
 --
 -- AUTO_INCREMENT for table `univers`
 --
 ALTER TABLE `univers`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=205;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=208;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
