@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Aug 21, 2024 at 03:19 PM
+-- Generation Time: Sep 11, 2024 at 05:23 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -454,7 +454,9 @@ INSERT INTO `anime` (`ID`, `Name_Jp`, `Name_Fr`, `Image`, `Synopsis`, `Year`, `N
 (398, 'Azumanga Web Diaoh ', 'Azumanga Web Diaoh ', 'Azumanga Web Daioh (2000).jpg', 'Chiyo apporte une caméra vidéo à l\'école pour un sujet de classe.\r\nMais quand Tomo met la main dessus, des tas de problèmes se produisent partout dans le campus.', 2000, 0, 1, 0, 33, 0, 'original', 12, 31),
 (399, 'Azumanga Daioh : The Very Short Movie', 'Azumanga Daioh : The Very Short Movie', 'Azumanga Daioh The Very Short Movie (2001).jpg', 'Dans ce court spécial, Osaka est encore en train d\'avoir un rêve étrange où les tresses de Chiyo-chan sont possédées.', 2001, 0, 1, 0, 33, 0, 'original', 12, 31),
 (400, 'Ane Log (Flash Animation)', 'Ane Log (Flash Animation)', 'Ane log (Flash).jpg', 'Quand il était plus jeune, Akira Konoe demanda en mariage sa grande sœur Moyako. Depuis lors, Moyako pense que son frère est un pervers obsédé par sa grande sœur. Cependant, cette perversion ne se passe que dans son imagination ce qui l\'amène à imaginer toutes sortes de situations perverses avec son frère !', 2014, 0, 6, 0, 29, 0, 'original', 21, 28),
-(401, 'Air In Summer', 'Air In Summer', 'Air in summer.jpg', 'Air In Summer développe les personnages apparut dans les épisodes 9 et 10 de Air TV, mettant en scène des personnages de l\'ère féodal. Kannabi-No-Mikoto, ou tout simplement Kanna, est une jeune fille se révélant être un être ailé. Avec l\'aide d\'une de ses servantes, Uraha, et de Ryuuya un samourai en charge de sa protection, elle se lance dans un voyage afin de rencontrer sa mère qui est la dernière être ailée avec elle... Dans ces deux épisodes, nous verrons les relations entre ce trio de personnages être développés d\'une façon drôle et émouvante.', 2005, 0, 2, 0, 27, 37, 'parallèle', 19, 26);
+(401, 'Air In Summer', 'Air In Summer', 'Air in summer.jpg', 'Air In Summer développe les personnages apparut dans les épisodes 9 et 10 de Air TV, mettant en scène des personnages de l\'ère féodal. Kannabi-No-Mikoto, ou tout simplement Kanna, est une jeune fille se révélant être un être ailé. Avec l\'aide d\'une de ses servantes, Uraha, et de Ryuuya un samourai en charge de sa protection, elle se lance dans un voyage afin de rencontrer sa mère qui est la dernière être ailée avec elle... Dans ces deux épisodes, nous verrons les relations entre ce trio de personnages être développés d\'une façon drôle et émouvante.', 2005, 0, 2, 0, 27, 37, 'parallèle', 19, 26),
+(402, 'Ghost in the Shell : S.A.C. Solid State Society', 'Ghost in the Shell : S.A.C. Solid State Society', 'Ghost In The Shell Solid State Society.jpg', 'Nous sommes en 2034.\r\nCela fait 2 ans que le \'Major\' Motoko Kusanagi a quitté la Section 9 et travaille à son compte, suite aux événements survenus lors de la saison 2 de Ghost in the Shell : Stand Alone Complex.\r\nTogusa est devenu le leader d\'une équipe agrandie, toujours sous la tutelle d\'Aramaki.\r\n\r\nCette nouvelle Section 9 est confrontée à une série de suicides inexpliqués parmi les membres d\'une junte militaire menaçant d\'accomplir des actes terroristes dans le pays pour faire obstacle à un projet de loi du premier ministre. Leur enquête révèle bientôt l\'implication d\'un mystérieux hacker surnommé le Marionnettiste.\r\n\r\nAlors que Batou suit une piste, il croise le \'Major\' qui lui donne un étrange conseil : \"Tiens-toi à l\'écart du Solid State\". De son côté, la Section 9 découvre bientôt qu\'un grand nombre d\'enfants auraient été enlevés dans un but inconnu.\r\n\r\nMais Kusanagi ne pourrait-elle pas être le Marionnettiste ? ...', 2006, 0, 1, 0, 7, 10, 'Suite', 6, 7),
+(403, 'Landlock ', 'Landlock ', 'Landlock.jpg', 'Dans le monde de Zer’lue, le leader religieux Sana’ku cherche à imposer sa domination technologique et militaire, en éliminant les derniers guerriers du vent. Le jeune Lue’der, un orphelin qui peut contrôler la force dévastatrice du vent va se retrouver malgré lui dans une lutte à mort avec Sana’ku et ses sbires, qui le voient comme une menace à leur plans maléfiques. ', 1996, 0, 2, 0, 208, 0, 'original', 98, 188);
 
 -- --------------------------------------------------------
 
@@ -2076,7 +2078,16 @@ INSERT INTO `anime_genres` (`ID`, `ID_Anime`, `ID_Genre`) VALUES
 (1605, 401, 2),
 (1606, 401, 5),
 (1607, 401, 7),
-(1608, 401, 10);
+(1608, 401, 10),
+(1609, 402, 1),
+(1610, 402, 6),
+(1611, 402, 9),
+(1612, 402, 14),
+(1613, 402, 16),
+(1614, 403, 1),
+(1615, 403, 3),
+(1616, 403, 10),
+(1617, 403, 16);
 
 -- --------------------------------------------------------
 
@@ -2293,7 +2304,8 @@ INSERT INTO `createurs` (`ID`, `Name`) VALUES
 (184, 'Hideki Kakinuma'),
 (185, 'DC Comics'),
 (186, 'Miman'),
-(187, 'Mayumi Azuma ');
+(187, 'Mayumi Azuma '),
+(188, 'ORCA');
 
 -- --------------------------------------------------------
 
@@ -2493,7 +2505,9 @@ INSERT INTO `film` (`ID`, `Name_Jp`, `Name_Fr`, `Image`, `Synopsis`, `Year`, `ID
 (153, 'Yu Yu Hakusho Movie 2 : Meikai Shitou Hen - Honoo no Kizuna', 'Yu Yu Hakusho Film 2 : La légende du royaume des ombres', 'YuYu Hakusho film 2.jpg', 'Yakumo, monarque déchu du Royaume des Ombres arrive sur Terre pour ouvrir les cinq portes. Les éléments sacrés qu\'elles enferment lui serviront à faire renaître son univers. Banni après avoir perdu la guerre contre le Royaume des Morts, le temps de la vengeance est enfin arrivé. Yusuke et ses amis, prévenus du danger par Botan, parviendront-ils à contrer les plans de Yakumo ?', 1994, 155, 20, NULL, NULL, 143, 286),
 (154, 'Kidou Senshi Z Gundam I : Hoshi wo Tsugu Mono', 'Mobile Suit Zeta Gundam Film 1 : Les Héritiers des étoiles', 'Zeta Gundam film 1.jpg', '\r\nL\'histoire se déroule sept ans après Mobile Suit Gundam et la guerre d\'indépendance de Zeon, en l\'an U.C. 0087. Rendue exsangue et très méfiante par cette longue guerre, la Fédération crée en U.C. 0083 une armée d\'élite, les Titans. Leur rôle est de traquer les survivants des Forces de Zeon et de garantir le maintien de la paix. Mais les Titans gagnent de plus en plus en autonomie et en viennent à réprimer par la force armée toute opposition politique au gouvernement, en faisant usage de méthodes excessivement brutales et très expéditives.\r\n\r\nEn U.C. 0085, c\'est l\'incident de la Colonie no 30 de Side-1 où les Titans exterminent les 10 millions d\'habitants de la colonie, après qu\'une gigantesque manifestation d\'opposants politique ait mis le feu aux poudre. Parmi l\'opposition politique se fait sentir un besoin urgent : celui de créer une force paramilitaire soutenue par d\'importants appuis politiques et industriels, pour contrebalancer la puissance des Titans. De ce besoin va naître l\'Anti-Earth Union Group, ou AEUG.\r\n\r\nKamille Bidan est un jeune adolescent de la Fédération, habitant la colonie Side-7, rebaptisée Gryps par les Titans. Délaissé par ses parents, qui privilégient leurs emplois d\'ingénieurs auprès des Titans, Kamille est un brillant jeune homme, lui-même doué pour l\'ingénierie et le pilotage. Par un extraordinaire concours de circonstance, il va se retrouver impliqué dans un accrochage entre les Titans et l\'AEUG...', 2005, 15, 13, NULL, NULL, 118, 244),
 (155, 'Kidou Senshi Z Gundam II : Koibito-tachi', 'Mobile Suit Zeta Gundam II : Amants', 'Zeta Gundam film 2.jpg', 'Suite directe du premier film, Mobile Suit Zeta Gundam : A New Translation-Heirs to the Stars. Amuro Ray les a rejoints, mais Kamille et l\'AEUG continuent de combattre contre les Titans. Les femmes auront une grande importance dans cette partie. Le cœur de héros va-t-il chavirer ?', 2005, 15, 13, NULL, NULL, 118, 244),
-(156, 'Kidou Senshi Z Gundam III : Hoshi no Kodou wa Ai', 'Mobile Suit Zeta Gundam III : C\'est l\'amour qui fait battre les étoiles', 'Zeta Gundam film 3.jpg', 'Haman Karn, représentante des forces Neon Zeon, est venue en aide à nos protagonistes. Mais cette aide n\'est que pour servir ses intérêts. Pendant ce temps, Scirocco est de retour et s\'impose chez les Titans. Quelle sera le dénouement de cette histoire ?', 2006, 15, 13, NULL, NULL, 118, 244);
+(156, 'Kidou Senshi Z Gundam III : Hoshi no Kodou wa Ai', 'Mobile Suit Zeta Gundam III : C\'est l\'amour qui fait battre les étoiles', 'Zeta Gundam film 3.jpg', 'Haman Karn, représentante des forces Neon Zeon, est venue en aide à nos protagonistes. Mais cette aide n\'est que pour servir ses intérêts. Pendant ce temps, Scirocco est de retour et s\'impose chez les Titans. Quelle sera le dénouement de cette histoire ?', 2006, 15, 13, NULL, NULL, 118, 244),
+(157, 'Shinseiki Evangelion Movie: Shi to Shinsei', 'Neon Genesis Evangelion : Death & Rebirth', 'Evangelion Death and Rebirth.jpg', 'Résumé de la Série télévisée', 1997, 8, 7, NULL, NULL, 8, 11),
+(158, 'Shinseiki Evangelion Movie: Air/Magokoro wo, Kimi ni', 'Neon Genesis Evangelion: The End of Evangelion', 'Evangelion The End of Evangelion.jpg', 'he End of Evangelion est un film divisé en deux parties (Episode 25\': Love is Destructive et Episode 26\': ONE MORE FINAL: I need you) proposant une autre version des épisodes 25 et 26 de Neon Genesis Evangelion, épisodes finaux de la série qui ont suscité de nombreuses réactions de mécontentement chez les fans.\r\nEn effet, ce long métrage apporte une conclusion réaliste et pragmatique, contrairement à la série animée de 1996 qui ne put apporter qu\'une fin philosophique.', 1997, 8, 7, NULL, NULL, 8, 11);
 
 -- --------------------------------------------------------
 
@@ -3211,7 +3225,15 @@ INSERT INTO `film_genres` (`ID`, `ID_Film`, `ID_Genre`) VALUES
 (697, 156, 2),
 (698, 156, 7),
 (699, 156, 14),
-(700, 156, 16);
+(700, 156, 16),
+(701, 157, 1),
+(702, 157, 7),
+(703, 157, 14),
+(704, 157, 16),
+(705, 158, 1),
+(706, 158, 7),
+(707, 158, 14),
+(708, 158, 16);
 
 -- --------------------------------------------------------
 
@@ -3361,7 +3383,8 @@ INSERT INTO `studios` (`ID`, `Name`) VALUES
 (94, 'Studio 4°C'),
 (95, 'Studio Anima'),
 (96, 'Oh! Production'),
-(97, 'HAL Film Maker');
+(97, 'HAL Film Maker'),
+(98, 'Sanctuary');
 
 -- --------------------------------------------------------
 
@@ -3585,7 +3608,8 @@ INSERT INTO `univers` (`ID`, `Name`) VALUES
 (204, 'Gall Force'),
 (205, 'DC Comics'),
 (206, 'Yuri Is My Job!'),
-(207, 'Erementar Gerad');
+(207, 'Erementar Gerad'),
+(208, 'Landlock');
 
 --
 -- Indexes for dumped tables
@@ -3674,13 +3698,13 @@ ALTER TABLE `univers`
 -- AUTO_INCREMENT for table `anime`
 --
 ALTER TABLE `anime`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=402;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=404;
 
 --
 -- AUTO_INCREMENT for table `anime_genres`
 --
 ALTER TABLE `anime_genres`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1609;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1618;
 
 --
 -- AUTO_INCREMENT for table `arcnarratif`
@@ -3692,7 +3716,7 @@ ALTER TABLE `arcnarratif`
 -- AUTO_INCREMENT for table `createurs`
 --
 ALTER TABLE `createurs`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=188;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=189;
 
 --
 -- AUTO_INCREMENT for table `episodes`
@@ -3704,13 +3728,13 @@ ALTER TABLE `episodes`
 -- AUTO_INCREMENT for table `film`
 --
 ALTER TABLE `film`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=157;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
 
 --
 -- AUTO_INCREMENT for table `film_genres`
 --
 ALTER TABLE `film_genres`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=701;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=709;
 
 --
 -- AUTO_INCREMENT for table `genres`
@@ -3722,13 +3746,13 @@ ALTER TABLE `genres`
 -- AUTO_INCREMENT for table `studios`
 --
 ALTER TABLE `studios`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
 
 --
 -- AUTO_INCREMENT for table `univers`
 --
 ALTER TABLE `univers`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=208;
+  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=209;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

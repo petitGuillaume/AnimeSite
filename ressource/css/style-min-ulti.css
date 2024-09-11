@@ -48,10 +48,7 @@ margin-top : 7px;
 
 ul 
 {
-        
-
     list-style: none; /* enlever les puces */
-
 }
  
 ul li {
@@ -63,9 +60,6 @@ ul li {
 li{
    margin-left: 5px;
 }
-
-
-
 
 /** Anime ------------------------------------------------------------------------------------------------ **/
 
@@ -80,4 +74,3 @@ li{
     border-radius: 10px;
 
 }
-
