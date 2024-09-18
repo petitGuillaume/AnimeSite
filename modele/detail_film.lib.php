@@ -42,28 +42,25 @@ if (isset($_GET['id']) && is_numeric($_GET['id'])) {
     exit();
 }
 
+if (isset($_GET['id']) && is_numeric($_GET['id'])) {
+    // Récupérer l'ID du film depuis l'URL
+    $filmId = $_GET['id'];
 
-// Interroger la base de données pour obtenir les anime ayant ID_Source égal à l'ID donné
-$relatedSourceQuery = "SELECT image, Name_Fr
-                       FROM film
-                       WHERE ID_Source = :filmId";
-$relatedSourceStmt = $pdo->prepare($relatedSourceQuery);
-$relatedSourceStmt->bindParam(':filmId', $filmId, PDO::PARAM_INT);
-$relatedSourceStmt->execute();
-
-// Récupérer les données des anime ayant ID_Source égal à l'ID donné
-$relatedSourceFilmList = $relatedSourceStmt->fetchAll(PDO::FETCH_ASSOC);
-?>
-
-<?php
-// Interroger la base de données pour obtenir les anime ayant ID_Source égal à l'ID donné
-$film_antéQuery = "SELECT image, Name_Fr
-FROM film
-WHERE ID = (SELECT ID_Source FROM film WHERE ID = :filmId)";
-$film_antéStmt = $pdo->prepare($film_antéQuery);
-$film_antéStmt->bindParam(':filmId', $animeId, PDO::PARAM_INT);
-$film_antéStmt->execute();
-
-// Récupérer les données des anime ayant ID_Source égal à l'ID donné
-$film_antéList = $film_antéStmt->fetchAll(PDO::FETCH_ASSOC);
-
+    // Préparation de la requête pour récupérer les animes liés au film
+    $relatedSourceQuery = "SELECT anime.ID, anime.Image, anime.Name_Fr
+                           FROM anime
+                           INNER JOIN film ON film.ID_Source = anime.ID
+                           WHERE film.ID = :filmId";
+    
+    // Préparation de la requête avec PDO
+    $relatedSourceStmt = $pdo->prepare($relatedSourceQuery);
+    
+    // Liaison du paramètre filmId
+    $relatedSourceStmt->bindParam(':filmId', $filmId, PDO::PARAM_INT);
+    
+    // Exécuter la requête
+    $relatedSourceStmt->execute();
+    
+    // Récupérer les résultats
+    $results = $relatedSourceStmt->fetchAll(PDO::FETCH_ASSOC);
+}else{}

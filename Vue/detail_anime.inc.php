@@ -49,6 +49,7 @@
                     <li>
                         <img class="ani" src="ressource/img/anime_img/<?php echo $relatedAnime['image']; ?>" alt="<?php echo $relatedAnime['Name_Jp']; ?>">
                         <?php echo $relatedAnime['Name_Jp']; ?>
+                        </a>
                     </li>
                 <?php endforeach; ?>
             </ul>
