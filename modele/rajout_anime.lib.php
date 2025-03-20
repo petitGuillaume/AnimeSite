@@ -1,9 +1,11 @@
 <?php
 // insert_anime.php
-include_once("modele/pdo.lib.php");
+
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($_POST['form_type'] === 'add_anime') {
-
+       
         // Nettoyez et validez les entrées utilisateur
         $name_jp = $_POST['name_jp'];
         $name_fr = $_POST['name_fr'];
@@ -28,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $sql = "INSERT INTO Anime (Name_Jp, Name_Fr, image, Synopsis, Year, Nb_episodes, Nb_OAV, Nb_Film, ID_univers, ID_Source, Anime_Type, ID_studio, ID_createur) 
                 VALUES (:name_jp, :name_fr, :image, :synopsis, :year, :nb_episodes, :nb_oav, :nb_film, :id_univers, :id_source, :anime_type, :id_studio, :id_createur)";
 
-        $stmt = $conn->prepare($sql);
+        $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':name_jp', $name_jp);
         $stmt->bindParam(':name_fr', $name_fr);
         $stmt->bindParam(':image', $imageFileName);
@@ -48,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($stmt->execute()) {
             echo "Enregistrement de l'anime inséré avec succès.";
-            $anime_id = $conn->lastInsertId(); // Obtenez l'ID du dernier anime inséré
+            $anime_id = $pdo->lastInsertId(); // Obtenez l'ID du dernier anime inséré
 
             // Insérez les relations anime-genre dans la table "Anime_Genres"
             if (isset($_POST['genres']) && is_array($_POST['genres'])) {
@@ -57,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     // Préparez la requête SQL avec des paramètres pour éviter les injections SQL
                     $genre_id = intval($genre_id);
                     $sql = "INSERT INTO Anime_Genres (ID_Anime, ID_Genre) VALUES (:anime_id, :genre_id)";
-                    $stmt = $conn->prepare($sql);
+                    $stmt = $pdo->prepare($sql);
                     $stmt->bindParam(':anime_id', $anime_id, PDO::PARAM_INT);
                     $stmt->bindParam(':genre_id', $genre_id, PDO::PARAM_INT);
 
@@ -91,7 +93,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $sql = "INSERT INTO film (Name_Jp, Name_Fr, image, Synopsis, Year, ID_univers, ID_Source, ID_studio, ID_createur) 
             VALUES (:name_jp, :name_fr, :image, :synopsis, :year, :id_univers, :id_source, :id_studio, :id_createur)";
 
-        $stmt = $conn->prepare($sql);
+        $stmt = $pdo->prepare($sql);
         $stmt->bindParam(':name_jp', $name_jp);
         $stmt->bindParam(':name_fr', $name_fr);
         $stmt->bindParam(':image', $imageFileName);
@@ -108,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         if ($stmt->execute()) {
             echo "Enregistrement de du film inséré avec succès.";
-            $film_id = $conn->lastInsertId(); // Obtenez l'ID du dernier anime inséré
+            $film_id = $pdo->lastInsertId(); // Obtenez l'ID du dernier anime inséré
 
             // Insérez les relations anime-genre dans la table "Anime_Genres"
             if (isset($_POST['genres']) && is_array($_POST['genres'])) {
@@ -117,7 +119,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     // Préparez la requête SQL avec des paramètres pour éviter les injections SQL
                     $genre_id = intval($genre_id);
                     $sql = "INSERT INTO film_Genres (ID_film, ID_Genre) VALUES (:film_id, :genre_id)";
-                    $stmt = $conn->prepare($sql);
+                    $stmt = $pdo->prepare($sql);
                     $stmt->bindParam(':film_id', $film_id, PDO::PARAM_INT);
                     $stmt->bindParam(':genre_id', $genre_id, PDO::PARAM_INT);
 
@@ -137,7 +139,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Vérification si le genre existe déjà dans la table "Genres"
         $sql_check_genre = "SELECT * FROM Genres WHERE name = :genre_name";
-        $stmt_check_genre = $conn->prepare($sql_check_genre);
+        $stmt_check_genre = $pdo->prepare($sql_check_genre);
         $stmt_check_genre->bindParam(':genre_name', $genre_name, PDO::PARAM_STR);
         $stmt_check_genre->execute();
 
@@ -146,7 +148,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             // Insérer le genre dans la table "Genres" en utilisant une requête préparée
             $sql_insert_genre = "INSERT INTO Genres (name) VALUES (:genre_name)";
-            $stmt_insert_genre = $conn->prepare($sql_insert_genre);
+            $stmt_insert_genre = $pdo->prepare($sql_insert_genre);
             $stmt_insert_genre->bindParam(':genre_name', $genre_name, PDO::PARAM_STR);
 
             if ($stmt_insert_genre->execute()) {
@@ -161,7 +163,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Vérification si le univers existe déjà dans la table "univers"
         $sql_check_univers = "SELECT * FROM `univers`  WHERE name = :univers_name ";
-        $stmt_check_univers = $conn->prepare($sql_check_univers);
+        $stmt_check_univers = $pdo->prepare($sql_check_univers);
         $stmt_check_univers->bindParam(':univers_name', $univers_name, PDO::PARAM_STR);
         $stmt_check_univers->execute();
 
@@ -170,7 +172,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             // Insérer l'univers dans la table "univers" en utilisant une requête préparée
             $sql_insert_univers = "INSERT INTO univers (name) VALUES (:univers_name)";
-            $stmt_insert_univers = $conn->prepare($sql_insert_univers);
+            $stmt_insert_univers = $pdo->prepare($sql_insert_univers);
             $stmt_insert_univers->bindParam(':univers_name', $univers_name, PDO::PARAM_STR);
 
             if ($stmt_insert_univers->execute()) {
@@ -185,7 +187,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Vérification si le univers existe déjà dans la table "univers"
         $sql_check_studios = "SELECT * FROM `studios`  WHERE name = :studios_name";
-        $stmt_check_studios = $conn->prepare($sql_check_studios);
+        $stmt_check_studios = $pdo->prepare($sql_check_studios);
         $stmt_check_studios->bindParam(':studios_name', $studios_name, PDO::PARAM_STR);
         $stmt_check_studios->execute();
 
@@ -194,7 +196,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             // Insérer l'univers dans la table "univers" en utilisant une requête préparée
             $sql_insert_studios = "INSERT INTO studios (name) VALUES (:studios_name)";
-            $stmt_insert_studios = $conn->prepare($sql_insert_studios);
+            $stmt_insert_studios = $pdo->prepare($sql_insert_studios);
             $stmt_insert_studios->bindParam(':studios_name', $studios_name, PDO::PARAM_STR);
 
             if ($stmt_insert_studios->execute()) {
@@ -209,7 +211,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Vérification si le univers existe déjà dans la table "univers"
         $sql_check_createur = "SELECT * FROM `createurs`  WHERE name = :createur_name";
-        $stmt_check_createur = $conn->prepare($sql_check_createur);
+        $stmt_check_createur = $pdo->prepare($sql_check_createur);
         $stmt_check_createur->bindParam(':createur_name', $studios_name, PDO::PARAM_STR);
         $stmt_check_createur->execute();
 
@@ -218,7 +220,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             // Insérer l'univers dans la table "univers" en utilisant une requête préparée
             $sql_insert_createur = "INSERT INTO createurs (name) VALUES (:createur_name)";
-            $stmt_insert_createur = $conn->prepare($sql_insert_createur);
+            $stmt_insert_createur = $pdo->prepare($sql_insert_createur);
             $stmt_insert_createur->bindParam(':createur_name', $createur_name, PDO::PARAM_STR);
 
             if ($stmt_insert_createur->execute()) {

@@ -7,5 +7,5 @@
 	include_once ("vue/navbar.inc.php");
 	include_once ("modele/home.lib.php");
 	include_once ("vue/home.inc.php");
-
+	include_once ('modele/pdo.lib.php');
 	

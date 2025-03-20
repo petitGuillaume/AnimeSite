@@ -5,7 +5,8 @@ function filterAnime($studioId, $creatorId, $univerID, $genres, $searchTerm, $ye
   $dbHost = 'localhost';
   $dbName = 'db_anime';
   $dbUser = 'root';
-  $dbPass = '';
+  $dbPass = 'root';
+
   try {
     $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8", $dbUser, $dbPass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -99,7 +100,7 @@ function getAllAnime()
   $dbHost = 'localhost';
   $dbName = 'db_anime';
   $dbUser = 'root';
-  $dbPass = '';
+  $dbPass = 'root';
 
   try {
     $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8", $dbUser, $dbPass);
@@ -149,7 +150,7 @@ function fetchStudios()
   $dbHost = 'localhost';
   $dbName = 'db_anime';
   $dbUser = 'root';
-  $dbPass = '';
+  $dbPass = 'root';
 
   try {
     $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8", $dbUser, $dbPass);
@@ -181,7 +182,7 @@ function fetchCreator()
   $dbHost = 'localhost';
   $dbName = 'db_anime';
   $dbUser = 'root';
-  $dbPass = '';
+  $dbPass = 'root';
 
   try {
     $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8", $dbUser, $dbPass);
@@ -211,7 +212,7 @@ function fetchGenres()
   $dbHost = 'localhost';
   $dbName = 'db_anime';
   $dbUser = 'root';
-  $dbPass = '';
+  $dbPass = 'root';
 
   try {
     $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8", $dbUser, $dbPass);
@@ -235,7 +236,7 @@ function fetchUniver()
   $dbHost = 'localhost';
   $dbName = 'db_anime';
   $dbUser = 'root';
-  $dbPass = '';
+  $dbPass = 'root';
 
   try {
     $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8", $dbUser, $dbPass);
@@ -259,5 +260,3 @@ function fetchUniver()
     return array(); // Return an empty array in case of an error
   }
 }
-
-?>

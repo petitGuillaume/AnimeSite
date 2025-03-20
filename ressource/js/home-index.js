@@ -1,7 +1,8 @@
 $(document).ready(function () {
     $.ajax({
-        url: 'modele/home.lib.php',
-        type: 'POST',
+     url: 'modele/home.lib.php',
+       
+     type: 'POST',
         dataType: 'json',
         success: function (data) {
             var content = '';
