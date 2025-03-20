@@ -57,7 +57,7 @@
                             // Database connection parameters
                             $servername = "localhost";
                             $username = "root";
-                            $password = "";
+                            $password = "root";
                             $dbname = "db_anime";
 
                             // Create connection
@@ -212,7 +212,7 @@
                     // Database connection parameters
                     $servername = "localhost";
                     $username = "root";
-                    $password = "";
+                    $password = "root";
                     $dbname = "db_anime";
 
                     // Create connection
@@ -381,7 +381,7 @@
 
 </html>
 
-
+<!---------
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const fileInput = document.getElementById("fileInput");

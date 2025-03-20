@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
 			<title>Azunya</title>
 			<link href="ressource/css/Navbar.css" rel="stylesheet">
+			<link rel="icon" type="image/x-icon" href="ressource/img/favicon.ico">
 	</head>
 
 	<body >

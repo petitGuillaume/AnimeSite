@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.2
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Sep 11, 2024 at 05:23 PM
--- Server version: 8.0.30
--- PHP Version: 8.1.10
+-- Hôte : localhost:3306
+-- Généré le : jeu. 20 mars 2025 à 11:24
+-- Version du serveur : 5.7.24
+-- Version de PHP : 8.3.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,34 +18,34 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_anime`
+-- Base de données : `db_anime`
 --
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `anime`
+-- Structure de la table `anime`
 --
 
 CREATE TABLE `anime` (
-  `ID` int NOT NULL,
+  `ID` int(11) NOT NULL,
   `Name_Jp` varchar(255) DEFAULT NULL,
   `Name_Fr` varchar(255) DEFAULT NULL,
   `Image` varchar(255) DEFAULT NULL,
   `Synopsis` text,
-  `Year` int DEFAULT NULL,
-  `Nb_episodes` int DEFAULT NULL,
-  `Nb_OAV` int DEFAULT NULL,
-  `Nb_Film` int DEFAULT NULL,
-  `ID_Univers` int DEFAULT NULL,
-  `ID_Source` int DEFAULT NULL,
+  `Year` int(11) DEFAULT NULL,
+  `Nb_episodes` int(11) DEFAULT NULL,
+  `Nb_OAV` int(11) DEFAULT NULL,
+  `Nb_Film` int(11) DEFAULT NULL,
+  `ID_Univers` int(11) DEFAULT NULL,
+  `ID_Source` int(11) DEFAULT NULL,
   `Anime_Type` varchar(255) DEFAULT NULL,
-  `ID_Studio` int DEFAULT NULL,
-  `ID_Createur` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `ID_Studio` int(11) DEFAULT NULL,
+  `ID_Createur` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `anime`
+-- Déchargement des données de la table `anime`
 --
 
 INSERT INTO `anime` (`ID`, `Name_Jp`, `Name_Fr`, `Image`, `Synopsis`, `Year`, `Nb_episodes`, `Nb_OAV`, `Nb_Film`, `ID_Univers`, `ID_Source`, `Anime_Type`, `ID_Studio`, `ID_Createur`) VALUES
@@ -456,22 +456,29 @@ INSERT INTO `anime` (`ID`, `Name_Jp`, `Name_Fr`, `Image`, `Synopsis`, `Year`, `N
 (400, 'Ane Log (Flash Animation)', 'Ane Log (Flash Animation)', 'Ane log (Flash).jpg', 'Quand il était plus jeune, Akira Konoe demanda en mariage sa grande sœur Moyako. Depuis lors, Moyako pense que son frère est un pervers obsédé par sa grande sœur. Cependant, cette perversion ne se passe que dans son imagination ce qui l\'amène à imaginer toutes sortes de situations perverses avec son frère !', 2014, 0, 6, 0, 29, 0, 'original', 21, 28),
 (401, 'Air In Summer', 'Air In Summer', 'Air in summer.jpg', 'Air In Summer développe les personnages apparut dans les épisodes 9 et 10 de Air TV, mettant en scène des personnages de l\'ère féodal. Kannabi-No-Mikoto, ou tout simplement Kanna, est une jeune fille se révélant être un être ailé. Avec l\'aide d\'une de ses servantes, Uraha, et de Ryuuya un samourai en charge de sa protection, elle se lance dans un voyage afin de rencontrer sa mère qui est la dernière être ailée avec elle... Dans ces deux épisodes, nous verrons les relations entre ce trio de personnages être développés d\'une façon drôle et émouvante.', 2005, 0, 2, 0, 27, 37, 'parallèle', 19, 26),
 (402, 'Ghost in the Shell : S.A.C. Solid State Society', 'Ghost in the Shell : S.A.C. Solid State Society', 'Ghost In The Shell Solid State Society.jpg', 'Nous sommes en 2034.\r\nCela fait 2 ans que le \'Major\' Motoko Kusanagi a quitté la Section 9 et travaille à son compte, suite aux événements survenus lors de la saison 2 de Ghost in the Shell : Stand Alone Complex.\r\nTogusa est devenu le leader d\'une équipe agrandie, toujours sous la tutelle d\'Aramaki.\r\n\r\nCette nouvelle Section 9 est confrontée à une série de suicides inexpliqués parmi les membres d\'une junte militaire menaçant d\'accomplir des actes terroristes dans le pays pour faire obstacle à un projet de loi du premier ministre. Leur enquête révèle bientôt l\'implication d\'un mystérieux hacker surnommé le Marionnettiste.\r\n\r\nAlors que Batou suit une piste, il croise le \'Major\' qui lui donne un étrange conseil : \"Tiens-toi à l\'écart du Solid State\". De son côté, la Section 9 découvre bientôt qu\'un grand nombre d\'enfants auraient été enlevés dans un but inconnu.\r\n\r\nMais Kusanagi ne pourrait-elle pas être le Marionnettiste ? ...', 2006, 0, 1, 0, 7, 10, 'Suite', 6, 7),
-(403, 'Landlock ', 'Landlock ', 'Landlock.jpg', 'Dans le monde de Zer’lue, le leader religieux Sana’ku cherche à imposer sa domination technologique et militaire, en éliminant les derniers guerriers du vent. Le jeune Lue’der, un orphelin qui peut contrôler la force dévastatrice du vent va se retrouver malgré lui dans une lutte à mort avec Sana’ku et ses sbires, qui le voient comme une menace à leur plans maléfiques. ', 1996, 0, 2, 0, 208, 0, 'original', 98, 188);
+(403, 'Landlock ', 'Landlock ', 'Landlock.jpg', 'Dans le monde de Zer’lue, le leader religieux Sana’ku cherche à imposer sa domination technologique et militaire, en éliminant les derniers guerriers du vent. Le jeune Lue’der, un orphelin qui peut contrôler la force dévastatrice du vent va se retrouver malgré lui dans une lutte à mort avec Sana’ku et ses sbires, qui le voient comme une menace à leur plans maléfiques. ', 1996, 0, 2, 0, 208, 0, 'original', 98, 188),
+(404, 'Dragon Ball DAIMA', 'Dragon Ball DAIMA', 'Dragon Ball DAIMA.jpg', 'À la suite d\'une conspiration, Goku et certains de ses alliés reprennent leur taille d\'enfant. Commence alors une quête pour régler ce problème.', 2024, 20, 0, 0, 161, 306, 'Suite', 1, 22),
+(405, 'Ranma ½ (2024)', 'Ranma ½ (2024)', 'Ranma ½ (2024).jpg', ' Alors qu\'il revient tout juste de Chine où il s\'est entrainé à la pratique des arts martiaux avec son père, Ranma Saotome découvre brutalement la jeune fille à laquelle il a été fiancé alors qu\'il la connait à peine. Il s\'agit d\'Akane, la fille d\'un ami de son père qui tient un petit dojo familial. Mais le mariage s\'annonce difficile, les deux jeunes gens ne s\'appréciant pas vraiment. De plus, Ranma, maudit par les sources de Chine dans lesquelles il est tombé, se transforme en fille au contact de l\'eau froide.', 2024, 12, 0, 0, 17, 21, 'Remake', 91, 17),
+(406, 'Shikanoko Nokonoko Koshitantan', 'My Deer Friend Nokotan', 'My Deer Friend Nokotan.jpg', 'Personne ne sait que Torako a été une délinquante. Tous ses camarades de classe ne la connaissent que comme une élève parfaite. Mais tout change lorsque Nokotan, une élève avec des bois, débarque dans sa vie. Les bois ne sont pas la seule chose étrange chez Nokotan. Son nez de cerf est capable de flairer le passé secret de Torako ! Que ce soit à l\'école ou au zoo, le chaos suit chaque pas de cette jeune fille aux yeux de biche.\r\n\r\nTorako se pose tant de questions ! Nokotan est-elle un cerf, une fille ou quelque chose entre les deux ?', 2024, 12, 0, 0, 209, 0, 'Original', 73, 189),
+(407, 'Gintama', 'Gintama', 'Gintama.jpg', 'A l\'époque Edo, les samurai étaient respectés de tous, mais la venue des Amanto (aliens) a entraîné la déchéance des samurai avec l\'interdiction du port de l\'épée. Mais un jeune garçon du nom de Sataka Gintoki décide de vivre à sa manière en devenant un free-lancer (personne qui accepte des petits boulots pour rendre service). Accompagné de ses deux amis Kagura et Shinpachi, ils vivent et se battent en tant que hors-la-loi.', 2006, 201, 0, 0, 210, 0, 'Original', 13, 190),
+(408, 'Seihou Bukyou Outlaw Star', 'Outlaw Star', 'Outlaw Star.jpg', 'Gene Starwind vit comme un proscrit et rêve que la vie lui sourisse. Il semble trouver tout à coup un super boulot. Mais comme toutes les choses finissent mal, il trouve le vaisseau le plus technologiquement avancé de la galaxie mais malheureusement il est volé et les propriétaires souhaitent le récupérer...\r\nAvec ses partenaires Jim Hawking et Melfina, Gene doit se frayer un chemin à travers les pirates, les étrangers et les assassins en lutte au sein de la galaxie, tandis qu\'il tente en même temps de découvrir les secrets de l\'Outlaw Star.', 1998, 26, 0, 0, 211, 0, 'Original', 13, 191),
+(409, 'Soredemo Ayumu wa Yosetekuru', 'A quoi tu joues, Ayumu', 'A quoi tu joues, Ayumu.jpg', ' Ayumu Tanaka est un lycéen qui est secrètement amoureux de Urushi Yaotome, son aînée qui est aussi la présidente du club de shogi. Il a juré de lui avouer ses sentiments après avoir réussi à la battre dans une partie de shogi. Cependant, étant encore un novice, Urushi le bat toujours. De son côté, elle essaie de pousser Ayumu à avouer ses sentiments même s\'il ne se laisse que rarement distraire. Bien que le jour de sa victoire ne soit pas près d\'arriver, Ayumu va réussir à la mettre \"en échec\" par d\'autres moyens.', 2022, 12, 0, 0, 212, 0, 'Original', 47, 192),
+(410, 'Aoi Sekai no Chuushin de', 'World War Blue', 'World War Blue.jpg', 'Le Royaume de Segua est en train de perdre la guerre contre l\'Empire Ninterdo, mais tout change avec l\'apparition d\'un jeune garçon nommé Gear. Les personnages sont des parodies des jeux de Nintendo et Sega tels que Sonic, Super Mario Bros., La Légende de Zelda etc.', 2012, 0, 3, 0, 213, 0, 'Original', 99, 193);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `anime_genres`
+-- Structure de la table `anime_genres`
 --
 
 CREATE TABLE `anime_genres` (
-  `ID` int NOT NULL,
-  `ID_Anime` int DEFAULT NULL,
-  `ID_Genre` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `ID` int(11) NOT NULL,
+  `ID_Anime` int(11) DEFAULT NULL,
+  `ID_Genre` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `anime_genres`
+-- Déchargement des données de la table `anime_genres`
 --
 
 INSERT INTO `anime_genres` (`ID`, `ID_Anime`, `ID_Genre`) VALUES
@@ -2087,34 +2094,65 @@ INSERT INTO `anime_genres` (`ID`, `ID_Anime`, `ID_Genre`) VALUES
 (1614, 403, 1),
 (1615, 403, 3),
 (1616, 403, 10),
-(1617, 403, 16);
+(1617, 403, 16),
+(1618, 404, 1),
+(1619, 404, 3),
+(1620, 404, 4),
+(1621, 404, 5),
+(1622, 404, 10),
+(1623, 405, 1),
+(1624, 405, 2),
+(1625, 405, 4),
+(1626, 405, 5),
+(1627, 405, 10),
+(1628, 406, 5),
+(1629, 406, 18),
+(1630, 407, 1),
+(1631, 407, 3),
+(1632, 407, 5),
+(1633, 407, 7),
+(1634, 407, 10),
+(1635, 407, 11),
+(1636, 407, 16),
+(1637, 408, 3),
+(1638, 408, 5),
+(1639, 408, 7),
+(1640, 408, 16),
+(1641, 409, 2),
+(1642, 409, 5),
+(1643, 409, 18),
+(1644, 410, 1),
+(1645, 410, 3),
+(1646, 410, 5),
+(1647, 410, 7),
+(1648, 410, 10);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `arcnarratif`
+-- Structure de la table `arcnarratif`
 --
 
 CREATE TABLE `arcnarratif` (
-  `ID` int NOT NULL,
+  `ID` int(11) NOT NULL,
   `Name` varchar(255) DEFAULT NULL,
   `Description` text,
-  `ID_Anime` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `ID_Anime` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `createurs`
+-- Structure de la table `createurs`
 --
 
 CREATE TABLE `createurs` (
-  `ID` int NOT NULL,
+  `ID` int(11) NOT NULL,
   `Name` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `createurs`
+-- Déchargement des données de la table `createurs`
 --
 
 INSERT INTO `createurs` (`ID`, `Name`) VALUES
@@ -2305,46 +2343,51 @@ INSERT INTO `createurs` (`ID`, `Name`) VALUES
 (185, 'DC Comics'),
 (186, 'Miman'),
 (187, 'Mayumi Azuma '),
-(188, 'ORCA');
+(188, 'ORCA'),
+(189, 'Oshioshio'),
+(190, 'Hideaki Sorachi'),
+(191, 'Takehiko Ito'),
+(192, 'Soichiro Yamamoto '),
+(193, 'Anastasia Shestakova');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `episodes`
+-- Structure de la table `episodes`
 --
 
 CREATE TABLE `episodes` (
-  `ID` int NOT NULL,
-  `ID_Anime` int DEFAULT NULL,
-  `ID_ArcNarratif` int DEFAULT NULL,
+  `ID` int(11) NOT NULL,
+  `ID_Anime` int(11) DEFAULT NULL,
+  `ID_ArcNarratif` int(11) DEFAULT NULL,
   `Name` varchar(255) DEFAULT NULL,
-  `Numero` int DEFAULT NULL,
+  `Numero` int(11) DEFAULT NULL,
   `Link` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `film`
+-- Structure de la table `film`
 --
 
 CREATE TABLE `film` (
-  `ID` int NOT NULL,
-  `Name_Jp` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `ID` int(11) NOT NULL,
+  `Name_Jp` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `Name_Fr` varchar(255) DEFAULT NULL,
   `Image` varchar(255) DEFAULT NULL,
   `Synopsis` text,
-  `Year` int DEFAULT NULL,
-  `ID_Univers` int DEFAULT NULL,
-  `ID_Studio` int DEFAULT NULL,
-  `ID_Anime` int DEFAULT NULL,
+  `Year` int(11) DEFAULT NULL,
+  `ID_Univers` int(11) DEFAULT NULL,
+  `ID_Studio` int(11) DEFAULT NULL,
+  `ID_Anime` int(11) DEFAULT NULL,
   `Link` varchar(255) DEFAULT NULL,
-  `ID_Createur` int DEFAULT NULL,
-  `ID_Source` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `ID_Createur` int(11) DEFAULT NULL,
+  `ID_Source` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `film`
+-- Déchargement des données de la table `film`
 --
 
 INSERT INTO `film` (`ID`, `Name_Jp`, `Name_Fr`, `Image`, `Synopsis`, `Year`, `ID_Univers`, `ID_Studio`, `ID_Anime`, `Link`, `ID_Createur`, `ID_Source`) VALUES
@@ -2512,17 +2555,17 @@ INSERT INTO `film` (`ID`, `Name_Jp`, `Name_Fr`, `Image`, `Synopsis`, `Year`, `ID
 -- --------------------------------------------------------
 
 --
--- Table structure for table `film_genres`
+-- Structure de la table `film_genres`
 --
 
 CREATE TABLE `film_genres` (
-  `ID` int NOT NULL,
-  `ID_Film` int DEFAULT NULL,
-  `ID_Genre` int DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `ID` int(11) NOT NULL,
+  `ID_Film` int(11) DEFAULT NULL,
+  `ID_Genre` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `film_genres`
+-- Déchargement des données de la table `film_genres`
 --
 
 INSERT INTO `film_genres` (`ID`, `ID_Film`, `ID_Genre`) VALUES
@@ -3238,16 +3281,16 @@ INSERT INTO `film_genres` (`ID`, `ID_Film`, `ID_Genre`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `genres`
+-- Structure de la table `genres`
 --
 
 CREATE TABLE `genres` (
-  `ID` int NOT NULL,
-  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `ID` int(11) NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `genres`
+-- Déchargement des données de la table `genres`
 --
 
 INSERT INTO `genres` (`ID`, `name`) VALUES
@@ -3274,16 +3317,16 @@ INSERT INTO `genres` (`ID`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `studios`
+-- Structure de la table `studios`
 --
 
 CREATE TABLE `studios` (
-  `ID` int NOT NULL,
+  `ID` int(11) NOT NULL,
   `Name` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `studios`
+-- Déchargement des données de la table `studios`
 --
 
 INSERT INTO `studios` (`ID`, `Name`) VALUES
@@ -3384,21 +3427,22 @@ INSERT INTO `studios` (`ID`, `Name`) VALUES
 (95, 'Studio Anima'),
 (96, 'Oh! Production'),
 (97, 'HAL Film Maker'),
-(98, 'Sanctuary');
+(98, 'Sanctuary'),
+(99, 'Fifth Avenue');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `univers`
+-- Structure de la table `univers`
 --
 
 CREATE TABLE `univers` (
-  `ID` int NOT NULL,
+  `ID` int(11) NOT NULL,
   `Name` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `univers`
+-- Déchargement des données de la table `univers`
 --
 
 INSERT INTO `univers` (`ID`, `Name`) VALUES
@@ -3609,14 +3653,19 @@ INSERT INTO `univers` (`ID`, `Name`) VALUES
 (205, 'DC Comics'),
 (206, 'Yuri Is My Job!'),
 (207, 'Erementar Gerad'),
-(208, 'Landlock');
+(208, 'Landlock'),
+(209, 'My Deer Friend Nokotan'),
+(210, 'Gintama'),
+(211, 'Outlaw Star'),
+(212, 'A quoi tu joues, Ayumu'),
+(213, 'World War Blue');
 
 --
--- Indexes for dumped tables
+-- Index pour les tables déchargées
 --
 
 --
--- Indexes for table `anime`
+-- Index pour la table `anime`
 --
 ALTER TABLE `anime`
   ADD PRIMARY KEY (`ID`),
@@ -3626,7 +3675,7 @@ ALTER TABLE `anime`
   ADD KEY `ID_Createur` (`ID_Createur`);
 
 --
--- Indexes for table `anime_genres`
+-- Index pour la table `anime_genres`
 --
 ALTER TABLE `anime_genres`
   ADD PRIMARY KEY (`ID`),
@@ -3634,20 +3683,20 @@ ALTER TABLE `anime_genres`
   ADD KEY `ID_Genre` (`ID_Genre`);
 
 --
--- Indexes for table `arcnarratif`
+-- Index pour la table `arcnarratif`
 --
 ALTER TABLE `arcnarratif`
   ADD PRIMARY KEY (`ID`),
   ADD KEY `ID_Anime` (`ID_Anime`);
 
 --
--- Indexes for table `createurs`
+-- Index pour la table `createurs`
 --
 ALTER TABLE `createurs`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `episodes`
+-- Index pour la table `episodes`
 --
 ALTER TABLE `episodes`
   ADD PRIMARY KEY (`ID`),
@@ -3655,7 +3704,7 @@ ALTER TABLE `episodes`
   ADD KEY `ID_ArcNarratif` (`ID_ArcNarratif`);
 
 --
--- Indexes for table `film`
+-- Index pour la table `film`
 --
 ALTER TABLE `film`
   ADD PRIMARY KEY (`ID`),
@@ -3665,7 +3714,7 @@ ALTER TABLE `film`
   ADD KEY `ID_Createur` (`ID_Createur`);
 
 --
--- Indexes for table `film_genres`
+-- Index pour la table `film_genres`
 --
 ALTER TABLE `film_genres`
   ADD PRIMARY KEY (`ID`),
@@ -3673,86 +3722,86 @@ ALTER TABLE `film_genres`
   ADD KEY `ID_Genre` (`ID_Genre`);
 
 --
--- Indexes for table `genres`
+-- Index pour la table `genres`
 --
 ALTER TABLE `genres`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `studios`
+-- Index pour la table `studios`
 --
 ALTER TABLE `studios`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `univers`
+-- Index pour la table `univers`
 --
 ALTER TABLE `univers`
   ADD PRIMARY KEY (`ID`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- AUTO_INCREMENT for table `anime`
+-- AUTO_INCREMENT pour la table `anime`
 --
 ALTER TABLE `anime`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=404;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=411;
 
 --
--- AUTO_INCREMENT for table `anime_genres`
+-- AUTO_INCREMENT pour la table `anime_genres`
 --
 ALTER TABLE `anime_genres`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1618;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1649;
 
 --
--- AUTO_INCREMENT for table `arcnarratif`
+-- AUTO_INCREMENT pour la table `arcnarratif`
 --
 ALTER TABLE `arcnarratif`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `createurs`
+-- AUTO_INCREMENT pour la table `createurs`
 --
 ALTER TABLE `createurs`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=189;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=194;
 
 --
--- AUTO_INCREMENT for table `episodes`
+-- AUTO_INCREMENT pour la table `episodes`
 --
 ALTER TABLE `episodes`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `film`
+-- AUTO_INCREMENT pour la table `film`
 --
 ALTER TABLE `film`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
 
 --
--- AUTO_INCREMENT for table `film_genres`
+-- AUTO_INCREMENT pour la table `film_genres`
 --
 ALTER TABLE `film_genres`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=709;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=709;
 
 --
--- AUTO_INCREMENT for table `genres`
+-- AUTO_INCREMENT pour la table `genres`
 --
 ALTER TABLE `genres`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
--- AUTO_INCREMENT for table `studios`
+-- AUTO_INCREMENT pour la table `studios`
 --
 ALTER TABLE `studios`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=99;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
 
 --
--- AUTO_INCREMENT for table `univers`
+-- AUTO_INCREMENT pour la table `univers`
 --
 ALTER TABLE `univers`
-  MODIFY `ID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=209;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=214;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -1,16 +1,6 @@
 
 <?php
-$dbHost = 'localhost';
-$dbName = 'db_anime';
-$dbUser = 'root';
-$dbPass = '';
-
-try {
-    $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8", $dbUser, $dbPass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Erreur de connexion : " . $e->getMessage());
-}
+include_once("modele/pdo.lib.php");
 
 // Récupérer l'ID du film depuis GET
 if (isset($_GET['id']) && is_numeric($_GET['id'])) {
