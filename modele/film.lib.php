@@ -1,18 +1,11 @@
 <?php
 
 // Function to fetch anime data from the database based on filters and search term
-function filterAnime($studioId, $creatorId, $univerID, $genres, $searchTerm, $yearMin, $yearMax)
+function filterAnime($studioId, $creatorId, $univerID, $genres, $searchTerm, $yearMin, $yearMax, $pdo)
 {
-  // Implement your database connection and query here
-  // Replace the placeholders with the actual database credentials
-  $dbHost = 'localhost';
-  $dbName = 'db_anime';
-  $dbUser = 'root';
-  $dbPass = 'root';
+ 
   try {
-    $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8", $dbUser, $dbPass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+  
     // Build the query based on the filters and search term
     $query = "SELECT Film.*,
     Studios.Name AS StudioName,
@@ -101,19 +94,11 @@ WHERE 1=1";
 }
 
 // Function to fetch all anime data from the database
-function getAllAnime()
+function getAllAnime($pdo)
 {
-  // Implement your database connection and query here
-  // Replace the placeholders with the actual database credentials
-  $dbHost = 'localhost';
-  $dbName = 'db_anime';
-  $dbUser = 'root';
-  $dbPass = 'root';
+ 
 
   try {
-    $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8", $dbUser, $dbPass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
     // Fetch all anime data
     $query = "SELECT * FROM film";
     $stmt = $pdo->query($query);
@@ -144,16 +129,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["action"])) {
 
     $genres = isset($_POST["genres"]) ? $_POST["genres"] : array();
     $searchTerm = isset($_POST["searchTerm"]) ? $_POST["searchTerm"] : null;
-
+    require_once 'pdo.lib.php'; 
     // Filter anime data based on form inputs
-    $filteredAnime = filterAnime($studioId, $creatorId, $univerID ,$genres, $searchTerm, $yearMin, $yearMax);
+    $filteredAnime = filterAnime($studioId, $creatorId, $univerID ,$genres, $searchTerm, $yearMin, $yearMax, $pdo);
 
     // Return the filtered anime data as JSON response
     echo json_encode($filteredAnime);
     exit;
   } elseif ($action == "fetchAll") {
     // Fetch all anime data
-    $allAnime = getAllAnime();
+    $allAnime = getAllAnime($pdo);
 
     // Return all anime data as JSON response
     echo json_encode($allAnime);
@@ -161,17 +146,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["action"])) {
   }
 }
 
-function fetchStudios()
+function fetchStudios($pdo)
 {
-  // Replace with your actual database connection code
-  $dbHost = 'localhost';
-  $dbName = 'db_anime';
-  $dbUser = 'root';
-  $dbPass = 'root';
-
+ 
   try {
-    $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8", $dbUser, $dbPass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Query to fetch studio data
     $query = "SELECT s.ID, s.Name FROM Studios s WHERE EXISTS (
@@ -192,18 +170,11 @@ function fetchStudios()
 
 
 
-function fetchCreator()
+function fetchCreator($pdo)
 {
-  // Replace with your actual database connection code
-  $dbHost = 'localhost';
-  $dbName = 'db_anime';
-  $dbUser = 'root';
-  $dbPass = 'root';
 
   try {
-    $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8", $dbUser, $dbPass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+ 
     // Corrected Query to fetch creators data
     $query = "SELECT c.ID, c.Name 
               FROM createurs c 
@@ -225,17 +196,11 @@ function fetchCreator()
 }
 
 
-function fetchGenres()
+function fetchGenres($pdo)
 {
-  // Replace with your actual database connection code
-  $dbHost = 'localhost';
-  $dbName = 'db_anime';
-  $dbUser = 'root';
-  $dbPass = 'root';
+
 
   try {
-    $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8", $dbUser, $dbPass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Query to fetch genre data
     $query = "SELECT ID, name FROM Genres";
@@ -249,17 +214,11 @@ function fetchGenres()
   }
 }
 
-function fetchUniver()
+function fetchUniver($pdo)
 {
-  // Replace with your actual database connection code
-  $dbHost = 'localhost';
-  $dbName = 'db_anime';
-  $dbUser = 'root';
-  $dbPass = 'root';
+
 
   try {
-    $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8", $dbUser, $dbPass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Query to fetch genre data
     $query = "SELECT u.*

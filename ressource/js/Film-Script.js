@@ -5,7 +5,7 @@
         data.forEach(function (film) {
   
           content += '<a href="index.php?detail_film&id=' + film.ID + '">';
-          content += '<div class="anime-item"><img class="ani" src="ressource/img/film_img/' + film.Image + '"/>';
+          content += '<div class="anime-item"><img class="ani" src="ressource/img/film_img/' + film.Image + '" alt="' + film.Name_Fr + '"/>';
           content += '<div class="bigblock">';
           content += '<div class="blocktittle">';
           content += '<div class="tittle">' + film.Name_Fr + '</div>';
@@ -23,7 +23,7 @@
           var genresArray = film.GenresList.split(', ');
           genresArray.sort();
           genresArray.forEach(function (genre) {
-            content += '<div class="genreblock ' + genre + '"><img class="miniImg" src="ressource/img/genres/' + genre + '.png"><p class="TextGenre">' + genre + '</p></div>';
+            content += '<div class="genreblock ' + genre + '"><img class="miniImg" src="ressource/img/genres/' + genre + '.png" alt="' + genre + '"><p class="TextGenre">' + genre + '</p></div>';
           });
           content += '</div>';
           content += '<div class="minicolon coloneChiffre">';

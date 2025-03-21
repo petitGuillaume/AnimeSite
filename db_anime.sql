@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : jeu. 20 mars 2025 à 11:24
+-- Généré le : ven. 21 mars 2025 à 09:30
 -- Version du serveur : 5.7.24
 -- Version de PHP : 8.3.1
 
@@ -2550,7 +2550,8 @@ INSERT INTO `film` (`ID`, `Name_Jp`, `Name_Fr`, `Image`, `Synopsis`, `Year`, `ID
 (155, 'Kidou Senshi Z Gundam II : Koibito-tachi', 'Mobile Suit Zeta Gundam II : Amants', 'Zeta Gundam film 2.jpg', 'Suite directe du premier film, Mobile Suit Zeta Gundam : A New Translation-Heirs to the Stars. Amuro Ray les a rejoints, mais Kamille et l\'AEUG continuent de combattre contre les Titans. Les femmes auront une grande importance dans cette partie. Le cœur de héros va-t-il chavirer ?', 2005, 15, 13, NULL, NULL, 118, 244),
 (156, 'Kidou Senshi Z Gundam III : Hoshi no Kodou wa Ai', 'Mobile Suit Zeta Gundam III : C\'est l\'amour qui fait battre les étoiles', 'Zeta Gundam film 3.jpg', 'Haman Karn, représentante des forces Neon Zeon, est venue en aide à nos protagonistes. Mais cette aide n\'est que pour servir ses intérêts. Pendant ce temps, Scirocco est de retour et s\'impose chez les Titans. Quelle sera le dénouement de cette histoire ?', 2006, 15, 13, NULL, NULL, 118, 244),
 (157, 'Shinseiki Evangelion Movie: Shi to Shinsei', 'Neon Genesis Evangelion : Death & Rebirth', 'Evangelion Death and Rebirth.jpg', 'Résumé de la Série télévisée', 1997, 8, 7, NULL, NULL, 8, 11),
-(158, 'Shinseiki Evangelion Movie: Air/Magokoro wo, Kimi ni', 'Neon Genesis Evangelion: The End of Evangelion', 'Evangelion The End of Evangelion.jpg', 'he End of Evangelion est un film divisé en deux parties (Episode 25\': Love is Destructive et Episode 26\': ONE MORE FINAL: I need you) proposant une autre version des épisodes 25 et 26 de Neon Genesis Evangelion, épisodes finaux de la série qui ont suscité de nombreuses réactions de mécontentement chez les fans.\r\nEn effet, ce long métrage apporte une conclusion réaliste et pragmatique, contrairement à la série animée de 1996 qui ne put apporter qu\'une fin philosophique.', 1997, 8, 7, NULL, NULL, 8, 11);
+(158, 'Shinseiki Evangelion Movie: Air/Magokoro wo, Kimi ni', 'Neon Genesis Evangelion: The End of Evangelion', 'Evangelion The End of Evangelion.jpg', 'he End of Evangelion est un film divisé en deux parties (Episode 25\': Love is Destructive et Episode 26\': ONE MORE FINAL: I need you) proposant une autre version des épisodes 25 et 26 de Neon Genesis Evangelion, épisodes finaux de la série qui ont suscité de nombreuses réactions de mécontentement chez les fans.\r\nEn effet, ce long métrage apporte une conclusion réaliste et pragmatique, contrairement à la série animée de 1996 qui ne put apporter qu\'une fin philosophique.', 1997, 8, 7, NULL, NULL, 8, 11),
+(159, 'Gekijouban Jujutsu Kaisen 0', 'Jujutsu Kaisen 0', 'jujutsu_kaisen_0.jpg', 'Yuta Okkotsu est hanté par l\'esprit de Rika, son amie d\'enfance morte dans un accident de la route. Cette dernière n\'est plus la petite fille qu\'il a connu et se manifeste sous la forme d\'une entité monstrueuse qui le protège contre sa volonté.\r\n\r\nAprès un énième accident causé par ce fléau, Yuta est récupéré par Satoru Gojo, professeur à l\'école d\'exorcisme de Tokyo, qui le convainc de rejoindre l\'établissement pour maîtriser son énergie occulte.\r\n\r\nPourra-t-il en apprendre suffisamment à temps pour affronter la malédiction qui le hante ?', 2021, 195, 91, NULL, NULL, 177, 368);
 
 -- --------------------------------------------------------
 
@@ -3276,7 +3277,13 @@ INSERT INTO `film_genres` (`ID`, `ID_Film`, `ID_Genre`) VALUES
 (705, 158, 1),
 (706, 158, 7),
 (707, 158, 14),
-(708, 158, 16);
+(708, 158, 16),
+(709, 159, 1),
+(710, 159, 3),
+(711, 159, 7),
+(712, 159, 9),
+(713, 159, 10),
+(714, 159, 12);
 
 -- --------------------------------------------------------
 
@@ -3777,13 +3784,13 @@ ALTER TABLE `episodes`
 -- AUTO_INCREMENT pour la table `film`
 --
 ALTER TABLE `film`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=159;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=160;
 
 --
 -- AUTO_INCREMENT pour la table `film_genres`
 --
 ALTER TABLE `film_genres`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=709;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=715;
 
 --
 -- AUTO_INCREMENT pour la table `genres`

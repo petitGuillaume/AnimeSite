@@ -39,7 +39,7 @@
           <select id="studio_filter">
             <option value="">Studio</option>
             <?php
-              $studios = fetchStudios();
+              $studios = fetchStudios($pdo);
                 foreach ($studios as $studio) {
                   echo '<option value="' . $studio['ID'] . '">' . $studio['Name'] . '</option>';
                 }
@@ -51,7 +51,7 @@
           <select id="creator_filter">
             <option value="">Créateur</option>
             <?php
-              $creators = fetchCreator();
+              $creators = fetchCreator($pdo);
                 foreach ($creators as $creator) {
                   echo '<option value="' . $creator['ID'] . '">' . $creator['Name'] . '</option>';
                 }
@@ -65,7 +65,7 @@
           <select id="univer_filter">
             <option value="">Univers</option>
             <?php
-              $univers = fetchUniver();
+              $univers = fetchUniver($pdo);
                 foreach ($univers as $univer) {
                   echo '<option value="' . $univer['ID'] . '">' . $univer['Name'] . '</option>';
                 }
@@ -75,7 +75,7 @@
       </div>
       <div class="formTheirdLign">
           <?php
-          $genres = fetchGenres();
+          $genres = fetchGenres($pdo);
             foreach ($genres as $genre) {
                echo '<div class="checkboxGenres"><input class="Custom-checkbox" type="checkbox" name="genre_filter[]" value="' . $genre['ID'] . '"> ' . $genre['name'] . '</div>';
             }

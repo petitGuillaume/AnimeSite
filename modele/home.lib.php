@@ -1,23 +1,15 @@
 <?php
 /**
- * Modele de la page de garde
+ * Modele de la page home
 
  *
  */
 //
-
-function starAnime()
+function starAnime($pdo)
 {
   
- $dbHost = 'localhost';
- $dbName = 'db_anime';
- $dbUser = 'root';
- $dbPass = 'root';
   try {
-    $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8", $dbUser, $dbPass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  // global $pdo;
-
+   
     $query = "SELECT Anime.*,
     Studios.Name AS StudioName,
     univers.Name AS UniverseName,
@@ -48,6 +40,11 @@ function starAnime()
 
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $animeData = starAnime();
-  echo json_encode($animeData); // Output the data in JSON format
+  require_once 'pdo.lib.php'; // Charge la connexion à la base de données
+
+  $animeData = starAnime($pdo); // Passe $pdo en paramètre
+
+  header('Content-Type: application/json'); // Définit le type de réponse
+  echo json_encode($animeData);
+  exit;
 }

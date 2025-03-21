@@ -1,111 +1,97 @@
 <?php
 
-function filterAnime($studioId, $creatorId, $univerID, $genres, $searchTerm, $yearMin, $yearMax)
+function filterAnime($studioId, $creatorId, $univerID, $genres, $searchTerm, $yearMin, $yearMax, $pdo)
 {
-  $dbHost = 'localhost';
-  $dbName = 'db_anime';
-  $dbUser = 'root';
-  $dbPass = 'root';
 
-  try {
-    $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8", $dbUser, $dbPass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    try {
+      
+        $query = "SELECT 
+            Anime.*, 
+            Studios.Name AS StudioName, 
+            univers.Name AS UniverseName, 
+            Createurs.Name AS CreatorName, 
+            GROUP_CONCAT(DISTINCT Genres.name ORDER BY Genres.name SEPARATOR ', ') AS GenresList
+        FROM Anime
+        LEFT JOIN Studios ON Anime.ID_studio = Studios.ID
+        LEFT JOIN univers ON Anime.ID_univers = univers.ID
+        LEFT JOIN Createurs ON Anime.Id_createur = Createurs.ID
+        LEFT JOIN Anime_Genres ON Anime.ID = Anime_Genres.ID_Anime
+        LEFT JOIN Genres ON Anime_Genres.ID_genre = Genres.ID
+        WHERE 1=1";
 
-    $query = "SELECT Anime.*,
-    Studios.Name AS StudioName,
-    univers.Name AS UniverseName,
-    Createurs.Name AS CreatorName,
-    GROUP_CONCAT(Genres.name SEPARATOR ', ') AS GenresList
-FROM Anime
-LEFT JOIN Studios ON Anime.ID_studio = Studios.ID
-LEFT JOIN univers ON Anime.ID_univers = univers.ID
-LEFT JOIN Createurs ON Anime.Id_createur = Createurs.ID
-LEFT JOIN Anime_Genres ON Anime.ID = Anime_Genres.ID_Anime
-LEFT JOIN Genres ON Anime_Genres.ID_genre = Genres.ID
-WHERE 1=1";
-    if (!empty($studioId)) {
-      $query .= " AND ID_studio = :studioId";
-    }
-    if (!empty($yearMin)) {
-      $query .= " AND Year >= :yearMin";
-    }
-  
-    if (!empty($yearMax)) {
-      $query .= " AND Year <= :yearMax";
-    }
-    if (!empty($creatorId)) {
-      $query .= " AND Id_createur = :creatorId";
-    }
+        $params = [];
 
-    if (!empty($univerID)) {
-      $query .= " AND ID_univers = :univerID";
-    }
+        if (!empty($studioId)) {
+            $query .= " AND Anime.ID_studio = :studioId";
+            $params[':studioId'] = $studioId;
+        }
 
-    if (!empty($genres)) {
-      $genreIds = implode(',', $genres);
-      $numGenres = count($genres);
+        if (!empty($yearMin)) {
+            $query .= " AND Anime.Year >= :yearMin";
+            $params[':yearMin'] = $yearMin;
+        }
 
-  $query .= " AND ID_Anime IN (
-    SELECT ID_Anime
-    FROM Anime_Genres
-    WHERE ID_Genre IN ($genreIds)
-    GROUP BY ID_Anime
-    HAVING COUNT(DISTINCT ID_Genre) = $numGenres
-  )";  }
+        if (!empty($yearMax)) {
+            $query .= " AND Anime.Year <= :yearMax";
+            $params[':yearMax'] = $yearMax;
+        }
 
-    if (!empty($searchTerm)) {
-      $query .= " AND (Name_Jp LIKE :searchTerm OR Name_Fr LIKE :searchTerm)  GROUP BY Anime.ID, Studios.Name, univers.Name, Createurs.Name";
-    }
-    else{
-      $query .= " GROUP BY Anime.ID, Studios.Name, univers.Name, Createurs.Name ORDER BY  Anime.Name_Fr ASC";
-    }
+        if (!empty($creatorId)) {
+            $query .= " AND Anime.Id_createur = :creatorId";
+            $params[':creatorId'] = $creatorId;
+        }
 
-    $stmt = $pdo->prepare($query);
+        if (!empty($univerID)) {
+            $query .= " AND Anime.ID_univers = :univerID";
+            $params[':univerID'] = $univerID;
+        }
 
-    if (!empty($studioId)) {
-      $stmt->bindParam(':studioId', $studioId, PDO::PARAM_INT);
-    }
+        if (!empty($genres)) {
+            $genrePlaceholders = [];
+            foreach ($genres as $index => $genreId) {
+                $paramName = ":genre$index";
+                $genrePlaceholders[] = $paramName;
+                $params[$paramName] = $genreId;
+            }
 
-    if (!empty($creatorId)) {
-      $stmt->bindParam(':creatorId', $creatorId, PDO::PARAM_INT);
-    }
-    if (!empty($univerID)) {
-      $stmt->bindParam(':univerID', $univerID, PDO::PARAM_INT);
-    }
+            $query .= " AND Anime.ID IN (
+                SELECT ID_Anime FROM Anime_Genres 
+                WHERE ID_Genre IN (" . implode(',', $genrePlaceholders) . ") 
+                GROUP BY ID_Anime 
+                HAVING COUNT(DISTINCT ID_Genre) = :numGenres
+            )";
 
-    if (!empty($yearMin)) {
-      $stmt->bindParam(':yearMin', $yearMin, PDO::PARAM_INT);
-    }
-  
-    if (!empty($yearMax)) {
-      $stmt->bindParam(':yearMax', $yearMax, PDO::PARAM_INT);
-    }
-    if (!empty($searchTerm)) {
-      $searchTerm = "%$searchTerm%";
-      $stmt->bindParam(':searchTerm', $searchTerm, PDO::PARAM_STR);
-    }
-    $stmt->execute();
-    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            $params[':numGenres'] = count($genres);
+        }
 
-    return $result;
-  } catch (PDOException $e) {
-    echo "Error: " . $e->getMessage();
-    return false;
-  }
+        if (!empty($searchTerm)) {
+            $query .= " AND (Anime.Name_Jp LIKE :searchTerm OR Anime.Name_Fr LIKE :searchTerm)";
+            $params[':searchTerm'] = "%$searchTerm%";
+        }
+
+        $query .= " GROUP BY Anime.ID ORDER BY Anime.Name_Fr ASC";
+
+        $stmt = $pdo->prepare($query);
+
+        // Bind parameters dynamically
+        foreach ($params as $key => &$value) {
+            $stmt->bindParam($key, $value, is_int($value) ? PDO::PARAM_INT : PDO::PARAM_STR);
+        }
+
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+        return false;
+    }
 }
 
-function getAllAnime()
+function getAllAnime($pdo)
 {
  
-  $dbHost = 'localhost';
-  $dbName = 'db_anime';
-  $dbUser = 'root';
-  $dbPass = 'root';
-
   try {
-    $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8", $dbUser, $dbPass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+ 
     // Fetch all anime data
     $query = "SELECT * FROM Anime";
     $stmt = $pdo->query($query);
@@ -133,28 +119,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["action"])) {
     $genres = isset($_POST["genres"]) ? $_POST["genres"] : array();
     $searchTerm = isset($_POST["searchTerm"]) ? $_POST["searchTerm"] : null;
 
-    $filteredAnime = filterAnime($studioId, $creatorId, $univerID ,$genres, $searchTerm, $yearMin, $yearMax);
+    require_once 'pdo.lib.php'; 
+    $filteredAnime = filterAnime($studioId, $creatorId, $univerID ,$genres, $searchTerm, $yearMin, $yearMax, $pdo);
 
     echo json_encode($filteredAnime);
     exit;
   } elseif ($action == "fetchAll") {
-    $allAnime = getAllAnime();
+    $allAnime = getAllAnime($pdo);
 
     echo json_encode($allAnime);
     exit;
   }
 }
 
-function fetchStudios()
+function fetchStudios($pdo)
 {
-  $dbHost = 'localhost';
-  $dbName = 'db_anime';
-  $dbUser = 'root';
-  $dbPass = 'root';
-
+ 
   try {
-    $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8", $dbUser, $dbPass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $query = "SELECT s.*
     FROM Studios s
@@ -177,16 +158,10 @@ function fetchStudios()
 
 
 
-function fetchCreator()
+function fetchCreator($pdo)
 {
-  $dbHost = 'localhost';
-  $dbName = 'db_anime';
-  $dbUser = 'root';
-  $dbPass = 'root';
 
   try {
-    $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8", $dbUser, $dbPass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $query = "SELECT c.ID, c.Name FROM createurs c
         WHERE EXISTS (
@@ -206,17 +181,10 @@ function fetchCreator()
 }
 
 
-function fetchGenres()
+function fetchGenres($pdo)
 {
-  // Replace with your actual database connection code
-  $dbHost = 'localhost';
-  $dbName = 'db_anime';
-  $dbUser = 'root';
-  $dbPass = 'root';
-
+ 
   try {
-    $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8", $dbUser, $dbPass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Query to fetch genre data
     $query = "SELECT ID, name FROM Genres";
@@ -230,18 +198,11 @@ function fetchGenres()
   }
 }
 
-function fetchUniver()
+function fetchUniver($pdo)
 {
-  // Replace with your actual database connection code
-  $dbHost = 'localhost';
-  $dbName = 'db_anime';
-  $dbUser = 'root';
-  $dbPass = 'root';
 
   try {
-    $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8", $dbUser, $dbPass);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
+ 
     // Query to fetch genre data
     $query = "SELECT u.*
     FROM univers u
