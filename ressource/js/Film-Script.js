@@ -147,39 +147,63 @@
        * 
        * 
        */
-      const sliderOne = document.getElementById('yearMin');
-      const sliderTwo = document.getElementById('yearMax');
-      const displayValOne = document.getElementById('range1');
-      const displayValTwo = document.getElementById('range2');
-      const minGap = 1; // Minimum gap between sliders
-      const sliderTrack = document.querySelector('.slider-track');
-      
-      function slideOne() {
-          if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
-              sliderOne.value = parseInt(sliderTwo.value) - minGap;
-          }
-          displayValOne.textContent = sliderOne.value;
-          fillColor();
+ 
+document.addEventListener("DOMContentLoaded", function() {
+  const currentYear = new Date().getFullYear();
+ const range2 = document.getElementById('range2');
+  range2.max = currentYear;  // Set max for range2 display
+  // Set up the yearMax and yearMin ranges
+  const yearMax = document.getElementById('yearMax');
+  yearMax.max = currentYear;  // Set the max for yearMax slider
+  yearMax.value = currentYear; // Set the default value for yearMax
+  const yearMin = document.getElementById('yearMin');
+  yearMin.max = currentYear;  // Set the max for yearMin slider
+
+ 
+
+  // Initializing slider variables and display
+  const sliderOne = document.getElementById('yearMin');
+  const sliderTwo = document.getElementById('yearMax');
+  const displayValOne = document.getElementById('range1');
+  const displayValTwo = document.getElementById('range2');
+  const minGap = 1; // Minimum gap between the sliders
+  const sliderTrack = document.querySelector('.slider-track');
+
+  // Update the display of the first slider
+  function slideOne() {
+      if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+          sliderOne.value = parseInt(sliderTwo.value) - minGap;  // Enforce min gap
       }
-      
-      function slideTwo() {
-          if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
-              sliderTwo.value = parseInt(sliderOne.value) + minGap;
-          }
-          displayValTwo.textContent = sliderTwo.value;
-          fillColor();
+      displayValOne.textContent = sliderOne.value; // Update the display of the first slider
+      fillColor();  // Update the slider track color
+  }
+
+  // Update the display of the second slider
+  function slideTwo() {
+      if (parseInt(sliderTwo.value) - parseInt(sliderOne.value) <= minGap) {
+          sliderTwo.value = parseInt(sliderOne.value) + minGap;  // Enforce min gap
       }
-      
-      function fillColor() {
-          const percent1 = ((sliderOne.value - sliderOne.min) / (sliderOne.max - sliderOne.min)) * 100;
-          const percent2 = ((sliderTwo.value - sliderTwo.min) / (sliderTwo.max - sliderTwo.min)) * 100;
-      
-          sliderTrack.style.background = `linear-gradient(to right, #d5d5d5 ${percent1}% , #e76f51 ${percent1}% , #e76f51 ${percent2}%, #d5d5d5 ${percent2}%)`;
-      }
-      
-      slideOne();
-      slideTwo();
-      
-      sliderOne.addEventListener('input', slideOne);
-      sliderTwo.addEventListener('input', slideTwo);
-      
+      displayValTwo.textContent = sliderTwo.value; // Update the display of the second slider
+      fillColor();  // Update the slider track color
+  }
+
+  // Fill the slider track with color based on slider values
+  function fillColor() {
+      const percent1 = ((sliderOne.value - sliderOne.min) / (sliderOne.max - sliderOne.min)) * 100;
+      const percent2 = ((sliderTwo.value - sliderTwo.min) / (sliderTwo.max - sliderTwo.min)) * 100;
+
+      // Set the gradient color based on slider values
+      sliderTrack.style.background = `linear-gradient(to right, #d5d5d5 ${percent1}%, #e76f51 ${percent1}%, #e76f51 ${percent2}%, #d5d5d5 ${percent2}%)`;
+  }
+
+  // Initialize the sliders and track
+  slideOne();
+  slideTwo();
+
+  // Event listeners for the sliders
+  sliderOne.addEventListener('input', slideOne);
+  sliderTwo.addEventListener('input', slideTwo);
+});
+
+ 
+

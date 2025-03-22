@@ -23,14 +23,17 @@
           <input type="text" id="search_input">
         </div>
         <div class="slider-container">
-          <h2>Période de sortie</h2>
-            <div class="values">
-              <span id="range1">1950</span> - <span  id="range2">2024</span>
-            </div>
-            <div class="slider-track"></div>
-            <input  id="yearMin"  value="1950" type="range" min="1950" max="2024" >
-            <input  id="yearMax" value="2024" type="range" min="1950" max="2024">
-         </div>
+            <h2>Période de sortie</h2>
+                  <div class="values">
+                    <span id="range1">1950</span> - <span id="range2">2000</span>
+                  </div>
+                  <div class="slider-track"></div>
+  
+                  <!-- Range sliders -->
+                  <input id="yearMin" value="1950" type="range" min="1950">
+                  <input id="yearMax" type="range" min="1950">
+                  
+          </div>
       </div>
 
       <div class="formSecondLign">
