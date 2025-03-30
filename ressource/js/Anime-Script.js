@@ -108,6 +108,8 @@
   
       
       function resetFilters() {
+        const sliderOne = document.getElementById('yearMin');
+        const sliderTwo = document.getElementById('yearMax');
         const date = new Date();
         const anneeActuelle = date.getFullYear();
         const displayValOne = document.getElementById('range1');
