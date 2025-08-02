@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : ven. 21 mars 2025 à 09:30
+-- Généré le : sam. 02 août 2025 à 09:41
 -- Version du serveur : 5.7.24
 -- Version de PHP : 8.3.1
 
@@ -463,7 +463,14 @@ INSERT INTO `anime` (`ID`, `Name_Jp`, `Name_Fr`, `Image`, `Synopsis`, `Year`, `N
 (407, 'Gintama', 'Gintama', 'Gintama.jpg', 'A l\'époque Edo, les samurai étaient respectés de tous, mais la venue des Amanto (aliens) a entraîné la déchéance des samurai avec l\'interdiction du port de l\'épée. Mais un jeune garçon du nom de Sataka Gintoki décide de vivre à sa manière en devenant un free-lancer (personne qui accepte des petits boulots pour rendre service). Accompagné de ses deux amis Kagura et Shinpachi, ils vivent et se battent en tant que hors-la-loi.', 2006, 201, 0, 0, 210, 0, 'Original', 13, 190),
 (408, 'Seihou Bukyou Outlaw Star', 'Outlaw Star', 'Outlaw Star.jpg', 'Gene Starwind vit comme un proscrit et rêve que la vie lui sourisse. Il semble trouver tout à coup un super boulot. Mais comme toutes les choses finissent mal, il trouve le vaisseau le plus technologiquement avancé de la galaxie mais malheureusement il est volé et les propriétaires souhaitent le récupérer...\r\nAvec ses partenaires Jim Hawking et Melfina, Gene doit se frayer un chemin à travers les pirates, les étrangers et les assassins en lutte au sein de la galaxie, tandis qu\'il tente en même temps de découvrir les secrets de l\'Outlaw Star.', 1998, 26, 0, 0, 211, 0, 'Original', 13, 191),
 (409, 'Soredemo Ayumu wa Yosetekuru', 'A quoi tu joues, Ayumu', 'A quoi tu joues, Ayumu.jpg', ' Ayumu Tanaka est un lycéen qui est secrètement amoureux de Urushi Yaotome, son aînée qui est aussi la présidente du club de shogi. Il a juré de lui avouer ses sentiments après avoir réussi à la battre dans une partie de shogi. Cependant, étant encore un novice, Urushi le bat toujours. De son côté, elle essaie de pousser Ayumu à avouer ses sentiments même s\'il ne se laisse que rarement distraire. Bien que le jour de sa victoire ne soit pas près d\'arriver, Ayumu va réussir à la mettre \"en échec\" par d\'autres moyens.', 2022, 12, 0, 0, 212, 0, 'Original', 47, 192),
-(410, 'Aoi Sekai no Chuushin de', 'World War Blue', 'World War Blue.jpg', 'Le Royaume de Segua est en train de perdre la guerre contre l\'Empire Ninterdo, mais tout change avec l\'apparition d\'un jeune garçon nommé Gear. Les personnages sont des parodies des jeux de Nintendo et Sega tels que Sonic, Super Mario Bros., La Légende de Zelda etc.', 2012, 0, 3, 0, 213, 0, 'Original', 99, 193);
+(410, 'Aoi Sekai no Chuushin de', 'World War Blue', 'World War Blue.jpg', 'Le Royaume de Segua est en train de perdre la guerre contre l\'Empire Ninterdo, mais tout change avec l\'apparition d\'un jeune garçon nommé Gear. Les personnages sont des parodies des jeux de Nintendo et Sega tels que Sonic, Super Mario Bros., La Légende de Zelda etc.', 2012, 0, 3, 0, 213, 0, 'Original', 99, 193),
+(411, 'Meitantei Conan', 'Détective Conan', 'detective Conan.jpg', 'Shinichi Kudo est un brillant lycéen promis à un grand avenir. Il vit seul car ses parents vivent aux États-Unis, mais il passe beaucoup de temps avec Ran, son amie d\'enfance qu\'il aime en secret, ou avec le professeur Agasa. C\'est un excellent détective, qui a le sens de l\'observation et un très bon esprit de déduction, mais un jour, il va se faire surprendre alors qu\'il espionnait deux hommes en noir suspects. Ils lui feront alors prendre un médicament censé le tuer, mais qui va le faire rajeunir et il redeviendra un enfant de 6 ans. Coincé dans ce corps, Shinichi se fera alors passer pour Conan Edogawa, neveu du professeur, et se fera \"adopter\" par Ran dont le père est détective privé. Conan espère ainsi retrouver les hommes en noir, et enfin redevenir lui même.', 1996, 1170, 0, 28, 214, 0, 'Original', 5, 194),
+(412, 'Plastic Little', 'Plastic Little', 'Plastic Little.jpg', 'Une jeune fille prénommée Elise est pourchassée par l\'armée qui tente de s\'emparer du secret que lui a confié son père. Elle tombe alors sur Tita, capitaine du navire Cha Cha Mura qui va tout faire pour l\'aider à se sortir de cette situation...', 1994, 0, 1, 0, 215, 0, 'Original', 101, 195),
+(413, 'Dr. STONE', 'Dr. STONE', 'Dr. Stone.jpg', 'Un jour, une lumière brillante apparaît subitement dans le ciel pétrifiant en une fraction de seconde l\'humanité entière. Des millénaires plus tard, Taiju parvient à briser son enveloppe de pierre et découvre un monde où le genre humain a disparu de la surface de la terre. Avec son ami Senku, ils décident de récréer la civilisation à partir de zéro !', 2019, 24, 0, 0, 216, 0, 'Original', 5, 196),
+(414, 'Sasayaku You ni Koi wo Utau', 'Whisper Me a Love Song', 'Whisper Me a Love Song (2024).jpg', 'La pétillante et énergique Himari, étudiante en première année de lycée, tombe amoureuse d\'une grande et belle fille nommée Yori après avoir entendu son groupe jouer pendant la cérémonie de rentrée. Incapable de retenir son enthousiasme, Himari décide de déclarer ses sentiments à Yori et, à la surprise d\'Himari, elle lui répond qu\'elle l\'aime aussi ! Mais lorsque Himari se rend compte qu\'elle ne ressent pas le même amour que Yori, elle commence à se demander ce que \"l\'amour\" signifie vraiment...', 2024, 12, 0, 0, 217, 0, 'Original', 102, 197),
+(415, 'Shin Kidou Senki Gundam W', 'Mobile Suit Gundam WING', 'Mobile Suit Gundam Wing (1995).jpg', 'Il y a des milliers de colonies dans l\'espace, qui sont regroupées en cinq catégories, appelées L1, L2, L3, L4 et L5 (d\'après les points de Lagrange). Le gouvernement de la Terre, sous le commandement de l\'Alliance terrestre (aussi appelée Alliance), s\'oppose aux gouvernements des différentes colonies. Un groupe de pression, au sein de l\'Alliance, appelé Romefeller, va utiliser son bras armé, Oz, pour attaquer les colonies. Oz s\'est infiltré au sein de l\'armée de l\'alliance en formant les troupes d\'élites de cette dernière. La contre-attaque des colonies se fait par l\'envoi sur Terre de cinq pilotes de gundam (machines faites de gundanium, métal le plus solide qui ne peut être fabriqué que dans l\'espace).', 1996, 49, 0, 0, 15, 0, 'Original', 13, 118),
+(416, 'Shirobako', 'Shirobako', 'Shirobako (2014).jpg', 'Cinq filles poursuivant leurs rêves. L\'histoire tourne autour des problèmes quotidiens et des difficultés qui surviennent lorsque l\'on travaille dans l\'industrie de l\'animation, avec les conflits qui se produisent au jour le jour dans ce groupe de filles.', 2014, 24, 0, 0, 218, 0, 'Original', 58, 198),
+(417, 'Ima, Soko ni Iru Boku', 'L\'Autre Monde', 'Ima, Soko ni Iru Boku (1999).jpg', 'Shu est un jeune garçon passionné de Kendô, très persévérant et toujours optimiste malgré la défaite. En rentrant chez lui, il aperçoit une étrange fille tout en haut d\'une tour et tente de lui parler. Il n\'apprendra d\'elle que son prénom, Lala Ru, avant qu\'une femme, accompagnée d\'énormes robots, ne surgisse de nulle part pour enlever la jeune fille. En essayant de l\'aider, Shu se retrouve emporté dans un autre monde où règne la démence, la guerre et le chaos sous les ordres du Seigneur Hamdo. Il découvrira alors le secret de Lala Ru et la folie des humains.', 2000, 13, 0, 0, 219, 0, 'Original', 14, 199);
 
 -- --------------------------------------------------------
 
@@ -2125,7 +2132,36 @@ INSERT INTO `anime_genres` (`ID`, `ID_Anime`, `ID_Genre`) VALUES
 (1645, 410, 3),
 (1646, 410, 5),
 (1647, 410, 7),
-(1648, 410, 10);
+(1648, 410, 10),
+(1649, 411, 1),
+(1650, 411, 3),
+(1651, 411, 5),
+(1652, 411, 7),
+(1653, 411, 9),
+(1654, 412, 1),
+(1655, 412, 5),
+(1656, 412, 8),
+(1657, 412, 14),
+(1658, 412, 16),
+(1659, 413, 1),
+(1660, 413, 3),
+(1661, 413, 7),
+(1662, 413, 10),
+(1663, 413, 16),
+(1664, 414, 2),
+(1665, 414, 15),
+(1666, 414, 18),
+(1667, 414, 19),
+(1668, 415, 1),
+(1669, 415, 3),
+(1670, 415, 7),
+(1671, 415, 14),
+(1672, 415, 16),
+(1673, 416, 5),
+(1674, 416, 18),
+(1675, 417, 3),
+(1676, 417, 7),
+(1677, 417, 16);
 
 -- --------------------------------------------------------
 
@@ -2348,7 +2384,13 @@ INSERT INTO `createurs` (`ID`, `Name`) VALUES
 (190, 'Hideaki Sorachi'),
 (191, 'Takehiko Ito'),
 (192, 'Soichiro Yamamoto '),
-(193, 'Anastasia Shestakova');
+(193, 'Anastasia Shestakova'),
+(194, 'Gosho Aoyama'),
+(195, 'Satoshi Urushihara'),
+(196, 'Riichiro Inagaki'),
+(197, 'Eku Takeshima'),
+(198, 'Tsutomu Mizushima'),
+(199, 'Akitaro Daichi');
 
 -- --------------------------------------------------------
 
@@ -2551,7 +2593,8 @@ INSERT INTO `film` (`ID`, `Name_Jp`, `Name_Fr`, `Image`, `Synopsis`, `Year`, `ID
 (156, 'Kidou Senshi Z Gundam III : Hoshi no Kodou wa Ai', 'Mobile Suit Zeta Gundam III : C\'est l\'amour qui fait battre les étoiles', 'Zeta Gundam film 3.jpg', 'Haman Karn, représentante des forces Neon Zeon, est venue en aide à nos protagonistes. Mais cette aide n\'est que pour servir ses intérêts. Pendant ce temps, Scirocco est de retour et s\'impose chez les Titans. Quelle sera le dénouement de cette histoire ?', 2006, 15, 13, NULL, NULL, 118, 244),
 (157, 'Shinseiki Evangelion Movie: Shi to Shinsei', 'Neon Genesis Evangelion : Death & Rebirth', 'Evangelion Death and Rebirth.jpg', 'Résumé de la Série télévisée', 1997, 8, 7, NULL, NULL, 8, 11),
 (158, 'Shinseiki Evangelion Movie: Air/Magokoro wo, Kimi ni', 'Neon Genesis Evangelion: The End of Evangelion', 'Evangelion The End of Evangelion.jpg', 'he End of Evangelion est un film divisé en deux parties (Episode 25\': Love is Destructive et Episode 26\': ONE MORE FINAL: I need you) proposant une autre version des épisodes 25 et 26 de Neon Genesis Evangelion, épisodes finaux de la série qui ont suscité de nombreuses réactions de mécontentement chez les fans.\r\nEn effet, ce long métrage apporte une conclusion réaliste et pragmatique, contrairement à la série animée de 1996 qui ne put apporter qu\'une fin philosophique.', 1997, 8, 7, NULL, NULL, 8, 11),
-(159, 'Gekijouban Jujutsu Kaisen 0', 'Jujutsu Kaisen 0', 'jujutsu_kaisen_0.jpg', 'Yuta Okkotsu est hanté par l\'esprit de Rika, son amie d\'enfance morte dans un accident de la route. Cette dernière n\'est plus la petite fille qu\'il a connu et se manifeste sous la forme d\'une entité monstrueuse qui le protège contre sa volonté.\r\n\r\nAprès un énième accident causé par ce fléau, Yuta est récupéré par Satoru Gojo, professeur à l\'école d\'exorcisme de Tokyo, qui le convainc de rejoindre l\'établissement pour maîtriser son énergie occulte.\r\n\r\nPourra-t-il en apprendre suffisamment à temps pour affronter la malédiction qui le hante ?', 2021, 195, 91, NULL, NULL, 177, 368);
+(159, 'Gekijouban Jujutsu Kaisen 0', 'Jujutsu Kaisen 0', 'jujutsu_kaisen_0.jpg', 'Yuta Okkotsu est hanté par l\'esprit de Rika, son amie d\'enfance morte dans un accident de la route. Cette dernière n\'est plus la petite fille qu\'il a connu et se manifeste sous la forme d\'une entité monstrueuse qui le protège contre sa volonté.\r\n\r\nAprès un énième accident causé par ce fléau, Yuta est récupéré par Satoru Gojo, professeur à l\'école d\'exorcisme de Tokyo, qui le convainc de rejoindre l\'établissement pour maîtriser son énergie occulte.\r\n\r\nPourra-t-il en apprendre suffisamment à temps pour affronter la malédiction qui le hante ?', 2021, 195, 91, NULL, NULL, 177, 368),
+(160, 'Meitantei Conan : Tokei Jikake no Matenrou', 'Détective Conan Film 1 Le gratte-ciel infernal', 'Détective Conan Film 01 Le Gratte-ciel infernal.jpg', 'Shinichi reçoit un jour une invitation à une fête organisée par un célèbre architecte dans un building de Tokyo. Mais hélas il ne peut pas y participer et décide d\'y envoyer Ran à sa place. Mais il se trouve qu\'au même moment, un mystérieux individu donne des indices au compte-gouttes à Shinichi de la localisation des bombes qu\'il a caché dans toutes la ville. L\'enquête commence pour notre plus célèbre détective, mais celui-ci doit se dépêcher de résoudre cette énigme car son amie Ran est en grand péril : une bombe a été cachée dans le building où elle se trouve !', 1997, 214, 100, NULL, NULL, 194, 411);
 
 -- --------------------------------------------------------
 
@@ -3283,7 +3326,11 @@ INSERT INTO `film_genres` (`ID`, `ID_Film`, `ID_Genre`) VALUES
 (711, 159, 7),
 (712, 159, 9),
 (713, 159, 10),
-(714, 159, 12);
+(714, 159, 12),
+(715, 160, 1),
+(716, 160, 3),
+(717, 160, 5),
+(718, 160, 9);
 
 -- --------------------------------------------------------
 
@@ -3435,7 +3482,10 @@ INSERT INTO `studios` (`ID`, `Name`) VALUES
 (96, 'Oh! Production'),
 (97, 'HAL Film Maker'),
 (98, 'Sanctuary'),
-(99, 'Fifth Avenue');
+(99, 'Fifth Avenue'),
+(100, 'Kyokuichi Tokyo Movie'),
+(101, 'KSS'),
+(102, 'Cloud Hearts');
 
 -- --------------------------------------------------------
 
@@ -3665,7 +3715,13 @@ INSERT INTO `univers` (`ID`, `Name`) VALUES
 (210, 'Gintama'),
 (211, 'Outlaw Star'),
 (212, 'A quoi tu joues, Ayumu'),
-(213, 'World War Blue');
+(213, 'World War Blue'),
+(214, 'Detective Conan'),
+(215, 'Plastic Little'),
+(216, 'Dr. STONE'),
+(217, 'Whisper Me A Love Song'),
+(218, 'Shirobako'),
+(219, 'L\'Autre Monde');
 
 --
 -- Index pour les tables déchargées
@@ -3754,13 +3810,13 @@ ALTER TABLE `univers`
 -- AUTO_INCREMENT pour la table `anime`
 --
 ALTER TABLE `anime`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=411;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=418;
 
 --
 -- AUTO_INCREMENT pour la table `anime_genres`
 --
 ALTER TABLE `anime_genres`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1649;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1678;
 
 --
 -- AUTO_INCREMENT pour la table `arcnarratif`
@@ -3772,7 +3828,7 @@ ALTER TABLE `arcnarratif`
 -- AUTO_INCREMENT pour la table `createurs`
 --
 ALTER TABLE `createurs`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=194;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=200;
 
 --
 -- AUTO_INCREMENT pour la table `episodes`
@@ -3784,13 +3840,13 @@ ALTER TABLE `episodes`
 -- AUTO_INCREMENT pour la table `film`
 --
 ALTER TABLE `film`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=160;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=161;
 
 --
 -- AUTO_INCREMENT pour la table `film_genres`
 --
 ALTER TABLE `film_genres`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=715;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=719;
 
 --
 -- AUTO_INCREMENT pour la table `genres`
@@ -3802,13 +3858,13 @@ ALTER TABLE `genres`
 -- AUTO_INCREMENT pour la table `studios`
 --
 ALTER TABLE `studios`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=100;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
 
 --
 -- AUTO_INCREMENT pour la table `univers`
 --
 ALTER TABLE `univers`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=214;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=220;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

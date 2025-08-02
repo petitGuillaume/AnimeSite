@@ -10,8 +10,9 @@
 </head>
 
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="ressource/js/jquery-3.7.1.js" ></script>
 
+<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
 <div class="accueil">
     <h1>Azunya</h1>
     <p class="miniP">Dernier anime rajouter</p>
