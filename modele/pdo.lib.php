@@ -8,7 +8,7 @@
 $dbHost = 'localhost';
 $dbName = 'db_anime';
 $dbUser = 'root';
-$dbPass = 'root';
+$dbPass = '';
 
 try {
     $pdo = new PDO("mysql:host=$dbHost;dbname=$dbName;charset=utf8", $dbUser, $dbPass);

@@ -34,7 +34,7 @@ body {
 {   gap: 15px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: -5px 5px 5px #333;
+    box-shadow: -5px 5px 5px #FF6611;
     background-color: #FFFFFF !important;
     display: flex;
     margin-bottom: 1%;
@@ -167,7 +167,7 @@ input[type="range"]::-moz-range-thumb {
     gap: 15px;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: -5px 5px 5px grey;
+    box-shadow: -5px 5px 5px #FF6611;
     background-color: #FFFFFF !important;
     display: flex;
     max-width: 95%;
